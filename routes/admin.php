@@ -17,7 +17,7 @@ use App\Http\Controllers\AdminMainController;
 use App\Http\Controllers\UpdateDataController;
 use App\Models\admin\Listing;
 
-Route::get('/Home',[AdminMainController::class,'Home'])->name('admin.Dashboard');
+Route::get('/',[AdminMainController::class,'Home'])->name('admin.Dashboard');
 Route::get('/Home/Update',[AdminMainController::class,'Update'])->name('admin.Dashboard.Update');
 Route::get('/UpdateData',[UpdateDataController::class,'index'])->name('updateData');
 Route::get('/UpdateListing',[UpdateListingDataController::class,'update'])->name('update.UpdateListing');
