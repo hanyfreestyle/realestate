@@ -3,8 +3,9 @@
 return
 [
 	'blog' => 'Blog',
-	'contatc_us' => 'Contatc Us',
-	'developer' => 'Developer',
+	'contatc-us' => 'Contatc Us',
+	'developer' => 'Developers',
+	'egypt-s-compounds' => 'Egypt&#039;s Compounds',
 	'home' => 'Home',
-	'loaction' => 'Loaction',
+	'properties-for-sale' => 'Properties for sale',
 ];

@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_old.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
     @livewireStyles
 </head>
@@ -36,6 +36,24 @@
 <script src="{{ defWebAssets('js/plugins.js') }}"></script>
 <script src="{{ defWebAssets('js/app.js') }}"></script>
 <script src="{{ defWebAssets('js/app_script.js') }}"></script>
+<script>
+    async function loadarfont(){
+        const font_ar = new FontFace('Tajawal','url({{ defWebAssets('fonts/Ar/TajawalRegular.woff2') }}');
+        await font_ar.load();
+        document.fonts.add(font_ar);
+        document.body.classList.add('Tajawal');
+    };
+    loadarfont();
+
+    async function loadarfont_en(){
+        const font_en = new FontFace('Poppins','url({{ defWebAssets('fonts/En/Poppins-Regular.woff2') }}');
+        await font_en.load();
+        document.fonts.add(font_en);
+        document.body.classList.add('Poppins');
+    };
+    loadarfont_en();
+</script>
+
 @livewireScripts
 <script>
     document.addEventListener('livewire:load', () => {

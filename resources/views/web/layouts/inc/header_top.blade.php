@@ -8,15 +8,14 @@
                 <ul class="list list-row flex-wrap gap-3 align-items-center justify-content-between">
                     <li class="d-none d-lg-block">
                         <a href="{{route('page_index')}}" class="link d-inline-block">
-                            <img src="{{getDefPhotoPath($DefPhotoList,'dark-logo')}}" alt="logo" class="logo d-none d-xl-inline-block">
+                            <img src="{{getDefPhotoPath($DefPhotoList,'dark-logo')}}" alt="logo" class="top_header_logo d-none d-xl-inline-block">
                         </a>
                     </li>
                     <li class="ShowInDeskX">
                         <ul class="list list-row flex-wrap align-items-center list-divider">
 
-
                             <div class="menulogo d-xl-none">
-                                <img src="{{getDefPhotoPath($DefPhotoList,'dark-logo')}}" alt="logo" class="logo ">
+                                <img src="{{getDefPhotoPath($DefPhotoList,'dark-logo')}}" alt="logo" class="mobile_logo">
                             </div>
 
                             <li class="lang_menu d-xl-none">
@@ -38,9 +37,9 @@
                                         <span class="material-symbols-outlined mat-icon fs-24 clr-neutral-0 fw-300"> phone_in_talk </span>
                                     </div>
                                     <div class="d-noneX d-lg-block">
-                                        <span class="fs-12 d-block"> Call Us Now </span>
+                                        <span class="fs-12 d-block">{{__('web/topHeader.call-us-now')}}</span>
                                         <a href="tel:406-555-0120" class="link d-block clr-neutral-700
-                                        :clr-primary-300">  0100-9808-986</a>
+                                        :clr-primary-300">{{__('web/topHeader.call-us-now-number')}}</a>
                                     </div>
                                 </div>
                             </li>
@@ -51,9 +50,9 @@
                                         fw-300"> <i class="fa-brands fa-whatsapp"></i> </span>
                                     </div>
                                     <div class="d-none d-lg-block">
-                                        <span class="fs-12 d-block"> WhatsApp </span>
+                                        <span class="fs-12 d-block">{{__('web/topHeader.whats-app')}} </span>
                                         <a href="#" class="link d-block clr-neutral-700 :clr-primary-300">
-                                            0100-9808-986</a>
+                                            {{__('web/topHeader.whats-app-number')}}</a>
                                     </div>
                                 </div>
                             </li>
@@ -63,8 +62,8 @@
                                         <span class="material-symbols-outlined mat-icon fs-24 clr-neutral-700 fw-300"> mark_as_unread </span>
                                     </div>
                                     <div class="d-none d-lg-block">
-                                        <span class="fs-12 d-block"> Contact Us </span>
-                                        <span class="d-block"> sales@realestate.eg.com </span>
+                                        <span class="fs-12 d-block">{{__('web/topHeader.contact-us')}}</span>
+                                        <span class="d-block">{{__('web/topHeader.contact-us-email')}}</span>
                                     </div>
                                 </div>
                             </li>

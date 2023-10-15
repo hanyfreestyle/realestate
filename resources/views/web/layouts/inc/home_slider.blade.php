@@ -1,9 +1,9 @@
 <div class="primary-hero">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h1 class="d2 text-center mb-6"> Easy Way to Find a Perfect Property </h1>
-                <p class="max-text-40 mx-auto text-center fs-20 mb-10"> Explore vast property listings by category with our user-friendly search. Find your perfect match! </p>
+        <div class="row justify-content-center ">
+            <div class="col-lg-8 home_slider_text">
+                <h1 class="d2 text-center mb-6"> {{__('web/homeSlider.h1')}} </h1>
+                <p class="max-text-40 mx-auto text-center fs-20 mb-10"> {{__('web/homeSlider.p')}}</p>
             </div>
             <div class="col-xxl-10">
                 <form action="#">
@@ -12,14 +12,14 @@
                             <div class="property-search__select property-search__col rounded-pill d-flex align-items-center gap-2 px-6">
                                 <span class="material-symbols-outlined mat-icon"> water_damage </span>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>For Rent</option>
-                                    <option value="1">For Sale</option>
+                                    <option selected>{{__('web/homeSlider.fr-for-sale')}}</option>
+                                    <option value="1">{{__('web/homeSlider.fr-for-rent')}}</option>
                                 </select>
                             </div>
                             <div class="property-search__select property-search__col rounded-pill d-flex align-items-center gap-2 px-6">
                                 <span class="material-symbols-outlined mat-icon"> distance </span>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Location</option>
+                                    <option selected>{{__('web/homeSlider.fr-location')}}</option>
                                     <option value="1">New York</option>
                                     <option value="2">Chicago</option>
                                     <option value="3">Atlanta</option>
@@ -28,7 +28,7 @@
                             <div class="property-search__select property-search__col rounded-pill d-flex align-items-center gap-2 px-6">
                                 <span class="material-symbols-rounded mat-icon"> grid_view </span>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Property Type</option>
+                                    <option selected>{{__('web/homeSlider.fr-property-type')}}</option>
                                     <option value="1">Houses</option>
                                     <option value="2">Apartments</option>
                                     <option value="3">Commercial</option>
@@ -37,7 +37,7 @@
                             <div class="property-search__price property-search__col rounded-pill d-flex align-items-center gap-2 px-6 py-3">
                                 <div class="d-flex gap-2 align-items-center">
                                     <span class="material-symbols-rounded mat-icon"> add_card </span>
-                                    <span class="d-inline-block fs-14"> Price </span>
+                                    <span class="d-inline-block fs-14"> {{__('web/homeSlider.fr-price')}} </span>
                                 </div>
                                 <div class="property-search__range d-grid">
                                     <input type="range" min="1" max="1000" value="450" class="property-search__range-input" id="myRange" oninput="rangevalue.value=value">

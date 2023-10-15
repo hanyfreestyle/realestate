@@ -17,11 +17,18 @@ class SettingFormRequest extends FormRequest
     public function rules(): array
     {
         $rules =[
-            'facebook'=> 'exclude_if:facebook,#|required|url',
-            'twitter'=> 'exclude_if:twitter,#|required|url',
-            'youtube'=> 'exclude_if:youtube,#|required|url',
-            'instagram'=> 'exclude_if:instagram,#|required|url',
-            'google_api'=> 'exclude_if:google_api,#|required',
+//            'facebook'=> 'exclude_if:facebook,#|required|url',
+//            'twitter'=> 'exclude_if:twitter,#|required|url',
+//            'youtube'=> 'exclude_if:youtube,#|required|url',
+//            'instagram'=> 'exclude_if:instagram,#|required|url',
+//            'google_api'=> 'exclude_if:google_api,#|required',
+
+            'facebook'=> 'nullable|url',
+            'twitter'=> 'nullable|url',
+            'youtube'=> 'nullable|url',
+            'instagram'=> 'nullable|url',
+            'google_api'=> 'nullable',
+
         ];
 
         foreach(config('app.lang_file') as $key=>$lang){

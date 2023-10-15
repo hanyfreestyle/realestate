@@ -2,9 +2,10 @@
 
 return
 [
-	'blog' => 'المقالات',
-	'contatc_us' => 'اتصل بنا',
+	'blog' => 'المدونة',
+	'contatc-us' => 'اتصل بنا',
 	'developer' => 'المطورين',
+	'egypt-s-compounds' => 'كل كمبوندات مصر',
 	'home' => 'الرئيسية',
-	'loaction' => 'المناطق',
+	'properties-for-sale' => 'شقق للبيع',
 ];

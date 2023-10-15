@@ -1,0 +1,7 @@
+.stop_view{display:none}
+@media (max-width: 600px) {
+    .mobile_stop{display:none!important}
+}
+.crop_line_2{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.crop_line_3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+.crop_line_4{-webkit-line-clamp:4;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}

@@ -89,25 +89,20 @@ if (!function_exists('GetCopyRight')) {
             case 'ar':
                 $copyname = "جميع الحقوق محفوظة";
                 if($StartDate == date("Y")) {
-                    $CopyRight = $copyname." &copy; ".date("Y")." ".$CompanyName;
+                    $CopyRight = $copyname." &copy; ".date("Y").' <span class="clr-tertiary-300">'.$CompanyName.'</span>';
                 } else {
-                    $CopyRight = $copyname." &copy; ".$StartDate." - ".date("Y")." ".$CompanyName;
+                    $CopyRight = $copyname." &copy; ".$StartDate." - ".date("Y").' <span class="clr-tertiary-300">'
+                        .$CompanyName.'</span>';
                 }
                 break;
-//            case 'En':
-//                $copyname = "All Rights Reserved";
-//                if($StartDate == date("Y")) {
-//                    $CopyRight = $copyname." &copy; ".date("Y")." ".$CompanyName;
-//                } else {
-//                    $CopyRight = $copyname." &copy; ".$StartDate." - ".date("Y")." ".$CompanyName;
-//                }
-//                break;
+
             default:
                 $copyname = "All Rights Reserved";
                 if($StartDate == date("Y")) {
-                    $CopyRight = $copyname." &copy; ".date("Y")." ".$CompanyName;
+                    $CopyRight = $copyname." &copy; ".date("Y").' <span class="clr-tertiary-300">'.$CompanyName.'</span>';
                 } else {
-                    $CopyRight = $copyname." &copy; ".$StartDate." - ".date("Y")." ".$CompanyName;
+                    $CopyRight = $copyname." &copy; ".$StartDate." - ".date("Y").' <span class="clr-tertiary-300">'
+                        .$CompanyName.'</span>';
                 }
         }
         return $CopyRight;

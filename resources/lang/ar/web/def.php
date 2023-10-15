@@ -2,10 +2,10 @@
 
 return
 [
-	'Compounds' => 'كمبوندات',
-	'Project' => 'مشروع',
-	'Units' => 'وحدة',
-	'published_at' => 'نشرت بتاريخ',
-	'starting_from' => 'تبداء من',
-	'projects_news' => 'أخبار مشاريع كمبوندات',
+	'compounds' => 'كمبوندات',
+	'project' => 'مشروع',
+	'units' => 'وحدة',
+	'projects-news' => 'أخبار مشاريع كمبوندات',
+	'published-at' => 'نشرت بتاريخ',
+	'starting-from' => 'تبداء من',
 ];

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin\config;
 
+use App\Helpers\AdminHelper;
 use App\Http\Controllers\AdminMainController;
 use App\Http\Requests\admin\config\LangFileRequest;
 use Illuminate\Http\Request;
@@ -89,8 +90,11 @@ class LangFileWebController extends AdminMainController
 
             $content = "<?php\n\nreturn\n[\n";
             $index = 0;
+
             foreach ($request->key as $keyfromrequest ){
+
                 if(trim($keyfromrequest) != ''){
+                    $keyfromrequest = AdminHelper::Url_Slug($keyfromrequest);
                     $contentAsArr += [$keyfromrequest => $request->$key[$index]];
                     $content .= "\t'".$keyfromrequest."' => '".htmlentities($request->$key[$index])."',\n";
                 }
