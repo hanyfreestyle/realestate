@@ -7,6 +7,7 @@ use App\Http\Controllers\admin\config\MetaTagController;
 use App\Http\Controllers\admin\config\SettingsController;
 use App\Http\Controllers\admin\config\UploadFilterController;
 use App\Http\Controllers\admin\config\UploadFilterSizeController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/clearCash/',[SettingsController::class,'clearCash'])->name('cash.index');
 

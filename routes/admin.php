@@ -12,10 +12,9 @@ use App\Http\Controllers\admin\ProjectToUnitsController;
 use App\Http\Controllers\admin\QuestionController;
 use App\Http\Controllers\admin\UnitController;
 use App\Http\Controllers\admin\UpdateListingDataController;
-use App\Http\Controllers\admin\UpdateProjectController;
 use App\Http\Controllers\AdminMainController;
 use App\Http\Controllers\UpdateDataController;
-use App\Models\admin\Listing;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/',[AdminMainController::class,'Home'])->name('admin.Dashboard');
 Route::get('/Home/Update',[AdminMainController::class,'Update'])->name('admin.Dashboard.Update');

@@ -18,7 +18,7 @@
                 ['roleView'=>'upFilter_view','text'=> 'admin/menu.uploadFilter','url'=> 'config.upFilter.index','sel_routs'=> 'upFilter','icon'=>'fas fa-filter'],
                 ['roleView'=>'config_section','text'=> 'admin/menu.setting_icon','url'=> 'config.defIcon.show','sel_routs'=> 'defIcon','icon'=>'fab fa-fonticons'],
             ],
-        ],
+        ],  #Setting
 
         [
             'view'=>true,
@@ -28,7 +28,7 @@
             'url'=> 'amenity.index',
             'icon'=>'fas fa-swimming-pool',
             'roleView'=>'amenity_view',
-        ],
+        ],  #Amenity
 
         [
             'view'=>true,
@@ -38,7 +38,7 @@
             'url'=> 'weblang.index',
             'icon'=>'fas fa-globe-africa',
             'roleView'=>'weblang_view',
-        ],
+        ],  #Web Lang
 
         [
             'view'=>true,
@@ -48,7 +48,7 @@
             'url'=> 'adminlang.index',
             'icon'=>'fas fa-globe-africa',
             'roleView'=>'adminlang_view',
-        ],
+        ],  #Admin Lang
 
         [
             'view'=>true,
@@ -64,7 +64,7 @@
                 ['roleView'=>'permissions_view','text'=> 'admin/menu.roles_permissions' ,'url'=> 'users.permissions.index','sel_routs'=> 'permissions','icon'=>'fas fa-user-shield'],
             ],
 
-        ],
+        ],  #Permissions
 
         [
             'view'=>true,
@@ -74,7 +74,7 @@
             'url'=> 'category.index',
             'icon'=>'fas fa-sitemap',
             'roleView'=>'category_view',
-        ],
+        ],  #Category
 
         [
             'view'=>true,
@@ -84,8 +84,7 @@
             'url'=> 'post.index',
             'icon'=>'fab fa-blogger',
             'roleView'=>'post_view',
-        ],
-
+        ],  #Post
 
         [
             'view'=>true,
@@ -95,7 +94,7 @@
             'url'=> 'location.index',
             'icon'=>'fas fa-map-marker-alt',
             'roleView'=>'location_view',
-        ],
+        ],  #Location
 
         [
             'view'=>true,
@@ -105,7 +104,7 @@
             'url'=> 'developer.index',
             'icon'=>'fas fa-truck-monster',
             'roleView'=>'developer_view',
-        ],
+        ],  #Developer
 
         [
             'view'=>true,
@@ -115,7 +114,7 @@
             'url'=> 'project.index',
             'icon'=>'fas fa-building',
             'roleView'=>'project_view',
-        ],
+        ],  #Project
 
         [
             'view'=>true,
@@ -125,7 +124,7 @@
             'url'=> 'unit.index',
             'icon'=>'fas fa-bath',
             'roleView'=>'unit_view',
-        ],
+        ],  #Unit
 
         [
             'view'=>true,
@@ -135,18 +134,8 @@
             'url'=> 'update.UpdateListing',
             'icon'=>'fas fa-database',
             'roleView'=>'project_view',
-        ],
+        ], #Update
 
-
-//        [
-//            'view'=>true,
-//            'sel_routs'=>'cash',
-//            'type'=>'one',
-//            'text'=> 'Cash',
-//            'url'=> 'cash.index',
-//            'icon'=>'fas fa-bath',
-//            'roleView'=>'unit_view',
-//        ],
 
     ],
 

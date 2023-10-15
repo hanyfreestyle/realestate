@@ -2,6 +2,7 @@
 use App\Http\Controllers\admin\roles\PermissionController;
 use App\Http\Controllers\admin\roles\RoleController;
 use App\Http\Controllers\admin\roles\UserController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/Users', [UserController::class,'index'])->name('users.users.index');
 Route::get('/Users/create', [UserController::class,'create'])->name('users.users.create');
