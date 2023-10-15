@@ -8,8 +8,8 @@ use App\Models\admin\config\MetaTag;
 
 use App\Models\admin\config\Setting;
 use App\Models\admin\Location;
-use Cache;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 use Phattarachai\LaravelMobileDetect\Agent;
 
@@ -23,10 +23,19 @@ class WebMainController extends Controller
 
     public function __construct()
     {
+
+        $stopCash = 1 ;
+
         $agent = new Agent();
         View::share('agent', $agent);
 
+        $this->WebConfig = self::getWebConfig($stopCash);
+        View::share('WebConfig', $this->WebConfig);
 
+        $DefPhotoList = self::getDefPhotoList($stopCash);
+        View::share('DefPhotoList', $DefPhotoList);
+
+//        dd($DefPhotoList);
 
     }
 
@@ -95,20 +104,38 @@ class WebMainController extends Controller
         if ($DefPhoto->has($cat_id)) {
             return $DefPhoto[$cat_id] ;
         }else{
-            return $DefPhoto['logo'] ;
+            return $DefPhoto['dark-logo'] ;
         }
+    }
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getWebConfig
+    static function getWebConfig($stopCash=0){
+        if($stopCash){
+            $WebConfig = Setting::where('id' , 1)->with('translation')->first();
+        }else{
+            $WebConfig = Cache::remember('WebConfig_Cash_'.app()->getLocale(),config('app.def_24h_cash'), function (){
+                return  Setting::where('id' , 1)->with('translation')->first();
+            });
+        }
+        return $WebConfig ;
     }
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     getWebConfig
-    static function getWebConfig(){
-        $WebConfig = Cache::remember('WebConfig_Cash',config('app.website_config_cash'), function (){
-            return  Setting::where('id' , 1)->with('translation')->first();
-        });
-        return $WebConfig ;
+    static function getDefPhotoList($stopCash=0){
+
+        if($stopCash){
+            $DefPhotoList = DefPhoto::get()->keyBy('cat_id');
+        }else{
+            $DefPhotoList = Cache::remember('DefPhotoList_Cash_'.app()->getLocale(),config('app.def_24h_cash'), function (){
+                return  DefPhoto::get()->keyBy('cat_id');
+            });
+        }
+        return $DefPhotoList ;
     }
-
-
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text

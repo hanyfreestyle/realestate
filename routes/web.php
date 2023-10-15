@@ -21,7 +21,9 @@ Auth::viaRemember();
 Route::group(['middleware' => ['auth','status']], function() {
     Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 
-        Route::get('/', [PageController::class, 'index'])->name('menu-home');
+        Route::get('/', [PageController::class, 'index'])->name('page_index');
+
+
 
 
         Route::get('/contact-us', [PageController::class, 'contactUs'])->name('menu-contact-us');

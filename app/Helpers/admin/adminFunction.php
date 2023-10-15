@@ -21,16 +21,6 @@ if (!function_exists('defAdminAssets')) {
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #    static_admin_asset
-if (!function_exists('defWebAssets')) {
-    function defWebAssets($path, $secure = null): string
-    {
-        return app('url')->asset('assets/web/' . $path, $secure);
-    }
-}
-
-
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #    static_admin_asset
 if (!function_exists('defImagesDir')) {
     function defImagesDir($path, $secure = null): string
     {
