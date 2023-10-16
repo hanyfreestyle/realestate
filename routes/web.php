@@ -26,13 +26,16 @@ Route::group(['middleware' => ['auth','status']], function() {
         Route::get('/developers', [PageController::class, 'DevelopersPage'])->name('page_developers');
         Route::get('/developers/{slug}', [PageController::class, 'DeveloperView'])->name('page_developer_view');
 
+        Route::get('/blog', [PageController::class, 'BlogPageList'])->name('page_blog');
+
+
         Route::get('/contact-us', [PageController::class, 'contactUs'])->name('menu-contact-us');
 
 
 
 
 
-        Route::get('/blog', [PageController::class, 'BlogPageList'])->name('menu-blog');
+
         Route::get('/blog/{catSlug}', [PageController::class, 'BlogCatList'])->name('blogCatList');
         Route::get('/blog/{catSlug}/{postSlug}', [PageController::class, 'BlogView'])->name('blogView');
 

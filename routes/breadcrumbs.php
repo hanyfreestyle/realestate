@@ -22,12 +22,12 @@ Breadcrumbs::for('developer_view', function (BreadcrumbTrail $trail,$Developer) 
     $trail->push( $Developer->name , route('page_developer_view',$Developer->slug));
 });
 
-
-/*
 Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
-    $trail->push(__('web/menu.blog'), route('menu-blog'));
+    $trail->push(__('web/blog.breadcrumbs'), route('page_blog'));
 });
+/*
+
 
 Breadcrumbs::for('blogCatList', function (BreadcrumbTrail $trail, $Category) {
     $trail->parent('blog');

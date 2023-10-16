@@ -23,6 +23,7 @@ return [
         '5'=> ['id'=> '5' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'homeSlider','name'=>'Home Slider' ],
         '6'=> ['id'=> '6' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'stickyBar','name'=>'Sticky Footer' ],
         '7'=> ['id'=> '7' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'developer','name'=>'Developer' ],
+        '8'=> ['id'=> '8' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'blog','name'=>'Blog' ],
 
     ],
 

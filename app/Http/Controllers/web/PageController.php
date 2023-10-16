@@ -94,10 +94,18 @@ class PageController extends WebMainController
 
         $Posts = Post::query()
             ->where('is_published' ,true)
+            ->translatedIn()
+           // ->translated()
+
             ->with('translation')
+
+
+            //->whereTranslation('name','!=','كل ما تريد معرفته عن مدينة الجلالة العين السخنة')
             ->with('getCatName')
             ->orderBy('id','desc')
-            ->paginate(12);
+            ->paginate(4);
+
+       // dd($Posts);
 
         $Categories = Category::query()
             ->where('is_active',true)

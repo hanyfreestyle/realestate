@@ -2,9 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-
-
 use Database\Seeders\admin\CategorySeeder;
 use Database\Seeders\admin\CategoryTranslationSeeder;
 use Database\Seeders\admin\DeveloperPhotoSeeder;
