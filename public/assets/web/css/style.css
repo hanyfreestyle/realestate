@@ -3518,6 +3518,7 @@ small,
 }
 .active-bg {
   background-color: hsl(var(--primary-300)) !important;
+    color: #fff!important;
 }
 @media (min-width: 1400px) {
   .scale-05 {

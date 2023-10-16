@@ -40,6 +40,8 @@ class PageController extends WebMainController
 
         $Developers = Developer::getDeveloperList()
             ->paginate(16);
+
+
         return view('web.developers_index',compact('Developers'));
     }
 

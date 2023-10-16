@@ -10,9 +10,20 @@ use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
 
 
 Breadcrumbs::for('home', function (BreadcrumbTrail $trail) {
-    $trail->push(__('web/menu.home'), route('menu-home'));
+    $trail->push('<i class="fa fa-home"></i>' , route('page_index'));
+});
+Breadcrumbs::for('developer_list', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push(__('web/developer.h1'), route('page_developers'));
 });
 
+Breadcrumbs::for('developer_view', function (BreadcrumbTrail $trail,$Developer) {
+    $trail->parent('developer_list');
+    $trail->push( $Developer->name , route('page_developer_view',$Developer->slug));
+});
+
+
+/*
 Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push(__('web/menu.blog'), route('menu-blog'));
@@ -29,14 +40,8 @@ Breadcrumbs::for('post_view', function (BreadcrumbTrail $trail, $Category,$Post)
     $trail->push($Post->name, route('blogCatList', $Post->slug));
 });
 
-Breadcrumbs::for('developer_list', function (BreadcrumbTrail $trail) {
-    $trail->parent('home');
-    $trail->push(__('web/menu.developer'), route('menu-developers'));
-});
 
-Breadcrumbs::for('developer_view', function (BreadcrumbTrail $trail,$Developer) {
-    $trail->parent('developer_list');
-    $trail->push( $Developer->name , route('page-developer-view',$Developer->slug));
-});
 
+
+*/
 

@@ -23,13 +23,13 @@ Route::group(['middleware' => ['auth','status']], function() {
 
         Route::get('/', [PageController::class, 'index'])->name('page_index');
 
-
-
+        Route::get('/developers', [PageController::class, 'DevelopersPage'])->name('page_developers');
+        Route::get('/developers/{slug}', [PageController::class, 'DeveloperView'])->name('page_developer_view');
 
         Route::get('/contact-us', [PageController::class, 'contactUs'])->name('menu-contact-us');
 
-        Route::get('/developers', [PageController::class, 'DevelopersPage'])->name('menu-developers');
-        Route::get('/developers/{slug}', [PageController::class, 'DeveloperView'])->name('page-developer-view');
+
+
 
 
         Route::get('/blog', [PageController::class, 'BlogPageList'])->name('menu-blog');

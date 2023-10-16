@@ -1,2 +1,20 @@
 body{font-family: 'Poppins', sans-serif!important; font-size:14px;}
 .lang_menu{position: absolute;right:15px!important;}
+.breadcrumb-item + .breadcrumb-item::before{float:left;content:"\f101";padding-right:0!important;margin-left:0!important;padding-left:3px;margin-right:3px!important}
+.developer_col h2{font-size:16px}
+.developer_col .icons_div span{text-align:left;font-size:14px}
+
+
+.def_heading h1{
+    font-size: 30px;
+    color: var(--linkColor);
+}
+.def_heading p{
+    font-size: 16px;
+    line-height: 30px;
+    color: var(--textColor);
+}
+
+
+
+

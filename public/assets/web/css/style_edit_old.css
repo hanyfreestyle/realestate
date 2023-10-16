@@ -37,14 +37,6 @@
 
 
 
-.crop_line_1{
-    width: 100%;
-    display: inline-block;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-
-}
 
 
 
@@ -320,49 +312,9 @@ span.hide_text_hany {
 }
 
 
-.breadcrumb-item + .breadcrumb-item::before {
-    content: "\f101";
-    font-family: "FontAwesome";
-    vertical-align: middle;
-    color: #007aff!important;
 
 
-}
 
-
-.breadcrumb {
-    --bs-breadcrumb-padding-x: 0;
-    --bs-breadcrumb-padding-y: 0;
-    --bs-breadcrumb-margin-bottom: 1rem;
-    --bs-breadcrumb-divider-color: var(--bs-secondary-color);
-    --bs-breadcrumb-item-padding-x: 4px!important;
-    /*--bs-breadcrumb-item-active-color: var(--bs-secondary-color);*/
-    --bs-breadcrumb-item-active-color: #007aff!important;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1px 1px !important;
-    margin-bottom: var(--bs-breadcrumb-margin-bottom);
-    font-size: 15px!important;
-    list-style: none;
-    background-color: var(--bs-breadcrumb-bg);
-    border-radius: var(--bs-breadcrumb-border-radius);
-    line-height: 30px;
-    color: #007aff!important;
-    --bs-breadcrumb-item-background: #2c0b0e!important;
-}
-
-.breadcrumb-item{
-    max-width: 220px;
-    overflow: hidden!important;
-
-
-    display: inline-block;
-
-    text-overflow: ellipsis;
-    white-space: nowrap!important;
-    overflow: hidden!important;
-
-}
 
 
 .crop_text_1line{
@@ -454,16 +406,7 @@ div.scrollmenu a:hover {
 
 }
 
-.DevelopersList{
-    text-align: center;
 
-}
-.DevelopersList .team__member-img {
-    box-shadow: rgba(99, 99, 99, 0.2) 1px 2px 8px 1px;
-
-    width: 75%;
-    height: 75%;
-}
 
 
 .team__contact {

@@ -51,12 +51,12 @@
                         </ul>
                     </div>
                     <ul class="list list-lg-row menu-nav order-lg-1">
-                        <li class="menu-list current-page"><a href="index.php" class="link menu-link "> {{__('web/menu.home')}} </a> </li>
-                        <li class="menu-list"><a href="Project.php" class="link menu-link "> {!! __('web/menu.egypt-s-compounds') !!} </a> </li>
-                        <li class="menu-list"><a href="Blog.php" class="link menu-link "> {{__('web/menu.blog')}} </a> </li>
-                        <li class="menu-list"><a href="List.php" class="link menu-link "> {{__('web/menu.properties-for-sale')}} </a> </li>
-                        <li class="menu-list"><a href="Developers.php" class="link menu-link ">{{__('web/menu.developer')}}  </a> </li>
-                        <li class="menu-list"><a href="Compounds.php" class="link menu-link "> {{__('web/menu.contatc-us')}} </a> </li>
+                        <li class="menu-list current-page"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.home')}} </a> </li>
+                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {!! __('web/menu.egypt-s-compounds') !!} </a> </li>
+                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.blog')}} </a> </li>
+                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.properties-for-sale')}} </a> </li>
+                        <li class="menu-list"><a href="{{route('page_developers')}}" class="link menu-link ">{{__('web/menu.developer')}}  </a> </li>
+                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.contatc-us')}} </a> </li>
                     </ul>
                 </nav>
             </div>

@@ -1,7 +1,46 @@
+:root {
+    --linkColor: #3738ea;
+    --h1Color: #3738ea;
+    --linkHover: #000000;
+    --textColor: #808080;
+}
 .stop_view{display:none}
+.hidden-xs{display:none}
 @media (max-width: 600px) {
     .mobile_stop{display:none!important}
+    .page-item .w-10{width:2rem}
+    .page-item .h-10{height:2rem}
+
 }
+.crop_line_1{width:100%;display:inline-block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 .crop_line_2{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .crop_line_3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .crop_line_4{-webkit-line-clamp:4;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+
+
+
+a{text-decoration: none!important; color: var(--linkColor);}
+/*a:link{text-decoration: none!important; color: var(--linkColor);}*/
+/*a:visited{text-decoration: none!important; color: var(--linkColor);}*/
+/*a:hover {text-decoration: none!important; color: var(--linkColor);}*/
+/*a:active {text-decoration: none!important; color: var(--linkColor);}*/
+
+.breadcrumb{display:flex;flex-wrap:wrap;padding:1px!important;font-size:15px!important;list-style:none;line-height:30px;margin-top:5px!important}
+.breadcrumb-item a{color:var(--textColor)!important}
+.breadcrumb-item a:hover{color:var(--linkColor)!important}
+.breadcrumb-item.active{color:var(--textColor)!important}
+.breadcrumb-item{max-width:220px;display:inline-block;text-overflow:ellipsis;white-space:nowrap!important;overflow:hidden!important;line-height:30px}
+.breadcrumb i{font-size:13px;line-height:13px}
+.breadcrumb-item + .breadcrumb-item::before{float:right;content:"\f100";font-family:"FontAwesome";vertical-align:middle;color:var(--textColor)!important;padding-right:3px;margin-left:3px!important}
+
+
+.def_heading h1{
+    font-size: 30px;
+    color: var(--linkColor);
+}
+.def_heading p{
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--textColor);
+}
+
