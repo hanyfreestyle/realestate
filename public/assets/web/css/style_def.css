@@ -63,7 +63,19 @@ div.hide_text_but{display:none}
 .def_h2_blocks{
     font-size:25px;
     margin-bottom: 15px;
+}
+.def_h2_out{
+    font-size:25px;
+    margin-bottom: 15px;
+}
+.best_compounds_in{
+    font-size:25px;
 
+}
+
+.def_units_name{
+    font-size: 20px;
+    line-height: 30px;
 }
 
 

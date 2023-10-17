@@ -99,7 +99,13 @@ class Listing extends Model implements TranslatableContract
     }
 
 
-
+    public function units():HasMany
+    {
+        return $this->hasMany(Listing::class,'parent_id','id')
+            ->where('is_published',true)
+            ->with('translation')
+            ;
+    }
 
 
 

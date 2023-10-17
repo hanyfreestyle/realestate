@@ -22,6 +22,95 @@ body{font-family: 'Poppins', sans-serif!important; font-size:14px;}
 }
 
 
+@media (min-width: 1200px) {
+    .property-card--row .dotted-divider li+li {
+        -webkit-padding-start: 0.75rem;
+        padding-inline-start: 0.75rem;
+        -webkit-margin-start: 0.75rem;
+        margin-inline-start: 0.75rem;
+    }
+}
+@media (min-width: 1400px) {
+    .property-card--row .dotted-divider li+li {
+        -webkit-padding-start: 1.25rem;
+        padding-inline-start: 1.25rem;
+        -webkit-margin-start: 1.25rem;
+        margin-inline-start: 1.25rem;
+    }
+}
+
+
+
+.dotted-divider li+li {
+    -webkit-padding-start: 0.75rem;
+    padding-inline-start: 0.75rem;
+    -webkit-margin-start: 0.75rem;
+    margin-inline-start: 0.75rem;
+    position: relative;
+    isolation: isolate;
+}
+.dotted-divider li+li ::before {
+    content: "";
+    width: 1px;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block: 0;
+    background-image: linear-gradient(hsl(var(--neutral-200)) 33%, transparent 0%);
+    background-position: right;
+    background-size: 1px 0.5rem;
+    background-repeat: repeat-y;
+}
+@media (min-width: 375px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 0.75rem;
+        padding-inline-start: 0.75rem;
+        -webkit-margin-start: 1rem;
+        margin-inline-start: 1rem;
+    }
+}
+@media (min-width: 410px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 1.5rem;
+        padding-inline-start: 1.5rem;
+        -webkit-margin-start: 1.5rem;
+        margin-inline-start: 1.5rem;
+    }
+}
+@media (min-width: 768px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 1rem;
+        padding-inline-start: 1rem;
+        -webkit-margin-start: 1rem;
+        margin-inline-start: 1rem;
+    }
+}
+@media (min-width: 992px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 1.75rem;
+        padding-inline-start: 1.75rem;
+        -webkit-margin-start: 1.75rem;
+        margin-inline-start: 1.75rem;
+    }
+}
+@media (min-width: 1200px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 1rem;
+        padding-inline-start: 1rem;
+        -webkit-margin-start: 1rem;
+        margin-inline-start: 1rem;
+    }
+}
+@media (min-width: 1400px) {
+    .dotted-divider li+li {
+        -webkit-padding-start: 1.65rem;
+        padding-inline-start: 1.65rem;
+        -webkit-margin-start: 1.65rem;
+        margin-inline-start: 1.65rem;
+    }
+}
+
+
+
 
 
 

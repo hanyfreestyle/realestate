@@ -142,9 +142,12 @@ class PageController extends WebMainController
             $project_tag = Listing::query()
                 ->where('id',$post->listing_id)
                 ->with('developerName')
+                ->withCount('units')
+                ->with('units')
+                ->with('locationName')
                 ->first();
         }
-//dd($project_tag->amenity);
+
 
         if($post->location_id == null){
             $relatedProjects = null;
@@ -163,12 +166,16 @@ class PageController extends WebMainController
 
 
         }
-//        compact('post','project_tag','relatedProjects','Category')
+
+       // dd($relatedProjects);
+
+
         return view('web.blog_view')->with(
             [
              'post'=>$post,
              'category'=>$category,
              'project_tag'=>$project_tag,
+             'relatedProjects'=>$relatedProjects,
             ]
         );
     }
