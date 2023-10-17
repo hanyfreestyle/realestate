@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const teamSliderInit = new Swiper(teamSlider, {
       loop: true,
       slidesPerView: 2,
-      spaceBetween: 16,
+      spaceBetween: 10,
       pagination: {
         el: '.team-slider__pagination',
         clickable: true
@@ -407,7 +407,7 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         768: {
           slidesPerView: 2,
-          spaceBetween: 24
+          spaceBetween: 10
         },
         992: {
           slidesPerView: 4
@@ -417,7 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         1400: {
           slidesPerView: 5,
-          spaceBetween: 24
+          spaceBetween: 10
         }
       }
     })

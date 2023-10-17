@@ -65,4 +65,10 @@
         </div>
     </div>
 
+
+
+    <x-blog.related-posts-slider :posts="$relatedPosts" titel="{{__('web/blog.related-news')}}" />
+
+    <x-blog.other-projects :projects="$other_project" titel="{{__('web/blog.other-projects')}}" />
+
 @endsection

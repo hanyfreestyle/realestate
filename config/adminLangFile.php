@@ -24,6 +24,7 @@ return [
         '6'=> ['id'=> '6' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'stickyBar','name'=>'Sticky Footer' ],
         '7'=> ['id'=> '7' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'developer','name'=>'Developer' ],
         '8'=> ['id'=> '8' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'blog','name'=>'Blog' ],
+        '9'=> ['id'=> '9' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'home','name'=>'Home Page' ],
 
     ],
 

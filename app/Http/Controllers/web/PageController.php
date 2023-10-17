@@ -5,6 +5,7 @@ use App\Http\Controllers\WebMainController;
 use App\Models\admin\Category;
 use App\Models\admin\Developer;
 use App\Models\admin\Listing;
+use App\Models\admin\Location;
 use App\Models\admin\Post;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,36 @@ class PageController extends WebMainController
     {
        $Meta = parent::getMeatByCatId('home');
        parent::printSeoMeta($Meta);
-       return view('web.index');
+
+
+        $relatedPosts = Post::def()
+            ->orderBy('id','desc')
+            ->limit('10')
+            ->get();
+
+
+        $locations = Location::query()
+            ->where('is_active',true)
+            ->orderBy('id','desc')
+            ->limit('10')
+            ->get();
+
+        $developers = Developer::query()
+            ->where('is_active',true)
+            ->orderBy('units_count','desc')
+            ->limit('10')
+            ->get();
+
+
+
+
+        return view('web.index')->with(
+           [
+              'relatedPosts'=>$relatedPosts,
+              'locations'=>$locations,
+              'developers'=>$developers,
+           ]
+       );
     }
 
 
@@ -167,7 +197,25 @@ class PageController extends WebMainController
 
         }
 
-       // dd($relatedProjects);
+
+        $relatedPosts = Post::def()
+            ->where('category_id',$category->id)
+            ->where('id','!=',$post->id)
+            ->with('getCatName')
+            ->orderBy('id','desc')
+            ->limit('10')
+            ->get();
+
+
+
+        $other_project = Listing::query()
+            ->where('parent_id',null)
+            ->where('is_published',true)
+            ->inRandomOrder()
+            ->limit(6)
+            ->get();
+//dd($other_project);
+
 
 
         return view('web.blog_view')->with(
@@ -176,6 +224,8 @@ class PageController extends WebMainController
              'category'=>$category,
              'project_tag'=>$project_tag,
              'relatedProjects'=>$relatedProjects,
+             'relatedPosts'=>$relatedPosts,
+             'other_project'=>$other_project,
             ]
         );
     }

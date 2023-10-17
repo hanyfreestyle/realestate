@@ -1648,21 +1648,7 @@ small,
     background-color: hsl(var(--neutral-0));
   }
 }
-.team-slider__pagination {
-  bottom: -40px !important;
-}
-.team-slider__pagination .swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
-  opacity: 1;
-  background-color: hsl(var(--neutral-40));
-}
-.team-slider__pagination .swiper-pagination-bullet-active {
-  width: 1.75rem;
-  height: 0.75rem;
-  border-radius: 1rem;
-  background-color: hsl(var(--primary-300));
-}
+
 .about-tab {
   flex-direction: row;
   flex-wrap: wrap;
