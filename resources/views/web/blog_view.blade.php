@@ -5,6 +5,7 @@
         {{ Breadcrumbs::render('post_view',$category,$post) }}
     </x-web.block-breadcrumbs>
 
+    
     <div class="BlogView bg-primary-5p">
         <div class="container">
             <div class="row g-4">
