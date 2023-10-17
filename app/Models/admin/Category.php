@@ -22,21 +22,26 @@ class Category extends Model implements TranslatableContract
     protected $table = "categories";
     protected $primaryKey = 'id';
 
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| # setActive
     public function setActive(bool $status = true): self
     {
         return $this->setAttribute('is_active', $status);
     }
 
 
-    public function post_count() :HasMany
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #
+    public function posts() :HasMany
     {
-      return $this->hasMany(Post::class,'category_id','id')->where('is_published', true)
-
-
-
-          ;
+        return $this->hasMany(Post::class,'category_id','id')
+            ->where('is_published', true)
+            ->translatedIn()
+            ->with('translation')
+            ;
     }
+
+
 
 
 

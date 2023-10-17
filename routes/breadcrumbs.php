@@ -26,22 +26,16 @@ Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
     $trail->parent('home');
     $trail->push(__('web/blog.breadcrumbs'), route('page_blog'));
 });
-/*
-
 
 Breadcrumbs::for('blogCatList', function (BreadcrumbTrail $trail, $Category) {
     $trail->parent('blog');
-    $trail->push($Category->name, route('blogCatList', $Category->slug));
+    $trail->push($Category->name, route('page_blogCatList', $Category->slug));
 });
 
 Breadcrumbs::for('post_view', function (BreadcrumbTrail $trail, $Category,$Post) {
     $trail->parent('blog');
-    $trail->push($Category->name, route('blogCatList', $Category->slug));
-    $trail->push($Post->name, route('blogCatList', $Post->slug));
+    $trail->push($Category->name, route('page_blogCatList', $Category->slug));
+    $trail->push($Post->name, route('page_blogCatList', $Post->slug));
 });
 
-
-
-
-*/
 

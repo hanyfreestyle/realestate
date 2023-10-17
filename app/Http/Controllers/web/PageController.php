@@ -87,100 +87,71 @@ class PageController extends WebMainController
 #|||||||||||||||||||||||||||||||||||||| #     BlogPageList
     public function BlogPageList()
     {
-
         $Meta = parent::getMeatByCatId('blog');
         parent::printSeoMeta($Meta,'blog');
 
-
-        $Posts = Post::query()
-            ->where('is_published' ,true)
-            ->translatedIn()
-           // ->translated()
-
-            ->with('translation')
-
-
-            //->whereTranslation('name','!=','كل ما تريد معرفته عن مدينة الجلالة العين السخنة')
+        $posts = Post::def()
             ->with('getCatName')
             ->orderBy('id','desc')
             ->paginate(4);
-
-       // dd($Posts);
-
-        $Categories = Category::query()
-            ->where('is_active',true)
-            ->withCount('post_count')
-            ->with('translation')
-            ->get()
-        ;
-
-        return view('web.blog_index',compact('Posts','Categories'));
-
+        return view('web.blog_index',compact('posts'));
     }
+
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     text
+#|||||||||||||||||||||||||||||||||||||| #     BlogCatList
     public function BlogCatList($catSlug)
     {
-        $Category = Category::query()
+        $category = Category::query()
             ->where('is_active',true)
             ->where('slug',$catSlug)
-          //  ->withCount('post_count')
-           // ->with('translation')
             ->firstOrFail();
-        ;
+        parent::printSeoMeta($category,'blog');
 
-        parent::printSeoMeta($Category,'blog');
-
-
-        $Posts = Post::query()
-            ->where('is_published',true)
-            ->where('category_id',$Category->id)
-
-            ->with('translation')
+        $posts = Post::def()
+            ->where('category_id',$category->id)
             ->with('getCatName')
             ->orderBy('id','desc')
-            ->paginate(12);
-        return view('web.blog_cat_index',compact('Posts','Category'));
+            ->paginate(9);
+
+        return view('web.blog_cat_index',compact('posts','category'));
 
     }
-
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text
     public function BlogView($catSlug,$postSlug)
     {
 
-        $Post = Post::query()
+        $post = Post::query()
             ->where('slug',$postSlug)
-            ->with('getLoationName')
+            ->with('location')
             ->firstOrFail()
         ;
-        parent::printSeoMeta($Post,'blog');
+        parent::printSeoMeta($post,'blog');
 
-        $Category = Category::query()
+        $category = Category::query()
             ->where('is_active',true)
             ->where('slug',$catSlug)
             ->firstOrFail();
         ;
 
 
-        if($Post->listing_id == null){
+        if($post->listing_id == null){
             $project_tag = null ;
         }else{
             $project_tag = Listing::query()
-                ->where('id',$Post->listing_id)
+                ->where('id',$post->listing_id)
                 ->with('developerName')
                 ->first();
-            ;
         }
+//dd($project_tag->amenity);
 
-
-        if($Post->location_id == null){
+        if($post->location_id == null){
             $relatedProjects = null;
         }else{
             $relatedProjects = Listing::query()
                 ->where('listing_type','Project')
-                ->where('location_id',$Post->location_id)
+                ->where('location_id',$post->location_id)
                 ->with('locationName')
                 ->limit(10)
                 ->get();
@@ -192,11 +163,14 @@ class PageController extends WebMainController
 
 
         }
-
-
-
-
-        return view('web.blog_view',compact('Post','project_tag','relatedProjects','Category'));
+//        compact('post','project_tag','relatedProjects','Category')
+        return view('web.blog_view')->with(
+            [
+             'post'=>$post,
+             'category'=>$category,
+             'project_tag'=>$project_tag,
+            ]
+        );
     }
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text

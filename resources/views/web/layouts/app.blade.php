@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_old.css') }}">
+{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_old.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
     @livewireStyles
 </head>
@@ -53,7 +53,7 @@
     };
     loadarfont_en();
 </script>
-
+<x-js.show-more-show-less/>
 @livewireScripts
 <script>
     document.addEventListener('livewire:load', () => {

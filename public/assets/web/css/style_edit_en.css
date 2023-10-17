@@ -3,7 +3,7 @@ body{font-family: 'Poppins', sans-serif!important; font-size:14px;}
 .breadcrumb-item + .breadcrumb-item::before{float:left;content:"\f101";padding-right:0!important;margin-left:0!important;padding-left:3px;margin-right:3px!important}
 .developer_col h2{font-size:16px}
 .developer_col .icons_div span{text-align:left;font-size:14px}
-
+.ButDivCon .show_text_but,.ButDivCon .hide_text_but{float:right}
 
 .def_heading h1{
     font-size: 30px;
@@ -14,6 +14,13 @@ body{font-family: 'Poppins', sans-serif!important; font-size:14px;}
     line-height: 30px;
     color: var(--textColor);
 }
+
+
+.BlogList-col9 .read_more a{
+    float: right;
+    font-size: 14px!important;
+}
+
 
 
 

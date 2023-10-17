@@ -102,7 +102,7 @@ public function scopeGetDeveloperList(Builder $query): Builder
         $str = $this->des ;
         $str = strip_tags($str);
         $str = str_replace('&nbsp;', ' ', $str);
-        return Str::limit($str,160);
+        return Str::limit($str,250);
     }
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text

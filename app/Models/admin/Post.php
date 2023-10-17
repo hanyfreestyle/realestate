@@ -2,6 +2,8 @@
 
 namespace App\Models\admin;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Astrotomic\Translatable\Contracts\Translatable as TranslatableContract;
@@ -50,7 +52,7 @@ class Post extends Model implements TranslatableContract
         $str = strip_tags($str);
         $str = str_replace('&nbsp;', ' ', $str);
        # return Str::words($str,500);
-        return Str::limit($str,160);
+        return Str::limit($str,220);
     }
 
 
@@ -69,4 +71,29 @@ class Post extends Model implements TranslatableContract
 
     }
 
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| # scopeDef
+    public function scopeDef(Builder $query): Builder
+    {
+        return $query
+            ->where('is_published' ,true)
+            ->translatedIn()
+            ->with('translation');
+    }
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| # location
+    public function location()
+    {
+        return $this->belongsTo(Location::class,'location_id','id');
+    }
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #
+    public function getFormatteDate()
+    {
+        return Carbon::parse($this->published_at)->locale(app()->getLocale())->translatedFormat('jS F Y') ;
+    }
 }

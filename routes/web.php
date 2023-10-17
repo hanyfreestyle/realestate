@@ -27,6 +27,11 @@ Route::group(['middleware' => ['auth','status']], function() {
         Route::get('/developers/{slug}', [PageController::class, 'DeveloperView'])->name('page_developer_view');
 
         Route::get('/blog', [PageController::class, 'BlogPageList'])->name('page_blog');
+        Route::get('/blog/{catSlug}', [PageController::class, 'BlogCatList'])->name('page_blogCatList');
+        Route::get('/blog/{catSlug}/{postSlug}', [PageController::class, 'BlogView'])->name('page_blogView');
+
+
+
 
 
         Route::get('/contact-us', [PageController::class, 'contactUs'])->name('menu-contact-us');
@@ -36,8 +41,8 @@ Route::group(['middleware' => ['auth','status']], function() {
 
 
 
-        Route::get('/blog/{catSlug}', [PageController::class, 'BlogCatList'])->name('blogCatList');
-        Route::get('/blog/{catSlug}/{postSlug}', [PageController::class, 'BlogView'])->name('blogView');
+
+
 
     });
 });
