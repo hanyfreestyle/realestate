@@ -274,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       slidesPerView: 1,
       spaceBetween: 16,
-      centeredSlides: true,
+      centeredSlides: false,
       centeredSlidesBounds: true,
       pagination: {
         el: '.location-slider__pagination',

@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminMainController;
 use App\Http\Controllers\Controller;
 use App\Models\admin\Developer;
 use App\Models\admin\Listing;
+use App\Models\admin\Location;
 use DB;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,27 @@ class UpdateListingDataController extends AdminMainController
         }
 
 
-        //dd($Developers);
+        $Locations = Location::withTrashed()->get();
+
+        foreach ($Locations as $Location){
+
+            $projects_count = Listing::where('listing_type','=','Project')
+                ->where('is_published', true)
+                ->where('location_id',$Location->id)
+                ->count();
+
+            $units_count = Listing::where('listing_type','!=','Project')
+                ->where('is_published', true)
+                ->where('location_id',$Location->id)
+                ->count();
+
+            $Location->projects_count = $projects_count;
+            $Location->units_count = $units_count;
+            $Location->save();
+
+        }
+
+
 
 
 

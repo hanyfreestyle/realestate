@@ -28,7 +28,8 @@ class PageController extends WebMainController
 
         $locations = Location::query()
             ->where('is_active',true)
-            ->orderBy('id','desc')
+            ->where('is_home',true)
+            ->orderBy('projects_count','desc')
             ->limit('10')
             ->get();
 

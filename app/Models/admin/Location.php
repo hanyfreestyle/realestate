@@ -23,17 +23,6 @@ class Location extends Model implements TranslatableContract
     protected $primaryKey = 'id';
 
 
-    public function setActive(bool $status = true): self
-    {
-        return $this->setAttribute('is_active', $status);
-    }
-
-    public function setSearchable(bool $status = true): self
-    {
-        return $this->setAttribute('is_searchable', $status);
-    }
-
-
     public function locations()
     {
         return $this->hasMany(Location::class,'parent_id');

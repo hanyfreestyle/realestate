@@ -55,8 +55,8 @@
             <div class="row">
                 <x-form-check-active :row="$location" name="is_active" page-view="{{$pageData['ViewType']}}"/>
                 <x-form-check-active :row="$location" name="is_searchable" :defstatus="false" lable="{{ __('admin/project.searchable') }}" page-view="{{$pageData['ViewType']}}"/>
-
-            </div>
+                <x-form-check-active :row="$location" name="is_home" lable="عرض فى الصفحة الرئيسية" page-view="{{$pageData['ViewType']}}"/>
+           </div>
 
             <hr>
             <x-form-upload-file view-type="{{$pageData['ViewType']}}" :row-data="$location"

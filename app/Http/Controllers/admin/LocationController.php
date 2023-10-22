@@ -92,8 +92,11 @@ class LocationController extends AdminMainController
 
         $saveData =  Location::findOrNew($id);
         $saveData->slug = AdminHelper::Url_Slug($request->slug);
-        $saveData->setActive((bool) request('is_active', false));
-        $saveData->setSearchable((bool) request('is_searchable', false));
+        $saveData->is_active = intval((bool) $request->input( 'is_active'));
+        $saveData->is_searchable = intval((bool) $request->input( 'is_searchable'));
+        $saveData->is_home = intval((bool) $request->input( 'is_home'));
+
+
         $saveData->projects_type = $request->projects_type ;
         $saveData->latitude = $request->latitude ;
         $saveData->longitude  = $request->longitude  ;

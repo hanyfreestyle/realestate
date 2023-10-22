@@ -34,22 +34,24 @@
                                     <thead>
                                     <tr>
                                         <th class="TD_20">#</th>
+                                        <th class="tbutaction TD_50"></th>
                                         <th>{{__('admin/def.form_name_ar')}}</th>
                                         <th>{{__('admin/def.form_name_en')}}</th>
                                         <th>Parent</th>
+                                        <th></th>
+
 
                                         @if($pageData['ViewType'] == 'deleteList')
                                             <th>{{ __('admin/page.del_date') }}</th>
                                             <th></th>
                                             <th></th>
                                         @else
-                                            {{-- <th>{{__('admin/def.status')}}</th>--}}
-                                            <th>{{__('admin/def.photo')}}</th>
+
                                             @can('location_edit')
-                                                <th class="tbutaction"></th>
+                                                <th class="tbutaction TD_50"></th>
                                             @endcan
                                             @can('location_delete')
-                                                <th class="tbutaction"></th>
+                                                <th class="tbutaction TD_50"></th>
                                             @endcan
                                         @endif
 
@@ -59,6 +61,7 @@
                                     @foreach($locations as $row)
                                         <tr>
                                             <td>{{$row->id}}</td>
+                                            <td class="tc">{!! \App\Helpers\AdminHelper::printTableImage($row,'photo') !!} </td>
                                             <td>{{$row->translate('ar')->name}}</td>
                                             <td>{{$row->translate('en')->name}}</td>
                                             <th>
@@ -66,18 +69,18 @@
                                                     {{ $row->parentName->translate('en')->name }}
                                                 @endif
                                             </th>
+                                            <td class="tc" >{!! is_active($row->is_active) !!}</td>
+
                                             @if($pageData['ViewType'] == 'deleteList')
                                                 <td>{{$row->deleted_at}}</td>
                                                 <td class="tc"><x-action-button url="{{route('location.restore',$row->id)}}" type="restor" /></td>
                                                 <td class="tc"><x-action-button url="#" id="{{route('location.force',$row->id)}}" type="deleteSweet"/></td>
                                             @else
-                                                {{-- <td class="tc" > <x-ajax-update-status-but :row="$row" role="location_edit" /> </td>--}}
-                                                <td class="tc">{!! \App\Helpers\AdminHelper::printTableImage($row,'photo') !!} </td>
                                                 @can('location_edit')
-                                                    <td class="tc"><x-action-button url="{{route('location.edit',$row->id)}}" type="edit" :tip="false" /></td>
+                                                    <td class="tc"><x-action-button url="{{route('location.edit',$row->id)}}" type="edit" :tip="true" /></td>
                                                 @endcan
                                                 @can('location_delete')
-                                                    <td class="tc"><x-action-button url="#" id="{{route('location.destroy',$row->id)}}" type="deleteSweet"/></td>
+                                                    <td class="tc"><x-action-button url="#" id="{{route('location.destroy',$row->id)}}" :tip="true" type="deleteSweet"/></td>
                                                 @endcan
                                             @endif
 
