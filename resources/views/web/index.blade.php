@@ -4,9 +4,9 @@
 @include('web.layouts.inc.home_slider')
 
 
-{{--<x-home.featured-locations/>--}}
+<x-home.featured-locations/>
 
-<x-featured-locations/>
+{{--<x-featured-locations/>--}}
 
 
 <div class="section-space">

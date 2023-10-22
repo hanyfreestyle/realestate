@@ -23,17 +23,11 @@ class FeaturedLocations extends Component
 
         $this->locations = $locations ;
 
-//        dd($locations);
-
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
+ 
     public function render(): View|Closure|string
     {
-
-        dd('hi');
-        //return view('components.home.featured-locations');
+        return view('components.home.featured-locations');
     }
 }
