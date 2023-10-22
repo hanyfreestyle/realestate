@@ -24,9 +24,9 @@ return new class extends Migration
             $table->boolean("is_active")->default(true);
             $table->boolean("is_searchable")->default(false);
 
-            $table->integer("is_home")->nullable()->default(1);
-            $table->integer("projects_count")->nullable()->default(0);
-            $table->integer("units_count")->nullable()->default(0);
+            $table->integer("is_home")->nullable();
+            $table->integer("projects_count")->nullable();
+            $table->integer("units_count")->nullable();
 
 
             $table->softDeletes();
