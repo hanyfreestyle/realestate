@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components;
 
 use App\Models\admin\Location;
 use Closure;
@@ -26,14 +26,11 @@ class FeaturedLocations extends Component
 //        dd($locations);
 
     }
-
     /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|Closure|string
     {
-
-        dd('hi');
-        //return view('components.home.featured-locations');
+        return view('components.featured-locations');
     }
 }
