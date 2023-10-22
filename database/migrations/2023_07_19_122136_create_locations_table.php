@@ -28,6 +28,7 @@ return new class extends Migration
             $table->integer("projects_count")->nullable()->default(0);
             $table->integer("units_count")->nullable()->default(0);
 
+
             $table->softDeletes();
             $table->timestamps();
 
