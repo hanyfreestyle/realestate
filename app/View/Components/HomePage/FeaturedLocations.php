@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\home;
+namespace App\View\Components\HomePage;
 
 use App\Models\admin\Location;
 use Closure;
@@ -24,9 +24,8 @@ class FeaturedLocations extends Component
 
     }
 
-
     public function render(): View|Closure|string
     {
-        return view('components.home.featured-locations');
+        return view('components.home-page.featured-locations');
     }
 }
