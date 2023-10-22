@@ -10,24 +10,27 @@ use Illuminate\View\Component;
 class BlockCategoryList extends Component
 {
 
-
+    public $categories ;
     public function __construct(
-
+        $categories = array(),
     )
     {
-
+//        $categories = Category::query()
+//            ->where('is_active',true)
+//            ->withCount('posts')
+//            ->with('translation')
+//            ->orderBy('posts_count','desc')
+//            ->get();
+//
+//        dd($categories);
+        $this->categories = $categories ;
     }
 
 
     public function render(): View|Closure|string
     {
-        $categories = Category::query()
-            ->where('is_active',true)
-            ->withCount('posts')
-            ->with('translation')
-            ->orderBy('posts_count','desc')
-            ->get();
 
-        return view('components.blog.block-category-list',compact('categories'));
+
+        return view('components.blog.block-category-list');
     }
 }

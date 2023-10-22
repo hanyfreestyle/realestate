@@ -124,7 +124,16 @@ class PageController extends WebMainController
             ->with('getCatName')
             ->orderBy('id','desc')
             ->paginate(4);
-        return view('web.blog_index',compact('posts'));
+
+        $categories = Category::query()
+            ->where('is_active',true)
+            ->withCount('posts')
+            ->with('translation')
+            ->orderBy('posts_count','desc')
+            ->get();
+
+
+        return view('web.blog_index',compact('posts','categories'));
     }
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -143,7 +152,14 @@ class PageController extends WebMainController
             ->orderBy('id','desc')
             ->paginate(9);
 
-        return view('web.blog_cat_index',compact('posts','category'));
+        $categories = Category::query()
+            ->where('is_active',true)
+            ->withCount('posts')
+            ->with('translation')
+            ->orderBy('posts_count','desc')
+            ->get();
+
+        return view('web.blog_cat_index',compact('posts','category','categories'));
 
     }
 

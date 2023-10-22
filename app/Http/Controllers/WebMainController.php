@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\AdminHelper;
+use App\Models\admin\config\Amenity;
 use App\Models\admin\config\DefPhoto;
 use App\Models\admin\config\MetaTag;
 
@@ -34,6 +35,9 @@ class WebMainController extends Controller
 
         $DefPhotoList = self::getDefPhotoList($stopCash);
         View::share('DefPhotoList', $DefPhotoList);
+
+        $amenities = Amenity::all();
+        View::share('amenities', $amenities);
 
 //        dd($DefPhotoList);
 

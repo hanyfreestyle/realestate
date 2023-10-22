@@ -31,6 +31,6 @@
             </div>
         </div>
         <hr>
-        <x-blog.block-category-list/>
+        <x-blog.block-category-list :categories="$categories"/>
     </div>
 @endsection
