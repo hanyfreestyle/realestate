@@ -5,7 +5,6 @@ use App\Http\Controllers\WebMainController;
 use App\Models\admin\Category;
 use App\Models\admin\Developer;
 use App\Models\admin\Listing;
-use App\Models\admin\Location;
 use App\Models\admin\Post;
 use Illuminate\Http\Request;
 
@@ -19,34 +18,14 @@ class PageController extends WebMainController
        $Meta = parent::getMeatByCatId('home');
        parent::printSeoMeta($Meta);
 
-
         $relatedPosts = Post::def()
             ->orderBy('id','desc')
             ->limit('10')
             ->get();
 
-
-        $locations = Location::query()
-            ->where('is_active',true)
-//            ->where('is_home',true)
-            ->orderBy('projects_count','desc')
-            ->limit('10')
-            ->get();
-
-        $developers = Developer::query()
-            ->where('is_active',true)
-            ->orderBy('units_count','desc')
-            ->limit('10')
-            ->get();
-
-
-
-
         return view('web.index')->with(
            [
               'relatedPosts'=>$relatedPosts,
-              'locations'=>$locations,
-              'developers'=>$developers,
            ]
        );
     }
@@ -126,15 +105,7 @@ class PageController extends WebMainController
             ->orderBy('id','desc')
             ->paginate(4);
 
-        $categories = Category::query()
-            ->where('is_active',true)
-            ->withCount('posts')
-            ->with('translation')
-            ->orderBy('posts_count','desc')
-            ->get();
-
-
-        return view('web.blog_index',compact('posts','categories'));
+        return view('web.blog_index',compact('posts'));
     }
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -153,14 +124,9 @@ class PageController extends WebMainController
             ->orderBy('id','desc')
             ->paginate(9);
 
-        $categories = Category::query()
-            ->where('is_active',true)
-            ->withCount('posts')
-            ->with('translation')
-            ->orderBy('posts_count','desc')
-            ->get();
 
-        return view('web.blog_cat_index',compact('posts','category','categories'));
+
+        return view('web.blog_cat_index',compact('posts','category'));
 
     }
 
@@ -231,9 +197,6 @@ class PageController extends WebMainController
             ->inRandomOrder()
             ->limit(6)
             ->get();
-//dd($other_project);
-
-
 
         return view('web.blog_view')->with(
             [

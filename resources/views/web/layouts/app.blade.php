@@ -35,6 +35,7 @@
 <script src="{{ defWebAssets('js/leaflet.js') }}"></script>
 <script src="{{ defWebAssets('js/plugins.js') }}"></script>
 <script src="{{ defWebAssets('js/app.js') }}"></script>
+<script src="{{ defWebAssets('js/app_slider.js') }}"></script>
 <script src="{{ defWebAssets('js/app_script.js') }}"></script>
 <script>
     async function loadarfont(){

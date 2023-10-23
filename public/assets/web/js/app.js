@@ -265,38 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
-  /**
-  * Discover New Location Slider
-  */
-  const locationSlider = document.querySelector('.location-slider');
-  if (locationSlider) {
-    const locationSliderInit = new Swiper(locationSlider, {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      centeredSlides: false,
-      centeredSlidesBounds: true,
-      pagination: {
-        el: '.location-slider__pagination',
-        type: 'bullets',
-        clickable: true
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2.5
-        },
-        992: {
-          slidesPerView: 3
-        },
-        1200: {
-          slidesPerView: 3.5
-        },
-        1400: {
-          slidesPerView: 4.5
-        }
-      }
-    })
-  }
+
 
 
   const projectSlider = document.querySelector('.project-Slider');
@@ -391,67 +360,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
   }
-  /**
-  * Team Slider
-  */
-  const teamSlider = document.querySelector('.team-slider')
-  if (teamSlider) {
-    const teamSliderInit = new Swiper(teamSlider, {
-      loop: true,
-      slidesPerView: 2,
-      spaceBetween: 10,
-      pagination: {
-        el: '.team-slider__pagination',
-        clickable: true
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 10
-        },
-        992: {
-          slidesPerView: 4
-        },
-        1200: {
-          slidesPerView: 5
-        },
-        1400: {
-          slidesPerView: 5,
-          spaceBetween: 10
-        }
-      }
-    })
-  }
 
-  const bloghSlider = document.querySelector('.blogh-slider')
-  if (bloghSlider) {
-    const teamSliderInit = new Swiper(bloghSlider, {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      pagination: {
 
-        el: '.blogh-slider__pagination',
-        clickable: true
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 24
-        },
-        992: {
-          slidesPerView: 4
-        },
-        1200: {
-          slidesPerView: 5
-        },
-        1400: {
-          slidesPerView: 2,
-          spaceBetween: 24
-        }
-      }
-    })
-  }
+
   /**
   * Accordion
   */
