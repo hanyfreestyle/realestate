@@ -60,36 +60,33 @@ class PageController extends WebMainController
 #|||||||||||||||||||||||||||||||||||||| #     DeveloperView
     public function DeveloperView($slug)
     {
-        $Developer = Developer::getDeveloperList()
+        $developer = Developer::getDeveloperList()
             ->where('slug',$slug)
             ->firstOrFail();
 
-        parent::printSeoMeta($Developer,'developer');
+        parent::printSeoMeta($developer,'developer');
 
-       $Projects= Listing::query()
-            ->where('developer_id',$Developer->id)
+       $projects= Listing::def()
+            ->where('developer_id',$developer->id)
             ->where('listing_type','Project')
-            ->with('locationName')
             ->orderBy('id','desc')
-            ->paginate(12, ['*'], 'compound_page')
-        ;
+            ->paginate(12, ['*'], 'compound_page');
 
 
-        $Units= Listing::query()
-            ->where('developer_id',$Developer->id)
+        $units= Listing::def()
+            ->where('developer_id',$developer->id)
             ->where('listing_type','Unit')
             ->orderBy('id','desc')
-            ->paginate(12, ['*'], 'property_page')
-        ;
+            ->paginate(12, ['*'], 'property_page');
 
-        $Posts = Post::query()
-            ->where('developer_id',$Developer->id)
-            ->orderBy('id','asc')
-            ->limit(10)
-            ->get()
-        ;
+        $posts = Post::def()
+            ->where('developer_id',$developer->id)
+            ->with('getCatName')
+            ->orderBy('published_at','desc')
+            ->limit(15)
+            ->get();
 
-     return view('web.developers_view',compact('Developer','Projects','Units','Posts'));
+     return view('web.developers_view',compact('developer','projects','units','posts'));
     }
 
 

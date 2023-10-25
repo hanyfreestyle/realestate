@@ -9,11 +9,12 @@ return
 	'project' => 'Projects',
 	'projects-news' => 'Compounds projects news',
 	'published-at' => 'Published At',
+	'start-from' => 'Start from',
 	'starting-from' => 'Starting from',
 	'units' => 'Units',
 	'units-area' => 'M',
 	'units-bath' => 'Bath',
 	'units-read-more' => 'Read More',
 	'units-room' => 'Room',
-	'start-from' => 'Start from',
+	'view-all' => 'View All',
 ];

@@ -42,11 +42,6 @@
                         @endif
                     @endif
 
-
-
-
-
-
                 </div>
                 <div class="col-lg-4">
                     @if(count($relatedProjects)> 0)
@@ -54,8 +49,6 @@
                         <div class="row g-4 pb-5">
                             @foreach($relatedProjects as $project)
                                 <x-blog.related-projects-card :project="$project" />
-
-
                             @endforeach
                         </div>
                     @endif

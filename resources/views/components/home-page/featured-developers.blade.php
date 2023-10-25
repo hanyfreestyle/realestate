@@ -1,4 +1,4 @@
-<div class="section-space">
+<div class="section-space--sm pt-lg-0 mt-lg-0 mb-5">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7 col-xl-6">

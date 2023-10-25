@@ -27,7 +27,7 @@
 
                     <div class="col-xl-3 col-md-4 col-6 developer_col text-center">
                         <a href="{{route('page_developer_view',$developer->slug)}}">
-                            <div class="developer_img_div ">
+                            <div class="developer_img_div">
                                 <img src="{{getPhotoPath($developer->photo_thum_1,"developer")}}" alt="image" class="developer_list_img">
                             </div>
                         </a>

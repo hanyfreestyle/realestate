@@ -9,13 +9,16 @@ use Illuminate\View\Component;
 class RelatedProjectsCard extends Component
 {
     public $project;
+    public $cardstyle ;
 
     public function __construct(
         $project = array(),
+        $cardstyle = "",
 
     )
     {
         $this->project = $project;
+        $this->cardstyle = $cardstyle;
     }
 
     public function render(): View|Closure|string

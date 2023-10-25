@@ -1,6 +1,6 @@
 <div class="col-md-6 col-xl-12">
     <div class="listing-card listing_card_relatedProjects">
-        <div class="listing-card__img promax_h">
+        <div class="listing-card__img {{$cardstyle}}">
             <img src="{{getPhotoPath($project->photo,"blog")}}" alt="image" class="img-fluid w-100">
         </div>
         <div class="listing-card__content">
