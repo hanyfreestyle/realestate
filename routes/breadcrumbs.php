@@ -39,3 +39,17 @@ Breadcrumbs::for('post_view', function (BreadcrumbTrail $trail, $Category,$Post)
 });
 
 
+Breadcrumbs::for('CompoundsList', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push(__('web/compound.breadcrumbs'), route('page_compounds'));
+});
+
+
+Breadcrumbs::for('LocationView', function (BreadcrumbTrail $trail, $trees) {
+    $trail->parent('CompoundsList');
+    foreach($trees as $tree){
+        $trail->push($tree->name, route('page_locationView', $tree->slug));
+    }
+});
+
+

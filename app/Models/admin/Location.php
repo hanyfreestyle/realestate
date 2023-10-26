@@ -10,12 +10,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Staudenmeir\LaravelAdjacencyList\Eloquent\HasRecursiveRelationships;
 
 class Location extends Model implements TranslatableContract
 {
     use HasFactory;
     use SoftDeletes;
     use Translatable;
+    use HasRecursiveRelationships;
 
     public $translatedAttributes = ['name','g_title','g_des','body_h1','breadcrumb'];
     protected $fillable = ['slug','photo','photo_thum_1','is_active'];

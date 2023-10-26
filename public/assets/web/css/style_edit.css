@@ -484,3 +484,16 @@
 
 
 
+
+
+.projectCardInfo {
+    font-size: 15px;
+
+}
+
+.projectCardInfo .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(var(--tertiary-300));
+}
+

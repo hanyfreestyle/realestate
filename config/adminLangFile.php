@@ -25,6 +25,7 @@ return [
         '7'=> ['id'=> '7' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'developer','name'=>'Developer' ],
         '8'=> ['id'=> '8' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'blog','name'=>'Blog' ],
         '9'=> ['id'=> '9' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'home','name'=>'Home Page' ],
+        '10'=> ['id'=> '10' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'compound','name'=>'Compound' ],
 
     ],
 

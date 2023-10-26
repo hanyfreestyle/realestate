@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\blog;
+namespace App\View\Components\MainBlock;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class RelatedProjectsCard extends Component
+class ProjectCardPhoto extends Component
 {
     public $project;
     public $cardstyle ;
@@ -23,7 +23,6 @@ class RelatedProjectsCard extends Component
 
     public function render(): View|Closure|string
     {
-
-        return view('components.blog.related-projects-card');
+        return view('components.main-block.project-card-photo');
     }
 }

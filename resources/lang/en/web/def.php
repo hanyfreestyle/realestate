@@ -17,4 +17,5 @@ return
 	'units-read-more' => 'Read More',
 	'units-room' => 'Room',
 	'view-all' => 'View All',
+	'developed-by' => 'Developed by',
 ];

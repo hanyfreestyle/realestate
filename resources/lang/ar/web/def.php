@@ -17,4 +17,5 @@ return
 	'units-read-more' => 'عرض التفاصيل',
 	'units-room' => 'غرفة',
 	'view-all' => 'عرض الكل',
+	'developed-by' => 'المطور',
 ];

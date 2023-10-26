@@ -1,29 +1,24 @@
 <?php
 
-namespace App\View\Components\blog;
+namespace App\View\Components\MainBlock;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class RelatedProjectsCard extends Component
+class ProjectCard extends Component
 {
     public $project;
-    public $cardstyle ;
 
     public function __construct(
         $project = array(),
-        $cardstyle = "",
-
     )
     {
         $this->project = $project;
-        $this->cardstyle = $cardstyle;
     }
 
     public function render(): View|Closure|string
     {
-
-        return view('components.blog.related-projects-card');
+        return view('components.main-block.project-card');
     }
 }

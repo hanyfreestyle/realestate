@@ -29,14 +29,12 @@
                                             <div class="location-slider__content">
 
                                                 <div class="d-flex align-items-center justify-content-between w-100">
-                                                    <a href="#" class="link d-flex flex-column gap-1 clr-neutral-0
-                                                flex-grow-1">
+                                                    <a href="{{route('page_locationView',$location->slug)}}" class="link d-flex flex-column gap-1 clr-neutral-0 flex-grow-1">
                                                         <span class="d-block fs-20 fw-semibold"> {{$location->name}} </span>
                                                         <span class="d-block fs-14">{{$location->projects_count}} {{__('web/def.project')}} </span>
                                                         <span class="d-block fs-14">{{$location->units_count}} {{__('web/def.units')}} </span>
                                                     </a>
-                                                    <a href="#" class="link d-grid place-content-center w-9 h-9 border
-                                                border-primary-50 rounded-circle clr-primary-50 :bg-primary-300 flex-shrink-0">
+                                                    <a href="{{route('page_locationView',$location->slug)}}" class="link d-grid place-content-center w-9 h-9 border border-primary-50 rounded-circle clr-primary-50 :bg-primary-300 flex-shrink-0">
                                                         <span class="material-symbols-outlined mat-icon"> arrow_forward_ios </span>
                                                     </a>
                                                 </div>

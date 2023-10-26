@@ -82,19 +82,6 @@ class Developer extends Model implements TranslatableContract
 
 
 
-
-
-
-
-
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     text
-public function scopeGetDeveloperList(Builder $query): Builder
-{
-    return $query->where('is_active',true)
-        ->with('translation')
-        ->orderBy('projects_count','desc');
-}
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     seoDes
     public function seoDes():string
@@ -104,11 +91,16 @@ public function scopeGetDeveloperList(Builder $query): Builder
         $str = str_replace('&nbsp;', ' ', $str);
         return Str::limit($str,250);
     }
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     text
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text
+    public function scopeGetDeveloperList(Builder $query): Builder
+    {
+        return $query->where('is_active',true)
+            ->translatedIn()
+            ->with('translation')
+            ->orderBy('projects_count','desc');
+    }
 
 
 
