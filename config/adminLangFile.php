@@ -27,6 +27,7 @@ return [
         '9'=> ['id'=> '9' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'home','name'=>'Home Page' ],
         '10'=> ['id'=> '10' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'compound','name'=>'Compound' ],
         '11'=> ['id'=> '11' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'var','name'=>'Var' ],
+        '12'=> ['id'=> '12' , 'group'=>'web' , 'sub_dir'=> null , 'file_name'=> 'search','name'=>'Search' ],
 
     ],
 

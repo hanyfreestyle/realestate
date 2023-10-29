@@ -53,3 +53,12 @@ Breadcrumbs::for('LocationView', function (BreadcrumbTrail $trail, $trees) {
 });
 
 
+Breadcrumbs::for('ForSale', function (BreadcrumbTrail $trail) {
+    $trail->parent('home');
+    $trail->push(__('web/compound.breadcrumbs-for-sale'), route('page_for_sale'));
+});
+
+
+
+
+

@@ -1,0 +1,25 @@
+.property-search__select {
+    border: 1px solid hsl(var(--neutral-40));
+    background-color: hsl(var(--primary-300)/0.03);
+}
+.property-search__select .form-select {
+    min-width: 130px;
+    padding-block: 0.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.property-search__select .form-select:focus {
+    box-shadow: none;
+}
+.property-search__select .form-select option {
+    padding-block: 0.5rem;
+}
+
+
+
+
+
+.property-search__col_50{
+    width: 50%!important;
+}

@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-lg-4 mobile_stop">
                     <div class="section-space--smX">
-                        @include('web.blog_side_inc')
+                        <x-main-block.search-form-right />
                     </div>
                 </div>
             </div>

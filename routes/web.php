@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth','status']], function() {
 
 
         Route::get('/compounds', [WebCompoundController::class, 'CompoundsList'])->name('page_compounds');
+        Route::get('/for-sale', [WebCompoundController::class, 'ForSaleList'])->name('page_for_sale');
 
         Route::get('/{listingid}', [PageController::class, 'ListView'])
             ->name('page_ListView')->where('listingid','^(\d+)+[^\/]+$');

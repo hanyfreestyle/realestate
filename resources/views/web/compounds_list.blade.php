@@ -68,10 +68,7 @@
 
 
                 <div class="col-md-4">
-{{--                    <h3 class="def_h_rightSide">{{ __('web/developer.h1-news') }} {{$developer->name}}</h3>--}}
-{{--                    @foreach($posts as $post)--}}
-{{--                        <x-main-block.blog-post-right-side :post="$post" />--}}
-{{--                    @endforeach--}}
+                    <x-main-block.search-form-right />
                 </div>
 
             </div>

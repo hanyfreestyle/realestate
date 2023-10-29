@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_old.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
     @livewireStyles

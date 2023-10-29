@@ -52,6 +52,11 @@ class PageController extends WebMainController
             ->where('slug',$slug)
             ->firstOrFail();
 
+
+        parent::printSeoMeta($location,'developer');
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'Compounds' ;
+
         $trees = Location::find($location->id)->ancestorsAndSelf()->orderBy('depth','asc')->get() ;
 
         $listId = Location::find($location->id)->descendantsAndSelf()->orderBy('depth','asc')
@@ -79,6 +84,7 @@ class PageController extends WebMainController
 
         return view('web.location_view')->with(
             [
+                'pageView'=>$pageView,
                 'projects'=>$projects,
                 'units'=>$units,
                 'trees'=>$trees,
