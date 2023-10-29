@@ -8,8 +8,6 @@ use App\Models\admin\config\DefPhoto;
 use App\Models\admin\config\MetaTag;
 
 use App\Models\admin\config\Setting;
-use App\Models\admin\Location;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\View;
 use Phattarachai\LaravelMobileDetect\Agent;
@@ -21,6 +19,9 @@ use Artesaos\SEOTools\Facades\JsonLd;
 
 class WebMainController extends Controller
 {
+
+
+    public $pageView;
 
     public function __construct()
     {
@@ -41,8 +42,13 @@ class WebMainController extends Controller
         $amenities = Amenity::all();
         View::share('amenities', $amenities);
 
-//        dd($DefPhotoList);
+        $pageView = [
+            'SelMenu' => '',
+            'slug' => null,
+        ];
 
+        $this->pageView = $pageView ;
+        View::share('pageView', $pageView);
     }
 
 

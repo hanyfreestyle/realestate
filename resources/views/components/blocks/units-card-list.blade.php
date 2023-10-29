@@ -9,7 +9,7 @@
             </div>
 
             <a href="#" class="link property-card__tag d-inline-block bg-neutral-0 :bg-primary-300 clr-primary-300 :clr-neutral-0 py-2 px-4 rounded-pill fw-medium">
-                {{$unit->property_type}}
+                {{ getPropertyTypeName($unit->property_type) }}
             </a>
             <button class="property-card__fav w-10 h-10 rounded-circle bg-neutral-0 d-grid place-content-center border-0 clr-primary-300">
                 <span class="material-symbols-outlined mat-icon fw-200 property-card__heart"> favorite </span>
@@ -23,10 +23,12 @@
             <div class="property-card__body">
                 <div class="d-flex align-items-center gap-1 mb-2">
                     <span class="material-symbols-outlined mat-icon clr-tertiary-400"> distance </span>
-                    <span class="d-inline-block"><a href="#">{{$project->locationName->name}}</a></span>
+                    <span class="d-inline-block">
+                        <a href="{{route('page_locationView',$unit->locationName->slug)}}">{{$unit->locationName->name}}</a>
+                    </span>
                 </div>
 
-                <a href="#" class="link d-block clr-neutral-700 :clr-primary-300 fs-20 fw-medium mb-3">
+                <a href="{{route('page_ListView',$unit->slug)}}" class="link d-block clr-neutral-700 :clr-primary-300 fs-20 fw-medium mb-3">
                     <h3 class="def_units_name crop_line_2 ">{{$unit->name}}</h3>
                 </a>
 
@@ -83,7 +85,7 @@
                         </li>
                     </ul>
 
-                    <a href="#" class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
+                    <a href="{{route('page_ListView',$unit->slug)}}" class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
                         {{__('web/def.units-read-more')}}
                     </a>
                 </div>

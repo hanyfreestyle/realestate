@@ -51,12 +51,12 @@
                         </ul>
                     </div>
                     <ul class="list list-lg-row menu-nav order-lg-1">
-                        <li class="menu-list current-page"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.home')}} </a> </li>
-                        <li class="menu-list"><a href="{{route('page_compounds')}}" class="link menu-link "> {!! __('web/menu.egypt-s-compounds') !!} </a> </li>
-                        <li class="menu-list"><a href="{{route('page_blog')}}" class="link menu-link "> {{__('web/menu.blog')}} </a> </li>
-                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.properties-for-sale')}} </a> </li>
-                        <li class="menu-list"><a href="{{route('page_developers')}}" class="link menu-link ">{{__('web/menu.developer')}}  </a> </li>
-                        <li class="menu-list"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.contatc-us')}} </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'HomePage') current-page @endif"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.home')}} </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'Compounds') current-page @endif"><a href="{{route('page_compounds')}}" class="link menu-link "> {!! __('web/menu.egypt-s-compounds') !!} </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'Blog') current-page @endif"><a href="{{route('page_blog')}}" class="link menu-link "> {{__('web/menu.blog')}} </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'ForSale') current-page @endif"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.properties-for-sale')}} </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'Developers') current-page @endif"><a href="{{route('page_developers')}}" class="link menu-link ">{{__('web/menu.developer')}}  </a> </li>
+                        <li class="menu-list @if($pageView['SelMenu'] == 'Contact') current-page @endif"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.contatc-us')}} </a> </li>
                     </ul>
                 </nav>
             </div>

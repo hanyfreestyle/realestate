@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\web;
 
-use App\Http\Controllers\Controller;
+
 use App\Http\Controllers\WebMainController;
 use App\Models\admin\Category;
 use App\Models\admin\Listing;
@@ -19,18 +19,30 @@ class WebBlogController extends WebMainController
         $Meta = parent::getMeatByCatId('blog');
         parent::printSeoMeta($Meta,'blog');
 
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'Blog' ;
+
         $posts = Post::def()
             ->with('getCatName')
             ->orderBy('id','desc')
             ->paginate(4);
 
-        return view('web.blog_index',compact('posts'));
+        return view('web.blog_index')->with(
+            [
+                'pageView'=>$pageView,
+                'posts'=>$posts,
+            ]
+        );
     }
+
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     BlogCatList
     public function BlogCatList($catSlug)
     {
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'Blog' ;
+
         $category = Category::query()
             ->where('is_active',true)
             ->where('slug',$catSlug)
@@ -42,8 +54,14 @@ class WebBlogController extends WebMainController
             ->with('getCatName')
             ->orderBy('id','desc')
             ->paginate(9);
+        return view('web.blog_index_category')->with(
+            [
+                'pageView'=>$pageView,
+                'category'=>$category,
+                'posts'=>$posts,
+            ]
+        );
 
-        return view('web.blog_cat_index',compact('posts','category'));
 
     }
 
@@ -52,19 +70,19 @@ class WebBlogController extends WebMainController
 #|||||||||||||||||||||||||||||||||||||| #     text
     public function BlogView($catSlug,$postSlug)
     {
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'Blog' ;
 
         $post = Post::query()
             ->where('slug',$postSlug)
             ->with('location')
-            ->firstOrFail()
-        ;
+            ->firstOrFail();
         parent::printSeoMeta($post,'blog');
 
         $category = Category::query()
             ->where('is_active',true)
             ->where('slug',$catSlug)
             ->firstOrFail();
-        ;
 
 
         if($post->listing_id == null){
@@ -113,6 +131,7 @@ class WebBlogController extends WebMainController
 
         return view('web.blog_view')->with(
             [
+                'pageView'=>$pageView,
                 'post'=>$post,
                 'category'=>$category,
                 'project_tag'=>$project_tag,

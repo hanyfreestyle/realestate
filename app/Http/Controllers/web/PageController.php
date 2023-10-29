@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\web;
 use App\Http\Controllers\WebMainController;
-use App\Models\admin\Category;
 
-use App\Models\admin\Developer;
 use App\Models\admin\Listing;
 use App\Models\admin\Location;
 use App\Models\admin\Post;
@@ -20,6 +18,9 @@ class PageController extends WebMainController
        $Meta = parent::getMeatByCatId('home');
        parent::printSeoMeta($Meta);
 
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'HomePage' ;
+
         $relatedPosts = Post::def()
             ->orderBy('id','desc')
             ->limit('10')
@@ -27,24 +28,11 @@ class PageController extends WebMainController
 
         return view('web.index')->with(
            [
-              'relatedPosts'=>$relatedPosts,
+               'pageView'=>$pageView,
+               'relatedPosts'=>$relatedPosts,
            ]
        );
     }
-
-
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     index
-    public function contactUs()
-    {
-        $Meta = parent::getMeatByCatId('contact-us');
-        parent::printSeoMeta($Meta);
-        return view('web.index');
-    }
-
-
-
-
 
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

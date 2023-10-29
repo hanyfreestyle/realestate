@@ -41,7 +41,9 @@
                 <div class="col-lg-12 mb-4">
                     <div class="d-flex align-items-center gap-2">
                         <span class="material-symbols-outlined mat-icon iconColor"> home_work   </span>
-                        <p class="mb-0 crop_line_1"><a href="">{{$project->name}}</a></p>
+                        <p class="mb-0 crop_line_1">
+                            <a href="{{route('page_ListView',$project->slug)}}">{{$project->name}}</a>
+                        </p>
                     </div>
                 </div>
             @endif

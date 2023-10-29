@@ -20,7 +20,7 @@
                         </div>
 
                         @foreach($project_tag->units as $unit)
-                            <x-blocks.units-card-list  :unit="$unit" :project="$project_tag"  />
+                            <x-blocks.units-card-list  :unit="$unit"  />
                         @endforeach
 
                         <div class="row mb-5 ">

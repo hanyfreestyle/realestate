@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-lg-4 mobile_stop">
                     <div class="section-space--smX">
-                        @include('web.side_blog')
+                        @include('web.blog_side_inc')
                     </div>
                 </div>
             </div>
