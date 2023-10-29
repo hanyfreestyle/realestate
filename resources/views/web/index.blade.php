@@ -7,6 +7,7 @@
 
 <x-home-page.featured-projects/>
 
+
 <x-home-page.featured-developers/>
 
 <x-blog.related-posts-slider :posts="$relatedPosts" titel="{{__('web/home.latest-real-estate-updates')}}" />
