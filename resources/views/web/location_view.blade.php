@@ -10,9 +10,7 @@
 
                 <div class="col-md-12 text-center ">
                     <h1 class="def_h1 text-center mt-3">
-                        {!! __('web/compound.h1-title') !!} -
-                        {{$projects->total()}} {{ __('web/compound.h1-compounds') }} -
-                        {{$units->total()}} {{ __('web/compound.h1-properties') }}
+                      {{ getLocationProjectTypeName($location->projects_type) ." ". $location->name}}
                     </h1>
                 </div>
             </div>
@@ -47,7 +45,6 @@
                             <div class="row g-4 pb-5">
                                 @foreach($projects as $project)
                                     <x-main-block.project-card :project="$project" />
-
                                 @endforeach
                             </div>
                             <x-main-block.pagination :row="$projects"/>

@@ -20,10 +20,14 @@
                                 <div class="swiper-slide">
                                     <div class="dev_slider_card text-center">
                                         <div class="developer_img_div">
-                                            <img src="{{getPhotoPath($developer->photo_thum_1,"developer")}}" alt="image" class="developer_list_img">
+                                            <a href="{{route('page_developer_view',$developer->slug)}}">
+                                                <img src="{{getPhotoPath($developer->photo_thum_1,"developer")}}" alt="image" class="developer_list_img">
+                                            </a>
                                         </div>
                                     </div>
-                                    <h4 class="mb-2 home_developer_name mt-5 crop_line_1"> {{$developer->name}}</h4>
+                                    <h4 class="mb-2 home_developer_name mt-5 crop_line_1">
+                                        <a href="{{route('page_developer_view',$developer->slug)}}">{{$developer->name}}</a>
+                                    </h4>
                                 </div>
                             @endforeach
                         </div>

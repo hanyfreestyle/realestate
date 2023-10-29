@@ -18,7 +18,11 @@
             <div class="col-lg-4 mb-4">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> distance </span>
-                    <p class="mb-0"><a href="#">{{$post->location->name}}</a> </p>
+                    <p class="mb-0">
+                        <a href="{{route('page_locationView',$post->location->slug)}}">
+                            {{$post->location->name}}
+                        </a>
+                    </p>
                 </div>
             </div>
 

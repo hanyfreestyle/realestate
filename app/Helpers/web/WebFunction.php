@@ -10,6 +10,7 @@ if (!function_exists('defWebAssets')) {
         return app('url')->asset('assets/web/' . $path, $secure);
     }
 }
+
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     webContainer
 if (!function_exists('webContainer')) {
@@ -23,8 +24,9 @@ if (!function_exists('webContainer')) {
         return  $webContainer;
     }
 }
+
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     webContainer
+#|||||||||||||||||||||||||||||||||||||| #     webChangeLocale
 if (!function_exists('webChangeLocale')) {
     function webChangeLocale(){
         $Current =  LaravelLocalization::getCurrentLocale() ;
@@ -36,8 +38,9 @@ if (!function_exists('webChangeLocale')) {
         return $change;
     }
 }
+
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-#|||||||||||||||||||||||||||||||||||||| #     webContainer
+#|||||||||||||||||||||||||||||||||||||| #     webChangeLocaletext
 if (!function_exists('webChangeLocaletext')) {
     function webChangeLocaletext(){
         $Current =  LaravelLocalization::getCurrentLocale() ;
@@ -50,6 +53,8 @@ if (!function_exists('webChangeLocaletext')) {
     }
 }
 
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getPhotoPath
 if (!function_exists('getPhotoPath')) {
     function getPhotoPath($file,$defPhoto="dark-logo",$defPhotoThum="photo"){
         $defPhoto_file = WebMainController::getDefPhotoById($defPhoto);
@@ -62,7 +67,8 @@ if (!function_exists('getPhotoPath')) {
     }
 }
 
-
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #    getDefPhotoPath
 if (!function_exists('getDefPhotoPath')) {
     function getDefPhotoPath($DefPhotoList,$cat_id){
         if ($DefPhotoList->has($cat_id)) {
@@ -77,6 +83,7 @@ if (!function_exists('getDefPhotoPath')) {
         return $sendImg ;
     }
 }
+
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     GetCopyRight
 if (!function_exists('GetCopyRight')) {
@@ -123,9 +130,124 @@ if (!function_exists('ChangeText')) {
 }
 
 
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getLocationProjectTypeName
+if (!function_exists('getLocationProjectTypeName')) {
+    function getLocationProjectTypeName($value) {
+        switch ($value) {
+            case 'compound':
+                $sendStyle = __('web/var.location-compound');
+                break;
+            case 'village':
+                $sendStyle = __('web/var.location-village');
+                break;
+            case 'resort':
+                $sendStyle = __('web/var.location-resort');
+                break;
+            default:
+                $sendStyle = "";
+        }
+        return $sendStyle;
+    }
+}
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getProjectStatus
+if (!function_exists('getProjectStatus')) {
+    function getProjectStatus($value) {
+        switch ($value) {
+            case 'under-construction':
+                $sendStyle =__('web/var.status-under-construction');
+                break;
+            case 'completed':
+                $sendStyle = __('web/var.status-completed');
+                break;
+            default:
+                $sendStyle = "";
+        }
+        return $sendStyle;
+    }
+}
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getProjectTypeName
+if (!function_exists('getProjectTypeName')) {
+    function getProjectTypeName($value) {
+        switch ($value) {
+            case 'residential':
+                $sendStyle = __('web/var.project-residential');
+                break;
+            case 'vacation':
+                $sendStyle = __('web/var.project-vacation');
+                break;
+            case 'commercial':
+                $sendStyle = __('web/var.project-commercial');
+                break;
+            case 'medical':
+                $sendStyle =__('web/var.project-medical');
+                break;
+
+            default:
+                $sendStyle = "";
+        }
+        return $sendStyle;
+    }
+}
 
 
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getPropertyTypeName
+if (!function_exists('getPropertyTypeName')) {
+    function getPropertyTypeName($value) {
+        switch ($value) {
+            case 'apartment':
+                $sendStyle = __('web/var.units-apartment') ;
+                break;
+            case 'duplex':
+                $sendStyle = __('web/var.units-duplex') ;
+                break;
+            case 'studio':
+                $sendStyle = __('web/var.units-studio') ;
+                break;
+            case 'town-house':
+                $sendStyle = __('web/var.units-town-house') ;
+                break;
+            case 'twin-house':
+                $sendStyle = __('web/var.units-twin-house') ;
+                break;
+            case 'pent-house':
+                $sendStyle = __('web/var.units-pent-house') ;
+                break;
+            case 'villa':
+                $sendStyle = __('web/var.units-villa') ;
+                break;
+            case 'office':
+                $sendStyle = __('web/var.units-office') ;
+                break;
+            case 'store':
+                $sendStyle = __('web/var.units-store') ;
+                break;
+            case 'chalet':
+                $sendStyle = __('web/var.units-chalet') ;
+                break;
+            case 'chalet-with-garden':
+                $sendStyle = __('web/var.units-chalet-with-garden') ;
+                break;
+            case 'pharmacy':
+                $sendStyle = __('web/var.units-pharmacy') ;
+                break;
+            case 'clinic':
+                $sendStyle = __('web/var.units-clinic') ;
+                break;
+            case 'laboratory':
+                $sendStyle = __('web/var.units-laboratory') ;
+                break;
 
-
+            default:
+                $sendStyle = "";
+        }
+        return $sendStyle;
+    }
+}
 
 

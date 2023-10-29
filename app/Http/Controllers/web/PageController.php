@@ -94,6 +94,7 @@ class PageController extends WebMainController
                 'projects'=>$projects,
                 'units'=>$units,
                 'trees'=>$trees,
+                'location'=>$location,
             ]
         );
 

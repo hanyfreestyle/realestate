@@ -1,5 +1,4 @@
 <section class="section-space--sm pt-lg-0 mt-lg-0">
-
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-xl-12 text-center">
@@ -29,7 +28,7 @@
                         <div class="tab-pane fade @if($loop->first) show active @endif" id="list-location_{{$location->id}}">
                             <x-home-page.featured-projects-inc :locationid="$location->id"/>
                             <div class="text-center mt-10">
-                                <a href="#"
+                                <a href="{{route('page_locationView',$location->slug)}}"
                                    class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
                                     {{__('web/def.view-all')}}
                                     <span class="material-symbols-outlined mat-icon lh-1"> trending_flat </span>

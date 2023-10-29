@@ -120,7 +120,6 @@ class AdminMainController extends Controller
         $ProjectSatues_Arr = [
             "1"=> ['id'=>'under-construction','name'=> 'Under Construction' ],
             "2"=> ['id'=>'completed','name'=> 'Completed' ],
-
         ];
         View::share('ProjectSatues_Arr', $ProjectSatues_Arr);
 
