@@ -39,7 +39,15 @@ class PageController extends WebMainController
 #|||||||||||||||||||||||||||||||||||||| #     ListView
     public function ListView($listingid)
     {
-        dd($listingid);
+        $pageView = $this->pageView ;
+        $pageView['SelMenu'] = 'HomePage' ;
+
+        return view('web.listing_view')->with(
+            [
+                'pageView'=>$pageView,
+
+            ]
+        );
     }
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     LocationView
