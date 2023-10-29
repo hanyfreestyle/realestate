@@ -48,7 +48,7 @@
                         <h4 class="mb-4 best_compounds_in crop_line_1">{{__('web/def.best-compounds-in')}} {{$relatedProjects->first()->locationName->name}}</h4>
                         <div class="row g-4 pb-5">
                             @foreach($relatedProjects as $project)
-                                <x-blog.related-projects-card :project="$project" />
+                                <x-blog.related-projects-card :project="$project" cardstyle="" />
                             @endforeach
                         </div>
                     @endif
