@@ -18,6 +18,7 @@ class ActionButton extends Component
     public $id;
     public $sweetDelClass;
     public $printLable;
+    public $target;
 
     public function __construct(
         $url = "#",
@@ -25,6 +26,7 @@ class ActionButton extends Component
         $size = "s",
         $bg = "p",
         $tip = false,
+        $target = false,
         $icon = null,
         $type = null,
         $id = null,
@@ -39,6 +41,7 @@ class ActionButton extends Component
         $this->tip = $tip;
         $this->url = $url;
         $this->icon = $icon;
+        $this->target = $target;
 
         $this->size = getButSize($size);
         $this->bg = getBgColor($bg);

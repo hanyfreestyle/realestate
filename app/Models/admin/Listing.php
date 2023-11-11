@@ -19,7 +19,7 @@ class Listing extends Model implements TranslatableContract
     use HasFactory;
     use SoftDeletes;
     use Translatable;
-    public array $translatedAttributes = ['name','g_title','g_des','body_h1','breadcrumb'];
+    public array $translatedAttributes = ['name','des','g_title','g_des','body_h1','breadcrumb'];
     protected $table = "listings";
     protected $primaryKey = 'id';
 
@@ -54,7 +54,7 @@ class Listing extends Model implements TranslatableContract
     }
     public function locationName():BelongsTo
     {
-        return $this->belongsTo(Location::class,'location_id','id');
+        return $this->belongsTo(Location::class,'location_id','id')->with('translation');
     }
     public function getoldtools() :HasMany
     {
@@ -128,7 +128,33 @@ class Listing extends Model implements TranslatableContract
             ->with('translation');
     }
 
+    public function slider():HasMany
+    {
+        return $this->hasMany(ListingPhoto::class,'listing_id','id');
+    }
 
+    public function project() :BelongsTo
+    {
+        return $this->belongsTo(Listing::class,'parent_id','id')
+            ->with('developerName')
+            ->withCount('slider')
+            ->with('slider')
+            ->translatedIn()
+            ->with('locationName')
+            ->with('translation');
+    }
+
+
+    public function faqs():HasMany
+    {
+        return $this->hasMany(Question::class,'project_id','id')->with('translation');
+    }
+
+
+    public function pro_units():HasMany
+    {
+        return $this->hasMany(Listing::class,'parent_id','id')->with('translation');
+    }
 
 
 }

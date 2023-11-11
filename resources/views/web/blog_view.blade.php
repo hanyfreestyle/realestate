@@ -34,11 +34,11 @@
 
                     @if($project_tag != null)
                         @if($project_tag->youtube_url)
-                            <x-blocks.youtube :row="$project_tag" title="{{__('web/blog.h2-video')}}"/>
+                            <x-blocks.youtube :vcode="$project_tag->youtube_url" title="{{__('web/blog.h2-video')}}"/>
                         @endif
 
                         @if($project_tag->amenity)
-                            <x-blocks.amenities :row="$project_tag" title="{{__('web/blog.h2-amenities')}}" />
+                            <x-blocks.amenities :senddata="$project_tag->amenity" title="{{__('web/blog.h2-amenities')}}" />
                         @endif
                     @endif
 

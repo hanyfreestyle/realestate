@@ -2,17 +2,11 @@
     @if($title)
         <h2 class="def_h2_blocks">{{$title}}</h2>
     @endif
-
-
     <div id="wrapped_text" class="description-content">
-
         {!! $row->des !!}
-
+        <br>
+        {{$slot}}
     </div>
-
-
-
-
     <div class="ButDivCon">
         <div class="show_text_but ">
             <div class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
@@ -26,7 +20,4 @@
             </div>
         </div>
     </div>
-
-
-
 </div>

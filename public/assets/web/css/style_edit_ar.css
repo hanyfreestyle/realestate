@@ -101,3 +101,11 @@ body{font-family: 'Tajawal', sans-serif!important;}
         margin-inline-start: 1.65rem;
     }
 }
+
+.faq_container .accordion-button {
+    text-align: right;
+}
+.faq_container .accordion-button::after {
+    margin-right: auto!important;
+    margin-left: unset!important;
+}

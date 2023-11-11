@@ -6,6 +6,7 @@ use App\Http\Controllers\WebMainController;
 use App\Models\admin\Listing;
 use App\Models\admin\Location;
 use App\Models\admin\Post;
+use File;
 use Illuminate\Http\Request;
 
 class PageController extends WebMainController
@@ -39,12 +40,58 @@ class PageController extends WebMainController
 #|||||||||||||||||||||||||||||||||||||| #     ListView
     public function ListView($listingid)
     {
+
+        $description = null;
+        $youtube = null;
+        $amenities = null;
+
+
         $pageView = $this->pageView ;
         $pageView['SelMenu'] = 'HomePage' ;
+
+        $unit= Listing::def()
+            ->where('slug',$listingid)
+            ->with('developerName')
+            ->withCount('slider')
+            ->with('slider')
+            ->withCount('faqs')
+            ->with('faqs')
+            ->withCount('pro_units')
+            ->with('pro_units')
+
+
+            ->with('project')
+            ->firstOrFail();
+
+
+#dd($unit);
+
+        $folderPath = public_path("ckfinder/userfiles/".$unit->slider_images_dir);
+        if(File::isDirectory($folderPath)){
+            $old_slider = File::files($folderPath);
+        }else{
+            $old_slider = [];
+        }
+
+
+        if($unit->listing_type == 'Project'){
+            $description = __('web/compound.listview-h2-des');
+            $youtube = $unit->youtube_url ;
+            $amenities = $unit->amenity ;
+        }
+
+
 
         return view('web.listing_view')->with(
             [
                 'pageView'=>$pageView,
+                'unit'=>$unit,
+                'old_slider'=>$old_slider,
+
+
+                'description'=>$description,
+                'youtube'=>$youtube,
+                'amenities'=>$amenities,
 
             ]
         );

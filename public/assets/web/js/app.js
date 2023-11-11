@@ -404,34 +404,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  /**
-  * Property Gallery Slider
-  */
-  const propertyGallerySlider = document.querySelector('.property-gallery-slider');
-  if (propertyGallerySlider) {
-    new Swiper(propertyGallerySlider, {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
-      navigation: {
-        nextEl: '.property-gallery-slider__btn-next',
-        prevEl: '.property-gallery-slider__btn-prev',
-      },
-      breakpoints: {
-        576: {
-          slidesPerView: 2.25
-        },
-        768: {
-          slidesPerView: 2.5
-        },
-        1200: {
-          slidesPerView: 3.25
-        }
-      }
-    })
-  }
+
   /**
   * Quantity Increment & Decrement
   */

@@ -498,3 +498,26 @@
 }
 
 
+
+
+
+.accordion-button {
+
+
+}
+
+.faq_container .accordion-button {
+    font-weight: 600;
+    font-size: 16px!important;
+    line-height: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+
+.project_def_h1{
+    font-size: 25px;
+    line-height: 40px;
+}
+
+

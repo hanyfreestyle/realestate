@@ -67,7 +67,7 @@
                                                 <th class="tbutaction"></th>
                                             @endcan
                                         @endif
-
+                                        <th class="tbutaction TD_20"></th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -116,6 +116,7 @@
                                                 @endcan
                                             @endif
 
+                                            <td class="tc"><x-action-button url="{{route('page_ListView',$Project->slug)}}" :tip="true" bg="dark" icon="fa fa-eye" :target="true"  /></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
