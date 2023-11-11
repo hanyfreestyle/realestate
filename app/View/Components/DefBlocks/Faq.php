@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\blocks;
+namespace App\View\Components\DefBlocks;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -8,7 +8,6 @@ use Illuminate\View\Component;
 
 class Faq extends Component
 {
-
     public $row ;
     public $title;
     public function __construct(
@@ -24,6 +23,6 @@ class Faq extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.blocks.faq');
+        return view('components.def-blocks.faq');
     }
 }

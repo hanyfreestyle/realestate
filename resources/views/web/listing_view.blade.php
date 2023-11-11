@@ -29,11 +29,10 @@
 
                         <x-blocks.youtube :vcode="$youtube" title="{{__('web/blog.h2-video')}}"/>
 
-{{--                        <x-blocks.google-map :row="$unit" title="{{ __('web/compound.listview-h2-map') }}" />--}}
-
                         <x-def-blocks.google-map :row="$unit" title="{{ __('web/compound.listview-h2-map') }}" />
 
-                        <x-blocks.faq  :row="$unit"  title="{{__('web/compound.listview-h2-faq')}}"/>
+                        <x-def-blocks.faq :row="$unit"  title="{{__('web/compound.listview-h2-faq')}}"/>
+
                     </div>
 
                 </div>
