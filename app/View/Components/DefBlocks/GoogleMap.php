@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\blocks;
+namespace App\View\Components\DefBlocks;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -8,7 +8,6 @@ use Illuminate\View\Component;
 
 class GoogleMap extends Component
 {
-
     public $row ;
     public $title;
     public $lat;
@@ -33,8 +32,9 @@ class GoogleMap extends Component
         }
         $this->title = $title;
     }
+
     public function render(): View|Closure|string
     {
-        return view('components.blocks.google-map');
+        return view('components.def-blocks.google-map');
     }
 }
