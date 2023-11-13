@@ -1,31 +1,33 @@
 <?php
 
-namespace App\View\Components\blocks;
+namespace App\View\Components\DefBlocks;
 
+use App\Models\admin\config\Amenity;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Youtube extends Component
+class Amenities extends Component
 {
     public $row ;
-    public $vcode ;
     public $title;
+    public $senddata;
+
+
     public function __construct(
         $row = array(),
         $title = null,
-        $vcode = null,
+        $senddata = null,
     )
     {
         $this->row = $row;
         $this->title = $title;
-        $this->vcode = $vcode;
+        $this->senddata = $senddata;
 
     }
-
-
     public function render(): View|Closure|string
     {
-        return view('components.blocks.youtube');
+        $amenities = Amenity::query()->with('translation')->get();
+        return view('components.def-blocks.amenities',compact('amenities'));
     }
 }

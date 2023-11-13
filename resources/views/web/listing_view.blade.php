@@ -14,7 +14,7 @@
                     <div class="section-space--sm">
 
                         @if($unit->listing_type == 'Project')
-                            <x-blocks.project-info :row="$unit"  />
+                            <x-def-blocks.project-info :row="$unit"  />
                         @endif
 
                         <x-blocks.project-units :row="$unit" />
@@ -25,9 +25,9 @@
                             </x-web.block-breadcrumbs>
                         </x-blocks.description>
 
-                        <x-blocks.amenities :senddata="$amenities" title="{{__('web/blog.h2-amenities')}}" />
+                        <x-def-blocks.amenities :senddata="$amenities" title="{{__('web/blog.h2-amenities')}}" />
 
-                        <x-blocks.youtube :vcode="$youtube" title="{{__('web/blog.h2-video')}}"/>
+                        <x-def-blocks.youtube :vcode="$youtube" title="{{__('web/blog.h2-video')}}" />
 
                         <x-def-blocks.google-map :row="$unit" title="{{ __('web/compound.listview-h2-map') }}" />
 

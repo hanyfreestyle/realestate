@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components\blocks;
+namespace App\View\Components\DefBlocks;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -22,6 +22,6 @@ class ProjectInfo extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.blocks.project-info');
+        return view('components.def-blocks.project-info');
     }
 }
