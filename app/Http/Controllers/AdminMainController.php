@@ -180,16 +180,16 @@ class AdminMainController extends Controller
         }
     }
 
+    public function Home()
+    {
+        return view('admin.dashbord_empty');
 
+    }
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text
 
-    public function Home()
+    public function Home_sours()
     {
-
-
-
-
 
         $PostsCount = Cache::remember('PostsCount_Cash',config('app.def_24h_cash'), function (){
             return  [

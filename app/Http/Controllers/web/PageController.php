@@ -58,13 +58,10 @@ class PageController extends WebMainController
             ->with('faqs')
             ->withCount('pro_units')
             ->with('pro_units')
-
-
             ->with('project')
             ->firstOrFail();
 
 
-#dd($unit);
 
         $folderPath = public_path("ckfinder/userfiles/".$unit->slider_images_dir);
         if(File::isDirectory($folderPath)){
@@ -80,14 +77,11 @@ class PageController extends WebMainController
             $amenities = $unit->amenity ;
         }
 
-
-
         return view('web.listing_view')->with(
             [
                 'pageView'=>$pageView,
                 'unit'=>$unit,
                 'old_slider'=>$old_slider,
-
 
                 'description'=>$description,
                 'youtube'=>$youtube,

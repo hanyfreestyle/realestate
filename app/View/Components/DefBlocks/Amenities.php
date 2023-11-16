@@ -2,6 +2,7 @@
 
 namespace App\View\Components\DefBlocks;
 
+use App\Http\Controllers\WebMainController;
 use App\Models\admin\config\Amenity;
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -27,7 +28,8 @@ class Amenities extends Component
     }
     public function render(): View|Closure|string
     {
-        $amenities = Amenity::query()->with('translation')->get();
+        #$amenities = Amenity::query()->with('translation')->get();
+        $amenities = WebMainController::getDefAmenity('0');
         return view('components.def-blocks.amenities',compact('amenities'));
     }
 }

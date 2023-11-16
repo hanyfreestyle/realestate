@@ -50,7 +50,7 @@ class Listing extends Model implements TranslatableContract
 
     public function developerName() :BelongsTo
     {
-        return $this->belongsTo(Developer::class,'developer_id','id');
+        return $this->belongsTo(Developer::class,'developer_id','id')->with('translation');
     }
     public function locationName():BelongsTo
     {

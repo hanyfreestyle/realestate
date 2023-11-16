@@ -28,7 +28,7 @@ class WebMainController extends Controller
 
 
 
-        $stopCash = 1 ;
+        $stopCash = 0 ;
 
         $agent = new Agent();
         View::share('agent', $agent);
@@ -39,8 +39,8 @@ class WebMainController extends Controller
         $DefPhotoList = self::getDefPhotoList($stopCash);
         View::share('DefPhotoList', $DefPhotoList);
 
-        $amenities = Amenity::all();
-        View::share('amenities', $amenities);
+       $amenities =  self::getDefAmenity($stopCash);
+       View::share('amenities', $amenities);
 
         $pageView = [
             'SelMenu' => '',
@@ -50,6 +50,8 @@ class WebMainController extends Controller
         $this->pageView = $pageView ;
         View::share('pageView', $pageView);
     }
+
+
 
 
 
@@ -148,6 +150,22 @@ class WebMainController extends Controller
         }
         return $DefPhotoList ;
     }
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getWebConfig
+    static function getDefAmenity($stopCash=0){
+        if($stopCash){
+            $amenities = Amenity::query()
+                ->with('translation')
+                ->get();
+        }else{
+            $amenities = Cache::remember('DefAmenity_'.app()->getLocale(),config('app.def_24h_cash'), function (){
+                return  Amenity::query()->with('translation')->get();
+            });
+        }
+        return $amenities ;
+    }
+
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 #|||||||||||||||||||||||||||||||||||||| #     text

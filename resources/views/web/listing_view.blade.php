@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-xl-4 mobile_stop">
                     <div class="section-space--sm">
-                        <x-main-block.search-form-right />
+{{--                        <x-main-block.search-form-right />--}}
                     </div>
                 </div>
             </div>
