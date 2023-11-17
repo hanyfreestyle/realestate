@@ -64,12 +64,15 @@ class PageController extends WebMainController
 
 
         $folderPath = public_path("ckfinder/userfiles/".$unit->slider_images_dir);
+//      dd($folderPath);
+
         if(File::isDirectory($folderPath)){
             $old_slider = File::files($folderPath);
         }else{
             $old_slider = [];
         }
 
+      // dd($old_slider);
 
         if($unit->listing_type == 'Project'){
             $description = __('web/compound.listview-h2-des');

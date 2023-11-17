@@ -1,11 +1,13 @@
 @extends('web.layouts.app')
 @section('content')
 
-    @if($unit->slider_count > 0)
-        <x-main-block.units-slider />
+    @if($unit->slider_count > 2)
+        <x-main-block.units-slider :unit="$unit" />
     @elseif(count($old_slider) > 0 )
-        <x-main-block.units-slider-folder :photos="$old_slider" :unit="$unit" />
+        <x-main-block.units-slider-folder :photos="$old_slider" :unit="$unit"   />
     @endif
+
+
 
     <div class="bg-primary-5p">
         <div class="container">

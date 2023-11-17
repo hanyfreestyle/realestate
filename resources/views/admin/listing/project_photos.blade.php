@@ -25,7 +25,7 @@
                     <div class="row col-lg-12 hanySort">
                         @foreach($ProjectPhotos as $Photo)
                             <div class="col-lg-2 ListThisItam"  data-index="{{$Photo->id}}" data-position="{{$Photo->postion}}" >
-                                <p class="PhotoImageCard"><img src="{{ defImagesDir($Photo->photo) }}"></p>
+                                <p class="PhotoImageCard"><img src="{{ defImagesDir($Photo->photo_thum_1) }}"></p>
                                 <div class="buttons mb-3" >
                                     @can('project_delete')
                                         <td class="tc"><x-action-button url="#" id="{{route('project.More_PhotosDestroy',$Photo->id)}}"  type="deleteSweet"/></td>
@@ -56,7 +56,7 @@
                         <input type="hidden" name="name" value="{{ $Project->slug }}">
                         <x-form-upload-file view-type="Add" :row-data="$Project"
                                             :multiple="true"
-                                            thisfilterid="4"
+                                            thisfilterid="6"
                         />
                         <div class="container-fluid">
                             <x-form-submit text="Add" />

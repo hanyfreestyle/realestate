@@ -78,8 +78,17 @@ div.hide_text_but{display:none}
 .def_units_name{
     font-size: 20px;
     line-height: 30px;
+
 }
 
+
+@media (min-width: 991px) {
+    .def_units_name{
+        min-height: 60px;
+
+    }
+
+}
 .def_h_rightSide{
     font-size: 20px;
     line-height: 30px;
