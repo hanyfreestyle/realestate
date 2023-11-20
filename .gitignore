@@ -6,6 +6,7 @@
 /public/storage
 /public/db
 /public/ckfinder
+/public/images/project
 /storage/*.key
 /storage/
 /vendor

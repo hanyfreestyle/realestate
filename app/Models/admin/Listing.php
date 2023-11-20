@@ -130,7 +130,7 @@ class Listing extends Model implements TranslatableContract
 
     public function slider():HasMany
     {
-        return $this->hasMany(ListingPhoto::class,'listing_id','id');
+        return $this->hasMany(ListingPhoto::class,'listing_id','id')->orderBy('position');
     }
 
     public function project() :BelongsTo

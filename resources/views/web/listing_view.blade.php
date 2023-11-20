@@ -2,9 +2,9 @@
 @section('content')
 
     @if($unit->slider_count > 2)
-        <x-main-block.units-slider :unit="$unit" />
-    @elseif(count($old_slider) > 0 )
-        <x-main-block.units-slider-folder :photos="$old_slider" :unit="$unit"   />
+        <x-main-block.units-slider :unit="$unit" type="new_slider"  />
+    @elseif(count($old_slider) > 2 )
+        <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
     @endif
 
 

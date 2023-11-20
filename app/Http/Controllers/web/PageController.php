@@ -61,7 +61,7 @@ class PageController extends WebMainController
             ->with('project')
             ->firstOrFail();
 
-
+        parent::printSeoMeta($unit,'blog');
 
         $folderPath = public_path("ckfinder/userfiles/".$unit->slider_images_dir);
 //      dd($folderPath);
@@ -72,12 +72,14 @@ class PageController extends WebMainController
             $old_slider = [];
         }
 
-      // dd($old_slider);
+
 
         if($unit->listing_type == 'Project'){
             $description = __('web/compound.listview-h2-des');
             $youtube = $unit->youtube_url ;
             $amenities = $unit->amenity ;
+        }elseif ($unit->listing_type == 'Unit'){
+           ///dd($unit);
         }
 
         return view('web.listing_view')->with(
