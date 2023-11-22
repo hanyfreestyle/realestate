@@ -25,7 +25,7 @@
                     <div class="row col-lg-12 hanySort">
                         @foreach($UnitPhotos as $Photo)
                             <div class="col-lg-2 ListThisItam"  data-index="{{$Photo->id}}" data-position="{{$Photo->postion}}" >
-                                <p class="PhotoImageCard"><img src="{{ defImagesDir($Photo->photo) }}"></p>
+                                <p class="PhotoImageCard"><img src="{{ defImagesDir($Photo->photo_thum_1) }}"></p>
                                 <div class="buttons mb-3" >
                                     @can('unit_delete')
                                         <td class="tc"><x-action-button url="#" id="{{route('project.project_units.More_PhotosDestroy',$Photo->id)}}"  type="deleteSweet"/></td>

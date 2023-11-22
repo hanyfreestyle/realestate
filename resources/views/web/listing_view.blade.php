@@ -26,10 +26,10 @@
                 <div class="col-xl-8">
                     <div class="section-space--sm">
 
-                        @foreach($unit->pro_units as $prounit)
-                            <a href="{{route('page_ListView',$prounit->slug)}}">{{$prounit->slider_images_dir}}</a>
-                            <br>
-                        @endforeach
+{{--                        @foreach($unit->pro_units as $prounit)--}}
+{{--                            <a href="{{route('page_ListView',$prounit->slug)}}">{{$prounit->slider_images_dir}}</a>--}}
+{{--                            <br>--}}
+{{--                        @endforeach--}}
 
                         @if($unit->listing_type == 'Project')
                             <x-def-blocks.project-info :row="$unit" />
