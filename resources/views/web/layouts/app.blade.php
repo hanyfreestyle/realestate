@@ -22,7 +22,7 @@
     @livewireStyles
 </head>
 <body>
-{{--@include('web.layouts.inc.preloader')--}}
+@include('web.layouts.inc.preloader')
 @include('web.layouts.inc.header_top')
 @include('web.layouts.inc.header_menu')
 
