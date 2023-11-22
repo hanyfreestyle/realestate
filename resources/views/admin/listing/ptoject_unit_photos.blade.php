@@ -56,7 +56,7 @@
                         <input type="hidden" name="name" value="{{ $Unit->slug }}">
                         <x-form-upload-file view-type="Add" :row-data="$Unit"
                                             :multiple="true"
-                                            thisfilterid="4"
+                                            thisfilterid="6"
                         />
                         <div class="container-fluid">
                             <x-form-submit text="Add" />
