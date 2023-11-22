@@ -53,7 +53,7 @@
                                     <thead>
                                     <tr>
                                         <th class="TD_20">#</th>
-                                        <th class="tc">{{__('admin/def.photo')}}</th>
+                                        <th class="TD_20">{{__('admin/def.photo')}}</th>
                                         <th class="TD_350">{{__('admin/def.form_name_ar')}}</th>
                                         <th class="TD_350">{{__('admin/def.form_name_en')}}</th>
 
@@ -64,15 +64,16 @@
 
 
                                         @else
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
+                                            <th class="TD_20"></th>
+                                            <th class="TD_20"></th>
+                                            <th class="TD_20"></th>
                                             @can('unit_edit')
-                                                <th class="tbutaction"></th>
+                                                <th class="TD_20"></th>
                                             @endcan
                                             @can('unit_delete')
-                                                <th class="tbutaction"></th>
+                                                <th class="TD_20"></th>
                                             @endcan
+                                            <th class="TD_20"></th>
                                         @endif
 
                                     </tr>
@@ -114,6 +115,8 @@
                                                 @can('unit_delete')
                                                     <td class="tc"><x-action-button url="#" id="{{route('project.project_units.destroy',$Unit->id)}}" :tip="true" type="deleteSweet"/></td>
                                                 @endcan
+
+                                                <td class="tc"><x-action-button url="{{route('page_ListView',$Unit->slug)}}" :tip="true" bg="dark" icon="fa fa-eye" :target="true"  /></td>
                                             @endif
 
                                         </tr>

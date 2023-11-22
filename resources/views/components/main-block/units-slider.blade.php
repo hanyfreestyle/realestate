@@ -4,7 +4,7 @@
             <div class="swiper property-gallery-slider">
                 <div class="swiper-wrapper property-gallery-slider">
                     @if($type == 'new_slider')
-                        @foreach($unit->slider as $photo)
+                        @foreach($photos as $photo)
                             <div class="swiper-slide Pro_Slider_New">
                                 <a href="{{getPhotoPath($photo->photo,"blog")}}" class="link property-gallery">
                                     <img src="{{getPhotoPath($photo->photo_thum_1,"blog")}}" alt="{{$unit->name}}" class="img-fluid">

@@ -1,32 +1,32 @@
-<div class="p-6 bg-neutral-0 rounded-4 mb-10">
+<div class="p-6 bg-neutral-0 rounded-4 border border-neutral-40 mb-10">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-        <div class="py-3 px-6 bg-primary-50 rounded-pill">
-            <h5 class="clr-primary-300 d-inline-block mb-0">  {{ getProjectTypeName($row->project_type)}} </h5>
-        </div>
+        <h5 class="clr-primary-300 d-inline-block mb-0"> {{ getPropertyTypeName($row->property_type) }}</h5>
         <ul class="list list-row gap-3 align-items-center">
             <li>
                 <a href="#" class="link w-8 h-8 d-grid place-content-center bg-primary-50 clr-primary-300 rounded-circle :bg-primary-300 :clr-neutral-0">
-                    <span class="material-symbols-outlined mat-icon fs-20"> favorite </span>
+                    <i class="fab fa-facebook-f"></i>
                 </a>
             </li>
             <li>
                 <a href="#" class="link w-8 h-8 d-grid place-content-center bg-primary-50 clr-primary-300 rounded-circle :bg-primary-300 :clr-neutral-0">
-                    <span class="material-symbols-outlined mat-icon fs-20"> compare_arrows </span>
+                    <i class="fab fa-twitter"></i>
                 </a>
             </li>
             <li>
                 <a href="#" class="link w-8 h-8 d-grid place-content-center bg-primary-50 clr-primary-300 rounded-circle :bg-primary-300 :clr-neutral-0">
-                    <span class="material-symbols-outlined mat-icon fs-20"> Share </span>
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="link w-8 h-8 d-grid place-content-center bg-primary-50 clr-primary-300 rounded-circle :bg-primary-300 :clr-neutral-0">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
             </li>
         </ul>
     </div>
-    <h1 class="mt-4  project_def_h1">
+    <h1 class="mt-4 mb-5 project_def_h1">
         {{$row->name}}
     </h1>
-    <div class="hr-dashed"></div>
-
-
     <div class="row mt-5" >
         <div class="col-lg-4 mb-5">
             <div class="d-flex align-items-center gap-2">
@@ -59,4 +59,41 @@
             </div>
         </div>
     </div>
+    <div class="hr-dashed"></div>
+
+    <div class="row mt-5" >
+        @if(intval($row->rooms) != 0)
+            <div class="col-lg-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined mat-icon iconColor">  home_work  </span>
+                    <p class="mb-0">
+                        {{$row->rooms}} {{__('web/def.units-room')}}
+                    </p>
+                </div>
+            </div>
+        @endif
+
+        @if(intval($row->baths) != 0)
+            <div class="col-lg-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined mat-icon iconColor"> bathtub </span>
+                    <p class="mb-0 crop_line_1">
+                        {{$row->baths}} {{__('web/def.units-bath')}}
+                    </p>
+                </div>
+            </div>
+        @endif
+
+        @if(intval($row->area) != 0)
+            <div class="col-lg-2 mb-2">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="material-symbols-outlined mat-icon iconColor"> drag_pan </span>
+                    <p class="mb-0 crop_line_1">
+                        {{$row->area}} {{__('web/def.units-area')}} <sup>2</sup>
+                    </p>
+                </div>
+            </div>
+        @endif
+    </div>
 </div>
+

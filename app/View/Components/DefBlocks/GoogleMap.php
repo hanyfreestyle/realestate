@@ -29,7 +29,14 @@ class GoogleMap extends Component
                 $this->lat = $this->row->latitude;
                 $this->long =  $this->row->longitude;
             }
+        }elseif ($this->row->listing_type == 'Unit'){
+            if($this->row->latitude == null and  $this->row->longitude == null ){
+                if($this->row->project->latitude  != null and  $this->row->project->longitude != null )
+                $this->lat = $this->row->project->latitude;
+                $this->long =  $this->row->project->longitude;
+            }
         }
+
         $this->title = $title;
     }
 

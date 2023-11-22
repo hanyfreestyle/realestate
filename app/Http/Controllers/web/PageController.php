@@ -44,6 +44,7 @@ class PageController extends WebMainController
         $description = null;
         $youtube = null;
         $amenities = null;
+        $other_units = [];
 
 
         $pageView = $this->pageView ;
@@ -61,6 +62,9 @@ class PageController extends WebMainController
             ->with('project')
             ->firstOrFail();
 
+
+
+        // dd($unit->project->slider_count);
         parent::printSeoMeta($unit,'blog');
 
         $folderPath = public_path("ckfinder/userfiles/".$unit->slider_images_dir);
@@ -72,15 +76,37 @@ class PageController extends WebMainController
             $old_slider = [];
         }
 
-
+      //   dd($old_slider);
 
         if($unit->listing_type == 'Project'){
             $description = __('web/compound.listview-h2-des');
             $youtube = $unit->youtube_url ;
             $amenities = $unit->amenity ;
         }elseif ($unit->listing_type == 'Unit'){
-           ///dd($unit);
+
+            $description ="";
+            if($unit->youtube_url == null ){
+                $youtube = $unit->project->youtube_url ;
+            }
+            if($unit->amenity == null ){
+                $amenities = $unit->project->amenity;
+            }
+
+            $other_units = Listing::def()
+                ->where('parent_id',$unit->parent_id)
+                ->where('id','!=',$unit->id)
+                ->with('developerName')
+                ->with('project')
+                ->get();
+
+        }elseif ($unit->listing_type == 'UnitDDD'){
+
+
+
         }
+
+
+
 
         return view('web.listing_view')->with(
             [
@@ -91,6 +117,7 @@ class PageController extends WebMainController
                 'description'=>$description,
                 'youtube'=>$youtube,
                 'amenities'=>$amenities,
+                'other_units'=>$other_units,
 
             ]
         );

@@ -1,10 +1,21 @@
 @extends('web.layouts.app')
 @section('content')
 
-    @if($unit->slider_count > 2)
-        <x-main-block.units-slider :unit="$unit" type="new_slider"  />
-    @elseif(count($old_slider) > 2 )
-        <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
+    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )
+        @if($unit->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
+        @elseif(count($old_slider) > 2 )
+            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
+        @endif
+
+    @elseif($unit->listing_type == 'Unit')
+        @if($unit->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
+        @elseif($unit->project->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->project->slider" type="new_slider"  />
+        @elseif(count($old_slider) > 2 )
+            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
+        @endif
     @endif
 
 
@@ -16,10 +27,17 @@
                     <div class="section-space--sm">
 
                         @if($unit->listing_type == 'Project')
-                            <x-def-blocks.project-info :row="$unit"  />
+                            <x-def-blocks.project-info :row="$unit" />
+                        @elseif($unit->listing_type == 'Unit')
+                            <x-def-blocks.unit-info :row="$unit" />
                         @endif
 
-                        <x-blocks.project-units :row="$unit" />
+                        @if($unit->listing_type == 'Project')
+                            <x-blocks.project-units :row="$unit" />
+                        @elseif($unit->listing_type == 'Unit')
+                            <x-blocks.project-units :row="$unit" :other="$other_units"/>
+                        @endif
+
 
                         <x-blocks.description  :row="$unit" title="{{$description}}">
                             <x-web.block-breadcrumbs>
@@ -40,7 +58,7 @@
                 </div>
                 <div class="col-xl-4 mobile_stop">
                     <div class="section-space--sm">
-{{--                        <x-main-block.search-form-right />--}}
+                        <x-main-block.search-form-right />
                     </div>
                 </div>
             </div>
