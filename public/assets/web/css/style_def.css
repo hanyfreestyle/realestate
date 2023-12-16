@@ -1,22 +1,5 @@
-:root {
-    --linkColor: #3738ea;
-    --h1Color: #3738ea;
-    --linkHover: #000000;
-    --textColor: #808080;
-}
-.stop_view{display:none}
-.hidden-xs{display:none}
-@media (max-width: 600px) {
-    .mobile_stop{display:none!important}
-    .page-item .w-10{width:2rem}
-    .page-item .h-10{height:2rem}
 
-}
-.crop_line_1{width:100%;display:inline-block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
-.crop_line_2{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
-.crop_line_3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
-.crop_line_4{-webkit-line-clamp:4;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
-.def_img_cover{width:100%;height: 100%;-o-object-fit:cover;object-fit:cover;}
+
 .crop_locationName_card{max-width: 120px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 
 .embed-responsive{position:relative;display:block;width:100%;padding:0;overflow:hidden;}
@@ -26,29 +9,14 @@
 .youtube_play_but{cursor: pointer!important;}
 
 
-a{text-decoration: none!important; color: var(--linkColor);}
+
 /*a:link{text-decoration: none!important; color: var(--linkColor);}*/
 /*a:visited{text-decoration: none!important; color: var(--linkColor);}*/
 /*a:hover {text-decoration: none!important; color: var(--linkColor);}*/
 /*a:active {text-decoration: none!important; color: var(--linkColor);}*/
 
-.breadcrumb{display:flex;flex-wrap:wrap;padding:1px!important;font-size:15px!important;list-style:none;line-height:30px;margin-top:10px!important}
-.breadcrumb-item a{color:var(--textColor)!important}
-.breadcrumb-item a:hover{color:var(--linkColor)!important}
-.breadcrumb-item.active{color:var(--textColor)!important}
-.breadcrumb-item{display:inline-block;text-overflow:ellipsis;white-space:nowrap!important;overflow:hidden!important;line-height:30px}
-@media (max-width: 700px) {
-    /*.breadcrumb-item{max-width:220px;}*/
-}
-.breadcrumb i{font-size:13px;line-height:13px}
-.breadcrumb-item + .breadcrumb-item::before{float:right;content:"\f100";font-family:"FontAwesome";vertical-align:middle;color:var(--textColor)!important;padding-right:3px;margin-left:3px!important}
 
-#wrapped_text{width:100%;height:235px;overflow:hidden;margin-bottom:10px}
-.description-content{ margin-top: 10px;}
-.ButDivCon{display:inline-block;width:100%}
-.ButDivCon .show_text_but,.ButDivCon .hide_text_but{float:left}
-.ButDivCon .show-more{float:left}
-div.hide_text_but{display:none}
+
 
 
 .def_heading h1{
@@ -62,14 +30,8 @@ div.hide_text_but{display:none}
 }
 
 
-.def_h2_blocks{
-    font-size:25px;
-    margin-bottom: 15px;
-}
-.def_h2_out{
-    font-size:25px;
-    margin-bottom: 15px;
-}
+
+
 .best_compounds_in{
     font-size:25px;
 

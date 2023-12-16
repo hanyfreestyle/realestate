@@ -1,3 +1,6 @@
+body{font-family: 'Aljazeera', sans-serif!important;}
+
+/*
 body{font-family: 'Tajawal', sans-serif!important;}
 .lang_menu{position: absolute;left:15px!important;}
 .form-select {background-position: left .75rem center;}
@@ -43,15 +46,7 @@ body{font-family: 'Tajawal', sans-serif!important;}
     isolation: isolate;
 }
 .dotted-divider li+li ::before {
-    /*content: "";*/
-    /*width: 1px;*/
-    /*position: absolute;*/
-    /*inset-inline-start: 0;*/
-    /*inset-block: 0;*/
-    /*background-image: linear-gradient(hsl(var(--neutral-200)) 33%, transparent 0%);*/
-    /*background-position: right;*/
-    /*background-size: 1px 0.5rem;*/
-    /*background-repeat: repeat-y;*/
+
 }
 @media (min-width: 375px) {
     .dotted-divider li+li {
@@ -109,3 +104,4 @@ body{font-family: 'Tajawal', sans-serif!important;}
     margin-right: auto!important;
     margin-left: unset!important;
 }
+*/

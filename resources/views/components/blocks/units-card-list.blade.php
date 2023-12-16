@@ -16,14 +16,12 @@
             </button>
         </div>
 
-
-
         <div class="property-card__content">
 
             <div class="property-card__body">
-                <div class="d-flex align-items-center gap-1 mb-2">
+                <div class="d-flex align-items-center gap-1">
                     <span class="material-symbols-outlined mat-icon clr-tertiary-400"> distance </span>
-                    <span class="d-inline-block">
+                    <span class="d-inline-block distance_name">
                         <a href="{{route('page_locationView',$unit->locationName->slug)}}">{{$unit->locationName->name}}</a>
                     </span>
                 </div>
@@ -32,33 +30,32 @@
                     <h3 class="def_units_name crop_line_2 ">{{$unit->name}}</h3>
                 </a>
 
-                <ul class="list list-row flex-wrap dotted-divider">
+{{--                <ul class="list list-row flex-wrap dotted-divider">--}}
+                <ul class="units_li">
                     @if(intval($unit->rooms) != 0)
                         <li>
-                            <span class="material-symbols-outlined mat-icon clr-neutral-600 d-inline-block mb-1"> home_work </span>
-                            <span class="d-block fs-14"> {{$unit->rooms}} {{__('web/def.units-room')}}</span>
+                            <span class="material-symbols-outlined units_li_icon"> home_work </span>
+                            <span class="d-block fs-16"> {{$unit->rooms}} {{__('web/def.units-room')}}</span>
                         </li>
                     @endif
 
                     @if(intval($unit->baths) != 0)
                         <li>
-                            <span class="material-symbols-outlined mat-icon clr-neutral-600 d-inline-block mb-1"> bathtub </span>
-                            <span class="d-block fs-14"> {{$unit->baths}} {{__('web/def.units-bath')}}</span>
+                            <span class="material-symbols-outlined units_li_icon"> bathtub </span>
+                            <span class="d-block  fs-16"> {{$unit->baths}} {{__('web/def.units-bath')}}</span>
                         </li>
                     @endif
 
                     @if(intval($unit->area) != 0)
                         <li>
-                            <span class="material-symbols-outlined mat-icon clr-neutral-600 d-inline-block mb-1"> zoom_out_map </span>
-                            <div class="d-block fs-14">{{$unit->area}} {{__('web/def.units-area')}} <sup>2</sup></div>
+                            <span class="material-symbols-outlined units_li_icon"> zoom_out_map </span>
+                            <div class="d-block  fs-16">{{$unit->area}} {{__('web/def.units-area')}} <sup>2</sup></div>
                         </li>
                     @endif
                 </ul>
             </div>
 
-            <div class="property-card__body py-0">
-                <div class="hr-dashed"></div>
-            </div>
+            <div class="hr-dashed"></div>
             <div class="property-card__body">
                 <div class="d-flex flex-wrap justify-content-between align-items-center">
                     <ul class="list list-row flex-wrap gap-3 justify-content-center">

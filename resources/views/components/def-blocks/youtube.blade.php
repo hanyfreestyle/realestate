@@ -13,7 +13,7 @@
 
         <div id="youtube_ifram" class="mt-3" style="display:none;" >
             <div class="embed-responsive embed-responsive-16by9 mb-4">
-                <iframe  src="https://www.youtube.com/embed/{{$vcode}}?autoplay=1" class="lazyload"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe  src="https://www.youtube.com/embed/{{$vcode}}?autoplay=0" class="lazyload"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

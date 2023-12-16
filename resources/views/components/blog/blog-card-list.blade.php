@@ -1,7 +1,7 @@
-<div class="bg-neutral-0 rounded-4 p-2">
+<div class="bg-neutral-0 rounded-4 p-2 blog_li">
     <div class="blog_photo_div">
         <a href="{{route('page_blogView',[$post->getCatName->slug,$post->slug])}}" class="link d-block rounded-4">
-            <img src="{{getPhotoPath($post->photo,"blog")}}" alt="image" class="blog_img rounded-4">
+            <img src="{{getPhotoPath($post->photo,"blog")}}" alt="{{$post->name}}" class="blog_img rounded-4">
         </a>
     </div>
 
@@ -18,7 +18,6 @@
                 {{__('web/blog.read-more')}}
                 <span class="material-symbols-outlined mat-icon lh-1"> trending_flat </span>
             </a>
-
         </div>
     </div>
 </div>

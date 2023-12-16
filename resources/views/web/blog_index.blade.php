@@ -7,25 +7,20 @@
 
 
 
-    <div class="BlogList-col9 bg-primary-5p">
+    <div class="FixedBreadcrumbLine BlogList bg-primary-5p">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-8">
-                    <h1>{!! __('web/blog.h1') !!}</h1>
-                    <ul class="list gap-6 blogas_list">
-                        @foreach($posts as $post)
-                            <li>
-                                <x-blog.blog-card-list :post="$post"/>
-                            </li>
-                        @endforeach
-                    </ul>
-
-                    <x-web.block-pagination :rows="$posts" />
-
-                </div>
-                <div class="col-lg-4 mobile_stop">
-                    <div class="section-space--smX">
-                        <x-main-block.search-form-right />
+                <div class="col-lg-12">
+                    <h1 class="h1_def">{!! __('web/blog.h1') !!}</h1>
+                    <div class="col-lg-12">
+                        <div class="row blogas_row">
+                            @foreach($posts as $post)
+                                <div class="col-lg-4 mb-5">
+                                    <x-blog.blog-card-list :post="$post"/>
+                                </div>
+                            @endforeach
+                        </div>
+                        <x-web.block-pagination :rows="$posts" />
                     </div>
                 </div>
             </div>

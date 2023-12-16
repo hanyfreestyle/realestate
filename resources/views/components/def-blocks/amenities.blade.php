@@ -7,12 +7,11 @@
             <div class="row g-4">
                 @foreach($amenities as $amenity)
                     @if(in_array($amenity->id,$senddata))
-                        <div class="ty-compact-list col-6 col-lg-3 align-items-center gap-2">
+                        <div class="ty-compact-list amenity_list_li col-6 col-lg-3 align-items-center gap-2">
                             <i class="{{$amenity->icon}}"></i>
                             <span class="d-inline-block"> {{$amenity->name}} </span>
                         </div>
                     @endif
-
                 @endforeach
             </div>
         </div>

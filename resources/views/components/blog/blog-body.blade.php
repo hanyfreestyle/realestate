@@ -7,11 +7,11 @@
     <div class="p-5 pt-8">
         <h1 class="mb-0">{{$post->name}}</h1>
         <div class="hr-dashed my-4"></div>
-        <div class="row" >
+        <div class="row blog_info" >
             <div class="col-lg-3 mb-4">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> calendar_month  </span>
-                    <p class="mb-0"> {{$post->getFormatteDate()}} </p>
+                    <a href="#"  class="mb-0"> {{$post->getFormatteDate()}} </a>
                 </div>
             </div>
 

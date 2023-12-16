@@ -25,7 +25,7 @@ class WebBlogController extends WebMainController
         $posts = Post::def()
             ->with('getCatName')
             ->orderBy('id','desc')
-            ->paginate(4);
+            ->paginate(12);
 
         return view('web.blog_index')->with(
             [
@@ -53,7 +53,7 @@ class WebBlogController extends WebMainController
             ->where('category_id',$category->id)
             ->with('getCatName')
             ->orderBy('id','desc')
-            ->paginate(9);
+            ->paginate(12);
         return view('web.blog_index_category')->with(
             [
                 'pageView'=>$pageView,
@@ -61,8 +61,6 @@ class WebBlogController extends WebMainController
                 'posts'=>$posts,
             ]
         );
-
-
     }
 
 

@@ -6,7 +6,7 @@
     </x-web.block-breadcrumbs>
 
 
-    <div class="BlogView bg-primary-5p">
+    <div class="FixedBreadcrumbLine BlogView bg-primary-5p">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-8">
@@ -33,9 +33,9 @@
                     <x-blocks.description  :row="$post" title="{{__('web/blog.h2-description')}}"/>
 
                     @if($project_tag != null)
-                        @if($project_tag->youtube_url)
-                            <x-def-blocks.youtube :vcode="$project_tag->youtube_url" title="{{__('web/blog.h2-video')}}" />
-                        @endif
+{{--                        @if($project_tag->youtube_url)--}}
+{{--                            <x-def-blocks.youtube :vcode="$project_tag->youtube_url" title="{{__('web/blog.h2-video')}}" />--}}
+{{--                        @endif--}}
 
                         @if($project_tag->amenity)
                             <x-def-blocks.amenities :senddata="$project_tag->amenity" title="{{__('web/blog.h2-amenities')}}" />
@@ -44,14 +44,14 @@
 
                 </div>
                 <div class="col-lg-4">
-                    @if(count($relatedProjects)> 0)
-                        <h4 class="mb-4 best_compounds_in crop_line_1">{{__('web/def.best-compounds-in')}} {{$relatedProjects->first()->locationName->name}}</h4>
-                        <div class="row g-4 pb-5">
-                            @foreach($relatedProjects as $project)
-                                <x-blog.related-projects-card :project="$project" cardstyle="" />
-                            @endforeach
-                        </div>
-                    @endif
+{{--                    @if(count($relatedProjects)> 0)--}}
+{{--                        <h4 class="mb-4 best_compounds_in crop_line_1">{{__('web/def.best-compounds-in')}} {{$relatedProjects->first()->locationName->name}}</h4>--}}
+{{--                        <div class="row g-4 pb-5">--}}
+{{--                            @foreach($relatedProjects as $project)--}}
+{{--                                <x-main-block.project-card-photo :project="$project" cardstyle="tab_card" />--}}
+{{--                            @endforeach--}}
+{{--                       </div>--}}
+{{--                    @endif--}}
                 </div>
 
             </div>
@@ -60,8 +60,8 @@
 
 
 
-    <x-blog.related-posts-slider :posts="$relatedPosts" titel="{{__('web/blog.related-news')}}" />
+{{--    <x-blog.related-posts-slider :posts="$relatedPosts" titel="{{__('web/blog.related-news')}}" />--}}
 
-    <x-blog.other-projects :projects="$other_project" titel="{{__('web/blog.other-projects')}}" />
+{{--    <x-blog.other-projects :projects="$other_project" titel="{{__('web/blog.other-projects')}}" />--}}
 
 @endsection

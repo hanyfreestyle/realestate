@@ -14,15 +14,22 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">
-{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_old.css') }}">--}}
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
+{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">--}}
+{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
+
     @livewireStyles
 </head>
 <body>
-@include('web.layouts.inc.preloader')
+
+@if($_SERVER['HTTP_HOST'] != 'localhost' )
+    @include('web.layouts.inc.preloader')
+@endif
+
 @include('web.layouts.inc.header_top')
 @include('web.layouts.inc.header_menu')
 
@@ -40,10 +47,15 @@
 <script src="{{ defWebAssets('js/app_script.js') }}"></script>
 <script>
     async function loadarfont(){
-        const font_ar = new FontFace('Tajawal','url({{ defWebAssets('fonts/Ar/TajawalRegular.woff2') }}');
+        {{--const font_ar = new FontFace('Tajawal','url({{ defWebAssets('fonts/Ar/TajawalRegular.woff2') }}');--}}
+        {{--await font_ar.load();--}}
+        {{--document.fonts.add(font_ar);--}}
+        {{--document.body.classList.add('Tajawal');--}}
+        const font_ar = new FontFace('Aljazeera','url({{ defWebAssets('fonts/Ar/Aljazeera.woff') }}');
         await font_ar.load();
         document.fonts.add(font_ar);
-        document.body.classList.add('Tajawal');
+        document.body.classList.add('Aljazeera');
+
     };
     loadarfont();
 
