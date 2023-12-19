@@ -1,9 +1,41 @@
-body{font-family: 'Poppins', sans-serif!important; font-size:14px;}
+body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
+.FS_16{font-size: 15px!important;}
+.FS_17{font-size: 16px!important;}
+.FS_18{font-size: 17px!important;}
+.FS_19{font-size: 18px!important;}
+.FS_20{font-size: 19px!important;}
+.FS_21{font-size: 20px!important;}
+.FS_22{font-size: 21px!important;}
+.FS_23{font-size: 22px!important;}
+.FS_24{font-size: 23px!important;}
+
+.lang_menu{position: absolute;right:15px!important;}
+.breadcrumb-item + .breadcrumb-item::before{font-size: 12px!important; float:left;content:"\f101";padding-right:0!important;margin-left:0!important;padding-left:3px;margin-right:3px!important}
+.breadcrumb{font-size:15px!important;list-style:none;line-height:30px;margin-top:10px!important}
+
+.ButDivCon .show_text_but,.ButDivCon .hide_text_but{float:right}
+.ButDivCon .show-more{float:right}
+
+.h1_def{font-size: 30px!important;}
+.def_h2_out{font-size:25px!important;}
+.def_h2_blocks{font-size:25px;}
+
+.blog_li h2{font-size: 20px;}
+.blog_li p{font-size: 16px;}
+.blog_li .read_more a{float: right;font-size: 16px!important;}
+.blog_category_list a{font-size: 17px!important;}
+
+.BlogView h1{font-size: 26px;}
+.property-card__content .distance_name a{font-size: 16px!important;}
+.property-card__content h3{font-size:20px;}
+.units_li li{border-left:none;border-right: 1px solid rgba(0,0,0,.1);}
+.units_li li:last-child{border-left:none;border-right:none;}
+.amenity_list_li{ font-size: 16px;}
+
 
 /*
 
-.lang_menu{position: absolute;right:15px!important;}
-.breadcrumb-item + .breadcrumb-item::before{float:left;content:"\f101";padding-right:0!important;margin-left:0!important;padding-left:3px;margin-right:3px!important}
+
 .developer_col h2{font-size:16px}
 .developer_col .icons_div span{text-align:left;font-size:14px}
 .ButDivCon .show_text_but,.ButDivCon .hide_text_but{float:right}

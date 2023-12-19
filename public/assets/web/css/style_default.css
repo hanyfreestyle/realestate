@@ -28,6 +28,7 @@ a{text-decoration: none!important; color: var(--linkColor);}
     .page-item .h-10{height:2rem}
 }
 .crop_line_1{width:100%;display:inline-block;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.crop_line_1_span{width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
 .crop_line_2{-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .crop_line_3{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
 .crop_line_4{-webkit-line-clamp:4;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
@@ -67,7 +68,7 @@ div.hide_text_but{display:none}
     color: var(--h1Color);
 }
 .def_h2_out{
-    font-size:30px;
+    font-size:30px!important;
     margin-bottom: 15px;
     color: var(--h1Color);
 }
@@ -76,5 +77,35 @@ div.hide_text_but{display:none}
     margin-bottom: 15px;
     color: var(--h1Color);
 }
+.p_def{
+    font-size:20px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    color: var(--textColor);
+}
+.def_sidebar_h{
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing:-1px!important;
+    color: var(--h1Color);
+}
+
+.sidebar_div{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.FS_12{font-size: 12px!important;}
+.FS_13{font-size: 13px!important;}
+.FS_14{font-size: 14px!important;}
+.FS_15{font-size: 15px!important;}
+.FS_16{font-size: 16px!important;}
+.FS_17{font-size: 17px!important;}
+.FS_18{font-size: 18px!important;}
+.FS_19{font-size: 19px!important;}
+.FS_20{font-size: 20px!important;}
+.FS_21{font-size: 21px!important;}
+.FS_22{font-size: 22px!important;}
+.FS_23{font-size: 23px!important;}
+.FS_24{font-size: 24px!important;}
 
 

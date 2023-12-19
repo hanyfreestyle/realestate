@@ -66,7 +66,7 @@ if (locationSlider) {
 /**
  * blogh-slider
  */
-const bloghSlider = document.querySelector('.blogh-slider')
+const bloghSlider = document.querySelector('.blog_slider_style')
 if (bloghSlider) {
     const teamSliderInit = new Swiper(bloghSlider, {
         loop: true,
@@ -74,7 +74,7 @@ if (bloghSlider) {
         spaceBetween: 16,
         pagination: {
 
-            el: '.blogh-slider__pagination',
+            el: '.blog_slider_style__pagination',
             clickable: true
         },
         breakpoints: {

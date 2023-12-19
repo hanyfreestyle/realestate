@@ -8,41 +8,38 @@
         <h1 class="mb-0">{{$post->name}}</h1>
         <div class="hr-dashed my-4"></div>
         <div class="row blog_info" >
-            <div class="col-lg-3 mb-4">
+
+            <div class="col-lg-3 mb-3">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> calendar_month  </span>
-                    <a href="#"  class="mb-0"> {{$post->getFormatteDate()}} </a>
+                    <a href="#"  class="FS_17 crop_line_1"> {{$post->getFormatteDate()}} </a>
                 </div>
             </div>
 
-            <div class="col-lg-4 mb-4">
+            <div class="col-lg-4 mb-3">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> distance </span>
-                    <p class="mb-0">
-                        <a href="{{route('page_locationView',$post->location->slug)}}">
-                            {{$post->location->name}}
-                        </a>
-                    </p>
+                    <a class="FS_17 crop_line_1" href="{{route('page_locationView',$post->location->slug)}}">
+                        {{$post->location->name}}
+                    </a>
                 </div>
             </div>
 
             @if($project != null)
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-3">
                     <div class="d-flex align-items-center gap-2">
                         <span class="material-symbols-outlined mat-icon iconColor"> construction </span>
-                        <p class="mb-0">
-                            <a href="{{route('page_developer_view',$project->developerName->slug)}}">
-                                {{$project->developerName->name}}
-                            </a>
-                        </p>
+                        <a class="FS_17" href="{{route('page_developer_view',$project->developerName->slug)}}">
+                            {{$project->developerName->name}}
+                        </a>
                     </div>
                 </div>
 
-                <div class="col-lg-12 mb-4">
+                <div class="col-lg-12">
                     <div class="d-flex align-items-center gap-2">
                         <span class="material-symbols-outlined mat-icon iconColor"> home_work   </span>
                         <p class="mb-0 crop_line_1">
-                            <a href="{{route('page_ListView',$project->slug)}}">{{$project->name}}</a>
+                            <a class="FS_17" href="{{route('page_ListView',$project->slug)}}">{{$project->name}}</a>
                         </p>
                     </div>
                 </div>

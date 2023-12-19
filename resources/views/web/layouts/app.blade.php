@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_project_card.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_developers.css') }}">
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">--}}

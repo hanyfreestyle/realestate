@@ -9,22 +9,21 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container py-4">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7 col-xl-6">
                 <div class="text-center def_heading">
-                    <h1> {{__('web/developer.breadcrumbs')}} </h1>
-                    <p class="mb-0"> {{__('web/developer.text')}}</p>
+                    <h1 class="h1_def"> {{__('web/developer.breadcrumbs')}} </h1>
+                    <p class="mb-0 p_def"> {{__('web/developer.text')}}</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="section-space--smX">
+
         <div class="container section-space--sm">
             <div class="row g-4 DevelopersList">
                 @foreach($Developers as $developer)
-
                     <div class="col-xl-3 col-md-4 col-6 developer_col text-center">
                         <a href="{{route('page_developer_view',$developer->slug)}}">
                             <div class="developer_img_div">
@@ -50,14 +49,14 @@
                 @endforeach
             </div>
         </div>
-    </div>
 
-    <div class="container section-space--sm">
-        <div class="d-flex justify-content-center">
-            @if($Developers instanceof \Illuminate\Pagination\AbstractPaginator)
-                {{ $Developers->links('web.layouts.inc.pagination') }}
-            @endif
-        </div>
-    </div>
+
+{{--    <div class="container section-space--sm">--}}
+{{--        <div class="d-flex justify-content-center">--}}
+{{--            @if($Developers instanceof \Illuminate\Pagination\AbstractPaginator)--}}
+{{--                {{ $Developers->links('web.layouts.inc.pagination') }}--}}
+{{--            @endif--}}
+{{--        </div>--}}
+{{--    </div>--}}
 
 @endsection

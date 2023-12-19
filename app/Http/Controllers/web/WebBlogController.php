@@ -104,8 +104,6 @@ class WebBlogController extends WebMainController
                 ->with('locationName')
                 ->limit(10)
                 ->get();
-
-
             if(count($relatedProjects) == 0){
                 $relatedProjects = null;
             }

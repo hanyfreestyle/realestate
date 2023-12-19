@@ -94,6 +94,6 @@ class Post extends Model implements TranslatableContract
 #|||||||||||||||||||||||||||||||||||||| #
     public function getFormatteDate()
     {
-        return Carbon::parse($this->published_at)->locale(app()->getLocale())->translatedFormat('jS F Y') ;
+        return Carbon::parse($this->published_at)->locale(app()->getLocale())->translatedFormat('jS M Y') ;
     }
 }

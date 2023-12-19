@@ -1,20 +1,18 @@
-body{font-family: 'Aljazeera', sans-serif!important;}
+body{font-family: 'Aljazeera', sans-serif!important; font-size:20px}
 
 /*
-body{font-family: 'Tajawal', sans-serif!important;}
+
 .lang_menu{position: absolute;left:15px!important;}
 .form-select {background-position: left .75rem center;}
 @media (max-width: 600px) {
     .home_slider_text h1{
         padding: 1px 40px;
         line-height: 40px;
-
     }
     .home_slider_text p{
         padding: 1px 15px;
         line-height: 35px;
     }
-
 }
 
 

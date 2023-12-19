@@ -34,9 +34,6 @@ Route::group(['middleware' => ['auth','status']], function() {
         Route::get('/blog/{catSlug}', [WebBlogController::class, 'BlogCatList'])->name('page_blogCatList');
         Route::get('/blog/{catSlug}/{postSlug}', [WebBlogController::class, 'BlogView'])->name('page_blogView');
 
-
-
-
         Route::get('/compounds', [WebCompoundController::class, 'CompoundsList'])->name('page_compounds');
         Route::get('/for-sale', [WebCompoundController::class, 'ForSaleList'])->name('page_for_sale');
 

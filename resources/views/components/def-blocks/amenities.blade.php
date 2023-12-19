@@ -8,8 +8,10 @@
                 @foreach($amenities as $amenity)
                     @if(in_array($amenity->id,$senddata))
                         <div class="ty-compact-list amenity_list_li col-6 col-lg-3 align-items-center gap-2">
+                            <span class="crop_line_1_span">
                             <i class="{{$amenity->icon}}"></i>
-                            <span class="d-inline-block"> {{$amenity->name}} </span>
+                            <span class="d-inline-block "> {{$amenity->name}} </span>
+                            </span>
                         </div>
                     @endif
                 @endforeach
