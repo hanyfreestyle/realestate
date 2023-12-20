@@ -22,14 +22,16 @@
     font-size: 25px!important;
 }
 .listing_card_content .project_name{
-    font-size: 24px!important;
+    font-size: 23px!important;
+    font-weight:normal!important;
     line-height: 30px;
     width: 100%!important;
-    font-weight: normal;
     margin-bottom: 20px!important;
     min-height: 50px;
 }
 .listing_card_content .project_locationName{
+    font-size: 16px;
+    font-weight: normal!important;
     display:inline-block;
     width:130px!important;
     text-overflow:ellipsis;white-space:nowrap;overflow:hidden

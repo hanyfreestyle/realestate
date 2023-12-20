@@ -115,7 +115,7 @@ class WebBlogController extends WebMainController
             ->where('id','!=',$post->id)
             ->with('getCatName')
             ->orderBy('id','desc')
-            ->limit('10')
+            ->limit('9')
             ->get();
 
         $other_project = Listing::query()
