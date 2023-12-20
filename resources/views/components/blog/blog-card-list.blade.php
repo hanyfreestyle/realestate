@@ -14,9 +14,8 @@
         <p class="mb-3 crop_line_3"> {!! $post->seoDes() !!}</p>
         <div class="read_more">
             <a href="{{route('page_blogView',[$post->getCatName->slug,$post->slug])}}"
-               class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold  float-right">
+               class="btn btn-outline-primary py-2 px-5 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold  float-right">
                 {{__('web/blog.read-more')}}
-                <span class="material-symbols-outlined mat-icon lh-1"> trending_flat </span>
             </a>
         </div>
     </div>
