@@ -22,7 +22,7 @@
                 <div class="d-flex align-items-center gap-1">
                     <span class="material-symbols-outlined mat-icon clr-tertiary-400"> distance </span>
                     <span class="d-inline-block distance_name">
-                        <a class="FS_20" href="{{route('page_locationView',$unit->locationName->slug)}}">{{$unit->locationName->name}}</a>
+                        <a class="" href="{{route('page_locationView',$unit->locationName->slug)}}">{{$unit->locationName->name}}</a>
                     </span>
                 </div>
 
@@ -34,21 +34,21 @@
                     @if(intval($unit->rooms) != 0)
                         <li>
                             <span class="material-symbols-outlined units_li_icon"> home_work </span>
-                            <span class="d-block FS_16"> {{$unit->rooms}} {{__('web/def.units-room')}}</span>
+                            <span class="d-block units_li_text "> {{$unit->rooms}} {{__('web/def.units-room')}}</span>
                         </li>
                     @endif
 
                     @if(intval($unit->baths) != 0)
                         <li>
                             <span class="material-symbols-outlined units_li_icon"> bathtub </span>
-                            <span class="d-block  FS_16"> {{$unit->baths}} {{__('web/def.units-bath')}}</span>
+                            <span class="d-block  units_li_text"> {{$unit->baths}} {{__('web/def.units-bath')}}</span>
                         </li>
                     @endif
 
                     @if(intval($unit->area) != 0)
                         <li>
                             <span class="material-symbols-outlined units_li_icon"> zoom_out_map </span>
-                            <div class="d-block  FS_16">{{$unit->area}} {{__('web/def.units-area')}} <sup>2</sup></div>
+                            <div class="d-block  units_li_text">{{$unit->area}} {{__('web/def.units-area')}}</div>
                         </li>
                     @endif
                 </ul>

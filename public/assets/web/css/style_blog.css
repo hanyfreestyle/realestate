@@ -91,7 +91,6 @@ font-size: 18px!important;
     color: var(--linkColor);
     font-size: 22px;
     line-height: 30px;
-
     margin-top: 10px;
     min-height: 55px;
 }
@@ -112,10 +111,17 @@ font-size: 18px!important;
     border-left:none;
 }
 .units_li .units_li_icon{
-    font-size: 26px;
+    font-size: 22px;
     margin: 0!important;
     padding: 0!important;
+    color: rgba(0,0,0,.6)!important;
 }
+.units_li_text{
+    font-size: 15px;
+    color: rgba(0,0,0,.6)!important;
+}
+
+
 .property_call_to_action{
     padding-top: 15px!important;
     padding-bottom: 15px!important;
