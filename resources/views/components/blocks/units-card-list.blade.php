@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <a href="#" class="link property-card__tag d-inline-block bg-neutral-0 :bg-primary-300 clr-primary-300 :clr-neutral-0 py-2 px-4 rounded-pill fw-medium">
+            <a href="#" class="FS_BOLD link property-card__tag d-inline-block bg-neutral-0 :bg-primary-300 clr-primary-300 :clr-neutral-0 py-2 px-4 rounded-pill fw-medium">
                 {{ getPropertyTypeName($unit->property_type) }}
             </a>
             <button class="property-card__fav w-10 h-10 rounded-circle bg-neutral-0 d-grid place-content-center border-0 clr-primary-300">
