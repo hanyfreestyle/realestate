@@ -78,15 +78,20 @@
     -o-object-fit:cover;
     object-fit:cover;
 }
+
+.property_type_name{
+font-size: 18px!important;
+}
 .property-card__content .distance_name a{
     color: var(--textColor);
-    font-size: 15px;
+    font-size:17px!important;
 }
 .property-card__content h3{
+    font-weight: bold!important;
     color: var(--linkColor);
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
-    font-weight: normal;
+
     margin-top: 10px;
     min-height: 55px;
 }
