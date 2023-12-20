@@ -15,7 +15,7 @@
                     @if($project_tag != null and $project_tag->units_count > 0 )
 
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-5">
-                            <h2 class="mb-0 def_h2_out"> كافة المعلومات حول كمبوند المقصد {{__('web/blog.h2-properties-for-sale')}} ({{$project_tag->units_count}}) </h2>
+                            <h2 class="mb-0 def_h2_out"> {{__('web/blog.h2-properties-for-sale')}} ({{$project_tag->units_count}}) </h2>
                         </div>
 
                         @foreach($project_tag->units as $unit)
