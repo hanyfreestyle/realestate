@@ -40,6 +40,41 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
     font-size:17px!important;
 }
 
+
+
+
+
+
+
+.listing_card_content .project_type{
+    font-size: 14px!important;
+    color: #fff;
+}
+
+.listing_card_content .project_price{
+    font-size: 15px!important;
+}
+
+
+.listing_card_content .project_name{
+    font-size: 20px!important;
+    font-weight:normal!important;
+    line-height: 30px;
+    width: 100%!important;
+    margin-bottom: 20px!important;
+    min-height: 50px;
+}
+.listing_card_content .project_locationName{
+    font-size: 14px;
+    font-weight: normal!important;
+    display:inline-block;
+    width:130px!important;
+    text-overflow:ellipsis;white-space:nowrap;overflow:hidden
+}
+
+
+
+
 /*
 
 
