@@ -4,7 +4,7 @@
             @if($titel)
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="text-center def_h2_out pb-3">{{$titel}}</h2>
+                        <h2 class="text-center h1_def pb-3">{{$titel}}</h2>
                     </div>
                 </div>
             @endif

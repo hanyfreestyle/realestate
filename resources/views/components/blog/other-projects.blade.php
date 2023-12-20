@@ -3,7 +3,7 @@
         <div class="container p-md-5">
             <div class="row g-md-0">
                 <div class="col-12 mb-3 pb-3">
-                    <h2 class="mb-0 def_h2_out">{{$titel}}</h2>
+                    <h2 class="mb-0 h1_def">{{$titel}}</h2>
                 </div>
                 <div class="col-12">
                     <div class="project-other-project-container">
