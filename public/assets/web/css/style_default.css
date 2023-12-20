@@ -73,6 +73,7 @@ div.hide_text_but{display:none}
 
 .def_h2_out{
     font-size:24px!important;
+    font-weight: normal!important;
     margin-bottom: 15px;
     color: var(--h1Color);
 }

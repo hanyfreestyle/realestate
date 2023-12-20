@@ -15,7 +15,7 @@
                     @if($project_tag != null and $project_tag->units_count > 0 )
 
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-5">
-                            <h2 class="mb-0 def_h2_out"> {{__('web/blog.h2-properties-for-sale')}} ({{$project_tag->units_count}}) </h2>
+                            <h2 class="mb-0 def_h2_out"> كافة المعلومات حول كمبوند المقصد {{__('web/blog.h2-properties-for-sale')}} ({{$project_tag->units_count}}) </h2>
                         </div>
 
                         @foreach($project_tag->units as $unit)
@@ -40,8 +40,8 @@
                             <x-def-blocks.amenities :senddata="$project_tag->amenity" title="{{__('web/blog.h2-amenities')}}" />
                         @endif
                     @endif
-
                 </div>
+
                 <div class="col-lg-4">
                     @if(count($relatedProjects)> 0)
                         <h4 class="def_sidebar_h crop_line_1">{{__('web/def.best-compounds-in')}} {{$relatedProjects->first()->locationName->name}}</h4>
