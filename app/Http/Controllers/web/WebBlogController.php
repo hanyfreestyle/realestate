@@ -102,7 +102,7 @@ class WebBlogController extends WebMainController
                 ->where('listing_type','Project')
                 ->where('location_id',$post->location_id)
                 ->with('locationName')
-                ->limit(10)
+                ->limit(9)
                 ->get();
             if(count($relatedProjects) == 0){
                 $relatedProjects = null;
