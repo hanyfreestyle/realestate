@@ -139,17 +139,8 @@
     border-radius: 1rem;
     background-color: hsl(var(--primary-300));
 }
-.developer_view{
-}
-.developer_view h1{
-    font-size: 30px;
-}
-@media (max-width: 768px) {
-    .developer_view h1{
-        font-size: 25px;
-        line-height: 35px;
-    }
-}
+
+
 .ListProjectUnitsCard{
     margin-bottom: 50px;
 }

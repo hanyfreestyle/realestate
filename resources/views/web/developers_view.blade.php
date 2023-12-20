@@ -5,7 +5,7 @@
     </x-web.block-breadcrumbs>
 
     <div class="bg-primary-5p def_pb_100">
-        <div class="container">
+        <div class="container StopView">
             <div class="row developer_view mb-5">
                 <div class="col-md-12 text-center ">
                     <div class="developer_img_div">
@@ -14,15 +14,14 @@
                 </div>
 
                 <div class="col-md-12 text-center ">
-                    <h1 class="def_h1 text-center mt-3"> {{__('web/developer.h1-compounds')}} {{$developer->name}} </h1>
+                    <h1 class="h1_def text-center mt-3"> {{__('web/developer.h1-compounds')}} {{$developer->name}} </h1>
                 </div>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container ">
             <div class="row">
-
-                <div class="col-md-8 ListProjectUnitsCard">
+                <div class="col-md-8 StopView ListProjectUnitsCard">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link @if(!isset($_GET['property_page'])) active @endif() "
@@ -66,20 +65,16 @@
 
                     </div>
                 </div>
-
-
-                <div class="col-md-4">
-                    <h3 class="def_h_rightSide">{{ __('web/developer.h1-news') }} {{$developer->name}}</h3>
+                <div class="col-lg-4 ">
+                    <h3 class="def_sidebar_h">{{ __('web/developer.h1-news') }} {{$developer->name}}</h3>
                     <hr>
                     @foreach($posts as $post)
                         <x-main-block.blog-post-right-side :post="$post" />
                     @endforeach
                 </div>
-
             </div>
         </div>
-
-        <div class="container">
+        <div class="container StopView">
             <div class="row">
                 <div class="col-md-12">
                     {!! $developer->des !!}

@@ -31,7 +31,7 @@
                             </div>
                         </a>
                         <div class="text-center">
-                            <h2 class="crop_line_1 list_def_h2">
+                            <h2 class="crop_line_1">
                                 <a href="{{route('page_developer_view',$developer->slug)}}">{{$developer->name}}</a>
                             </h2>
                             <div class="icons_div">
@@ -51,12 +51,12 @@
         </div>
 
 
-{{--    <div class="container section-space--sm">--}}
-{{--        <div class="d-flex justify-content-center">--}}
-{{--            @if($Developers instanceof \Illuminate\Pagination\AbstractPaginator)--}}
-{{--                {{ $Developers->links('web.layouts.inc.pagination') }}--}}
-{{--            @endif--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    <div class="container section-space--sm">
+        <div class="d-flex justify-content-center">
+            @if($Developers instanceof \Illuminate\Pagination\AbstractPaginator)
+                {{ $Developers->links('web.layouts.inc.pagination') }}
+            @endif
+        </div>
+    </div>
 
 @endsection
