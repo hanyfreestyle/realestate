@@ -12,14 +12,14 @@
             <div class="col-lg-3 mb-3">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> calendar_month  </span>
-                    <a href="#"  class="FS_15 crop_line_1"> {{$post->getFormatteDate()}} </a>
+                    <a href="#"  class="FS_16 crop_line_1"> {{$post->getFormatteDate()}} </a>
                 </div>
             </div>
 
             <div class="col-lg-4 mb-3">
                 <div class="d-flex align-items-center gap-2">
                     <span class="material-symbols-outlined mat-icon iconColor"> distance </span>
-                    <a class="FS_15 crop_line_1" href="{{route('page_locationView',$post->location->slug)}}">
+                    <a class="FS_16 crop_line_1" href="{{route('page_locationView',$post->location->slug)}}">
                         {{$post->location->name}}
                     </a>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="col-lg-4 mb-3">
                     <div class="d-flex align-items-center gap-2">
                         <span class="material-symbols-outlined mat-icon iconColor"> construction </span>
-                        <a class="FS_15" href="{{route('page_developer_view',$project->developerName->slug)}}">
+                        <a class="FS_16" href="{{route('page_developer_view',$project->developerName->slug)}}">
                             {{$project->developerName->name}}
                         </a>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="d-flex align-items-center gap-2">
                         <span class="material-symbols-outlined mat-icon iconColor"> home_work   </span>
                         <p class="mb-0 crop_line_1">
-                            <a class="FS_15" href="{{route('page_ListView',$project->slug)}}">{{$project->name}}</a>
+                            <a class="FS_16" href="{{route('page_ListView',$project->slug)}}">{{$project->name}}</a>
                         </p>
                     </div>
                 </div>
