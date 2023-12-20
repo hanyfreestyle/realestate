@@ -17,7 +17,7 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
 .ButDivCon .show-more{float:right}
 
 .h1_def{font-size: 30px!important;}
-.def_h2_out{font-size:22px!important;}
+.def_h2_out{font-size:22px!important; font-weight: normal!important; }
 .def_h2_blocks{font-size:25px;}
 
 .blog_li h2{font-size: 20px;}
