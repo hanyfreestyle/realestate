@@ -8,7 +8,7 @@
                 </div>
             </div>
 
-            <a href="#" class="FS_BOLD property_type_name link property-card__tag d-inline-block bg-neutral-0 :bg-primary-300 clr-primary-300 :clr-neutral-0 py-2 px-4 rounded-pill">
+            <a href="#" class="property_type_name link property-card__tag d-inline-block bg-neutral-0 :bg-primary-300 clr-primary-300 :clr-neutral-0 py-2 px-4 rounded-pill">
                 {{ getPropertyTypeName($unit->property_type) }}
             </a>
             <button class="property-card__fav w-10 h-10 rounded-circle bg-neutral-0 d-grid place-content-center border-0 clr-primary-300">
@@ -27,7 +27,7 @@
                 </div>
 
                 <a href="{{route('page_ListView',$unit->slug)}}" class="link d-block clr-neutral-700 :clr-primary-300 fs-20 fw-medium mb-3">
-                    <h3 class="def_units_name crop_line_2 ">{{$unit->name}}</h3>
+                    <h3 class="crop_line_2 ">{{$unit->name}}</h3>
                 </a>
 
                 <ul class="units_li">
