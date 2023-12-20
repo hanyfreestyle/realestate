@@ -3794,7 +3794,7 @@ small,
   background-color: hsl(var(--primary-300)/0.03);
 }
 .bg-primary-5p {
-  background-color: hsl(var(--primary-300)/0.05);
+  background-color: hsl(var(--primary-300)/0.50);
 }
 .bg-primary-10p {
   background-color: hsl(var(--primary-300)/0.1);
