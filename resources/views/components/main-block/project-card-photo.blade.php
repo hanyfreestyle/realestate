@@ -11,7 +11,7 @@
                 <div class="d-flex align-items-center justify-content-between mb-2">
                     <span class="project_type"> {{ getProjectTypeName($project->project_type)}} </span>
                     <span class="d-inline-block clr-tertiary-300 project_price">
-                        <span class="FS_18 fw-normal clr-neutral-0"> {{ __('web/def.starting-from') }}</span>
+                        <span class="FS_15 fw-normal clr-neutral-0"> {{ __('web/def.starting-from') }}</span>
                        {{ number_format($project->price) }}
                     </span>
                 </div>

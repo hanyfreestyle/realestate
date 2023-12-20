@@ -18,9 +18,12 @@
     font-size: 16px!important;
     color: #fff;
 }
+
 .listing_card_content .project_price{
-    font-size: 25px!important;
+    font-size: 20px!important;
 }
+
+
 .listing_card_content .project_name{
     font-size: 23px!important;
     font-weight:normal!important;
@@ -35,9 +38,6 @@
     display:inline-block;
     width:130px!important;
     text-overflow:ellipsis;white-space:nowrap;overflow:hidden
-}
-.listing_card_content .project_price{
-    font-size: 25px!important;
 }
 
 
