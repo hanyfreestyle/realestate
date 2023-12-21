@@ -4,8 +4,8 @@
         {{ Breadcrumbs::render('developer_view',$developer) }}
     </x-web.block-breadcrumbs>
 
-    <div class="bg-primary-5p def_pb_100">
-        <div class="container StopView">
+    <div class="bg-primary-5p def_pb_100 DeveloperView">
+        <div class="container StopViewX">
             <div class="row developer_view mb-5">
                 <div class="col-md-12 text-center ">
                     <div class="developer_img_div">
@@ -19,9 +19,9 @@
             </div>
         </div>
 
-        <div class="container ">
+        <div class="container">
             <div class="row">
-                <div class="col-md-8 StopView ListProjectUnitsCard">
+                <div class="col-md-8 ListProjectUnitsCard">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link @if(!isset($_GET['property_page'])) active @endif() "
@@ -47,7 +47,7 @@
                             <div class="row g-4 pb-5">
                                 @foreach($projects as $project)
                                     <div class="col-lg-6 mb-0">
-                                        <x-main-block.project-card-photo :project="$project" cardstyle="tab_card" />
+                                        <x-main-block.project-card-photo :project="$project" cardstyle="project_side_bar" />
                                     </div>
                                 @endforeach
                             </div>
@@ -57,7 +57,7 @@
                         <div class="tab-pane fade @if(isset($_GET['property_page'])) show active @endif() " id="pills-units" role="tabpanel" aria-labelledby="pills-units-tab">
                             <div class="row">
                                 @foreach($units as $unit)
-                                    <x-main-block.units-card :unit="$unit" />
+                                    <x-blocks.units-card-list  :unit="$unit"  />
                                 @endforeach
                             </div>
                             <x-main-block.pagination :row="$units"/>
@@ -65,8 +65,8 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4 ">
-                    <h3 class="def_sidebar_h">{{ __('web/developer.h1-news') }} {{$developer->name}}</h3>
+                <div class="col-lg-4 DeveloperSide StopViewX">
+                    <h3 class="">{{ __('web/developer.h1-news') }} {{$developer->name}}</h3>
                     <hr>
                     @foreach($posts as $post)
                         <x-main-block.blog-post-right-side :post="$post" />
@@ -74,13 +74,15 @@
                 </div>
             </div>
         </div>
-        <div class="container StopView">
+
+        <div class="container StopViewX">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 Des">
                     {!! $developer->des !!}
                 </div>
             </div>
         </div>
+
     </div>
 
 @endsection

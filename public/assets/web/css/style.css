@@ -1192,18 +1192,20 @@ small,
   }
 }
 .listing-card__content {
-  padding: 1rem;
+
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1.5rem;
+  /*  padding: 15px!important;*/
 }
-@media (min-width: 576px) {
-  .listing-card__content {
-    padding: 1.5rem;
-  }
-}
+/*@media (min-width: 576px) {*/
+/*  .listing-card__content {*/
+/*    padding: 1.5rem;*/
+/*  }*/
+/*}*/
 .service-card:hover h3,
 .service-card:hover h4,
 .service-card:hover p {
@@ -3794,7 +3796,7 @@ small,
   background-color: hsl(var(--primary-300)/0.03);
 }
 .bg-primary-5p {
-  background-color: hsl(var(--primary-300)/0.1);
+  background-color: hsl(var(--primary-300)/0.05);
 }
 .bg-primary-10p {
   background-color: hsl(var(--primary-300)/0.1);

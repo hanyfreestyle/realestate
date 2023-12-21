@@ -9,14 +9,22 @@ use Illuminate\View\Component;
 class UnitsCardList extends Component
 {
     public $unit ;
-    public $project;
+    public $show_more ;
+    public $show_more_style;
+
     public function __construct(
         $unit = array(),
-        $project =  array(),
+        $showmore = true,
+        $show_more_style = ' ty-compact-list-units ',
     )
     {
         $this->unit = $unit;
-        $this->project = $project;
+        $this->showmore = $showmore;
+        $this->show_more_style = $show_more_style;
+
+        if($this->showmore == false){
+            $this->show_more_style = '';
+        }
 
     }
     public function render(): View|Closure|string

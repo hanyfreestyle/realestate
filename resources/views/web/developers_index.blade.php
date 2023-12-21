@@ -24,7 +24,7 @@
         <div class="container section-space--sm">
             <div class="row g-4 DevelopersList">
                 @foreach($Developers as $developer)
-                    <div class="col-xl-3 col-md-4 col-6 developer_col text-center">
+                    <div class="col-xl-3 col-md-4X col-6X developer_col text-center">
                         <a href="{{route('page_developer_view',$developer->slug)}}">
                             <div class="developer_img_div">
                                 <img src="{{getPhotoPath($developer->photo_thum_1,"developer")}}" alt="image" class="developer_list_img">
@@ -37,11 +37,11 @@
                             <div class="icons_div">
                                 <div class="icon">
                                     <i class="fas fa-hotel"></i>
-                                    <span>{{ $developer->projects_count }} {{__('web/developer.project')}}</span>
+                                    <span class="print_text"><span class="print_num En_Font">{{ $developer->projects_count }}</span>  {{__('web/developer.project')}}</span>
                                 </div>
                                 <div class="icon">
                                     <i class="fas fa-bed"></i>
-                                    <span>{{ $developer->units_count }} {{__('web/developer.unit')}}</span>
+                                    <span class="print_text"><span class="print_num En_Font">{{ $developer->units_count }}</span>  {{__('web/developer.unit')}}</span>
                                 </div>
                             </div>
                         </div>

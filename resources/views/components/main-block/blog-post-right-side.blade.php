@@ -6,6 +6,6 @@
         <h5 class="mb-0">
             <a href="{{route('page_blogView',[$post->getCatName->slug,$post->slug])}}" class="link clr-neutral-700 h1_name crop_line_2"> {{$post->name}} </a>
         </h5>
-        <p class="mb-0 clr-neutral-500 published_at">{{ $post->getFormatteDate()  }} </p>
+        <p class="mb-0 clr-neutral-500 published_at En_FontX">{{ $post->getFormatteDate()  }} </p>
     </div>
 </div>

@@ -141,25 +141,9 @@
 }
 
 
-.ListProjectUnitsCard{
-    margin-bottom: 50px;
-}
-.ListProjectUnitsCard .nav {
-    padding-right: 0!important;
-}
-.RightSide_Blog{
-}
-.RightSide_Blog .h1_name{
-    font-size: 15px;
-    line-height: 25px;
-}
-.RightSide_Blog .img_div{
-    overflow: hidden;
-}
-.RightSide_Blog .published_at{
-    font-size: 15px;
-    margin-top: 5px;
-}
+
+
+
 .projectCardInfo {
     font-size: 15px;
 }

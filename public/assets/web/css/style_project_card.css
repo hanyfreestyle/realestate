@@ -10,9 +10,13 @@
 }
 
 .project_side_bar .listing_card_content{
-    padding-right: 10px;
-    padding-left: 10px;
+    /*padding-right: 1px;*/
+    /*padding-left: 1px;*/
+    /*background: red;*/
 }
+
+
+
 
 .listing_card_content .project_type{
     font-size: 16px!important;
@@ -42,3 +46,6 @@
 
 
 
+.project_card_on_tab .listing-card__content{
+    padding: 15px!important;
+}

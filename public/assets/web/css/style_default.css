@@ -1,6 +1,7 @@
 .StopView{
     display: none!important;
 }
+.En_Font{font-family: 'Poppins', sans-serif!important}
 :root {
     --linkColor: #3738ea;
     --h1Color: #3738ea;
