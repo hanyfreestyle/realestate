@@ -10,9 +10,8 @@
             <div class="row developer_view mb-5">
 
                 <div class="col-md-12 text-center ">
-                    <h1 class="def_h1 text-center mt-3">
+                    <h1 class="h1_def text-center mt-3">
                         {!! __('web/compound.breadcrumbs-for-sale') !!} -
-
                         {{$units->total()}} {{ __('web/compound.h1-properties') }}
                     </h1>
                 </div>
@@ -24,7 +23,8 @@
                 <div class="col-md-8 ListProjectUnitsCard">
                     <div class="row">
                         @foreach($units as $unit)
-                            <x-main-block.units-card :unit="$unit" />
+{{--                            <x-main-block.units-card :unit="$unit" />--}}
+                            <x-blocks.units-card-list  :unit="$unit" :showmore="false"/>
                         @endforeach
                     </div>
                     <x-main-block.pagination :row="$units"/>

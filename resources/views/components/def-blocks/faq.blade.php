@@ -11,7 +11,7 @@
                             <div class="accordion-item">
                                 <h3 class="accordion-header">
                                     <button class="accordion-button @if($loop->index != 0) collapsed @endif " type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{$faq->id}}" aria-expanded="@if($loop->index == 0) true @endif" aria-controls="collapse_{{$faq->id}}">
-                                        {{$faq->question}}
+                                        <span class="faq_question">{{$faq->question}}</span>
                                     </button>
                                 </h3>
                                 <div id="collapse_{{$faq->id}}" class="accordion-collapse collapse @if($loop->index == 0) show @endif" data-bs-parent="#accordionExample">

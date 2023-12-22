@@ -1,22 +1,22 @@
 @extends('web.layouts.app')
 @section('content')
 
-    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )
-        @if($unit->slider_count > 2)
-            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
-        @elseif(count($old_slider) > 2 )
-            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
-        @endif
+{{--    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )--}}
+{{--        @if($unit->slider_count > 2)--}}
+{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />--}}
+{{--        @elseif(count($old_slider) > 2 )--}}
+{{--            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />--}}
+{{--        @endif--}}
 
-    @elseif($unit->listing_type == 'Unit')
-        @if($unit->slider_count > 2)
-            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
-        @elseif($unit->project->slider_count > 2)
-            <x-main-block.units-slider :unit="$unit" :photos="$unit->project->slider" type="new_slider"  />
-        @elseif(count($old_slider) > 2 )
-            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
-        @endif
-    @endif
+{{--    @elseif($unit->listing_type == 'Unit')--}}
+{{--        @if($unit->slider_count > 2)--}}
+{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />--}}
+{{--        @elseif($unit->project->slider_count > 2)--}}
+{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->project->slider" type="new_slider"  />--}}
+{{--        @elseif(count($old_slider) > 2 )--}}
+{{--            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />--}}
+{{--        @endif--}}
+{{--    @endif--}}
 
 
 
@@ -25,11 +25,6 @@
             <div class="row">
                 <div class="col-xl-8">
                     <div class="section-space--sm">
-
-{{--                        @foreach($unit->pro_units as $prounit)--}}
-{{--                            <a href="{{route('page_ListView',$prounit->slug)}}">{{$prounit->slider_images_dir}}</a>--}}
-{{--                            <br>--}}
-{{--                        @endforeach--}}
 
                         @if($unit->listing_type == 'Project')
                             <x-def-blocks.project-info :row="$unit" />
@@ -52,16 +47,15 @@
 
                         <x-def-blocks.amenities :senddata="$amenities" title="{{__('web/blog.h2-amenities')}}" />
 
-                        <x-def-blocks.youtube :vcode="$youtube" title="{{__('web/blog.h2-video')}}" />
+{{--                        <x-def-blocks.youtube :vcode="$youtube" title="{{__('web/blog.h2-video')}}" />--}}
 
                         <x-def-blocks.google-map :row="$unit" title="{{ __('web/compound.listview-h2-map') }}" />
 
                         <x-def-blocks.faq :row="$unit"  title="{{__('web/compound.listview-h2-faq')}}"/>
-
                     </div>
 
                 </div>
-                <div class="col-xl-4 mobile_stop">
+                <div class="col-xl-4 StopView mobile_stop">
                     <div class="section-space--sm">
                         <x-main-block.search-form-right />
                     </div>

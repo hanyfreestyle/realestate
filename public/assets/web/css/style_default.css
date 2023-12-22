@@ -81,6 +81,7 @@ div.hide_text_but{display:none}
 .def_h2_blocks{
     font-size:25px;
     margin-bottom: 15px;
+    font-weight: normal!important;
     color: var(--h1Color);
 }
 .p_def{

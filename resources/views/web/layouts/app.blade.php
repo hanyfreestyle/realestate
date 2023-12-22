@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/style_project_card.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_developers.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_compounds.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_listing_view.css') }}">
 
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">--}}
-{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">--}}
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
 

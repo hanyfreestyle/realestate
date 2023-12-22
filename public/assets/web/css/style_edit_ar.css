@@ -1,5 +1,13 @@
 body{font-family: 'Aljazeera', sans-serif!important; font-size:20px}
 
+.faq_container .accordion-button {
+    text-align: right;
+}
+.faq_container .accordion-button::after {
+    margin-right: auto!important;
+    margin-left: unset!important;
+}
+
 /*
 
 .lang_menu{position: absolute;left:15px!important;}
@@ -95,11 +103,5 @@ body{font-family: 'Aljazeera', sans-serif!important; font-size:20px}
     }
 }
 
-.faq_container .accordion-button {
-    text-align: right;
-}
-.faq_container .accordion-button::after {
-    margin-right: auto!important;
-    margin-left: unset!important;
-}
+
 */

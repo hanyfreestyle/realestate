@@ -9,7 +9,7 @@
             <div class="row developer_view mb-5">
 
                 <div class="col-md-12 text-center ">
-                    <h1 class="def_h1 text-center mt-3">
+                    <h1 class="h1_def text-center mt-3">
                       {{ getLocationProjectTypeName($location->projects_type) ." ". $location->name}}
                     </h1>
                 </div>
@@ -44,7 +44,10 @@
                         <div class="tab-pane fade @if(!isset($_GET['property_page'])) show active @endif() " id="pills-project" role="tabpanel" aria-labelledby="pills-project-tab">
                             <div class="row g-4 pb-5">
                                 @foreach($projects as $project)
-                                    <x-main-block.project-card :project="$project" />
+                                    <div class="col-lg-6 project_card_on_tab">
+                                        <x-main-block.project-card-photo :project="$project" cardstyle="project_side_bar" />
+                                    </div>
+{{--                                    <x-main-block.project-card :project="$project" />--}}
                                 @endforeach
                             </div>
                             <x-main-block.pagination :row="$projects"/>
@@ -53,7 +56,8 @@
                         <div class="tab-pane fade @if(isset($_GET['property_page'])) show active @endif() " id="pills-units" role="tabpanel" aria-labelledby="pills-units-tab">
                             <div class="row">
                                 @foreach($units as $unit)
-                                    <x-main-block.units-card :unit="$unit" />
+{{--                                    <x-main-block.units-card :unit="$unit" />--}}
+                                    <x-blocks.units-card-list  :unit="$unit" :showmore="false"/>
                                 @endforeach
                             </div>
                             <x-main-block.pagination :row="$units"/>
@@ -62,10 +66,8 @@
                     </div>
                 </div>
 
-
                 <div class="col-md-4">
                     <x-main-block.search-form-right />
-
                 </div>
 
             </div>
