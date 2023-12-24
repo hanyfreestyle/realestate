@@ -10,13 +10,13 @@
     <div class="ButDivCon">
         <div class="show_text_but ">
             <div class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
-                {{__('web/blog.read-more')}}
+                {{__('web/def.but-show-more')}}
             </div>
         </div>
 
         <div class="hide_text_but">
             <div class="btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">
-                {{__('web/blog.show-less')}}
+                {{__('web/def.but-show-less')}}
             </div>
         </div>
     </div>

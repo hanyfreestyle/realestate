@@ -3,9 +3,10 @@
 return
 [
 	'best-compounds-in' => 'Best Compounds In',
-	'but-show-less' => 'Show less',
-	'but-show-more' => 'Show more',
+	'but-show-less' => 'Show Less',
+	'but-show-more' => 'Show More',
 	'compounds' => 'Compounds',
+	'developed-by' => 'Developed by',
 	'project' => 'Projects',
 	'projects-news' => 'Compounds projects news',
 	'published-at' => 'Published At',
@@ -13,9 +14,8 @@ return
 	'starting-from' => 'Starting from',
 	'units' => 'Units',
 	'units-area' => 'M',
-	'units-bath' => 'Bath',
+	'units-bath' => 'Baths',
 	'units-read-more' => 'Read More',
-	'units-room' => 'Room',
+	'units-room' => 'Rooms',
 	'view-all' => 'View All',
-	'developed-by' => 'Developed by',
 ];

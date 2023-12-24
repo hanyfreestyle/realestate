@@ -7,7 +7,6 @@
     <div class="bg-primary-5p def_pb_100X">
         <div class="container">
             <div class="row mb-5">
-
                 <div class="col-md-12 text-center ">
                     <h1 class="h1_def text-center mt-3">
                         {!! __('web/compound.h1-title') !!} -

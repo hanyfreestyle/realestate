@@ -1,4 +1,5 @@
 @extends('web.layouts.app')
+
 @section('content')
 
 {{--    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )--}}

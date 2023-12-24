@@ -6,6 +6,7 @@ return
 	'but-show-less' => 'عرض اقل',
 	'but-show-more' => 'عرض المزيد',
 	'compounds' => 'كمبوندات',
+	'developed-by' => 'المطور',
 	'project' => 'مشروع',
 	'projects-news' => 'أخبار مشاريع كمبوندات',
 	'published-at' => 'نشرت بتاريخ',
@@ -17,5 +18,4 @@ return
 	'units-read-more' => 'عرض التفاصيل',
 	'units-room' => 'غرفة',
 	'view-all' => 'عرض الكل',
-	'developed-by' => 'المطور',
 ];
