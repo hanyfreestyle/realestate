@@ -84,14 +84,14 @@
 }
 
 .ListingViewInfo .iconColor{
-    color: var(--textColor);
+    color: rgba(0,0,0,.7) !important;
 
 }
 .ListingViewInfo .pro_info{
-    color: var(--textColor);
-    font-size: 16px;
+    font-size: 18px;
+    color: rgba(0,0,0,.7) !important;
 }
 .ListingViewInfo .pro_info a{
-    color: var(--textColor);
-    font-size: 16px;
+    font-size: 18px;
+    color: rgba(0,0,0,.7) !important;
 }

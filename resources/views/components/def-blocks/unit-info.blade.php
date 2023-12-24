@@ -51,7 +51,7 @@
         </div>
         <div class="col-lg-4 mb-5">
             <div class="d-flex align-items-center gap-2">
-                <span class="material-symbols-outlined mat-icon iconColor"> construction </span>
+                <span class="material-symbols-outlined mat-icon iconColor"> real_estate_agent </span>
                 <p class="mb-0 crop_line_1 pro_info">
                     <a class="" href="{{route('page_developer_view',$row->developerName->slug)}}">
                         {{$row->developerName->name}}
