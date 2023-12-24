@@ -9,7 +9,7 @@ use Illuminate\View\Component;
 class UnitsCardList extends Component
 {
     public $unit ;
-    public $show_more ;
+    public $showmore ;
     public $show_more_style;
 
     public function __construct(
