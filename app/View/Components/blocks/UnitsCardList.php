@@ -20,7 +20,7 @@ class UnitsCardList extends Component
     {
         $this->unit = $unit;
         $this->showmore = $showmore;
-        $this->show_more_style = $showmorestyle;
+        $this->showmorestyle = $showmorestyle;
 
         if($this->showmore == false){
             $this->showmorestyle = '';
