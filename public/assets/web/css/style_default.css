@@ -4,7 +4,8 @@
 .En_Font{font-family: 'Poppins', sans-serif!important}
 :root {
     --linkColor: #3738ea;
-    --h1Color: #3738ea;
+    /*--h1Color: #3738ea;*/
+    --h1Color:  rgb(36, 55, 87);
     --linkHover: #000000;
     --textColor: #808080;
 }
