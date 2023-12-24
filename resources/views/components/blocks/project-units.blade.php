@@ -24,7 +24,7 @@
 
     <div class="row mb-5 ">
         <div class="col-12 text-center mb-lg-5">
-            <div class="show-more-units btn btn-outline-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">{{__('web/def.but-show-more')}}</div>
+            <div class="show-more-units btn btn-primary py-3 px-6 rounded-pill d-inline-flex align-items-center gap-1 fw-semibold">{{__('web/def.but-show-more')}}</div>
         </div>
     </div>
 
