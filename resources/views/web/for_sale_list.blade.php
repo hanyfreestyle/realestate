@@ -9,8 +9,8 @@
         <div class="container">
             <div class="row developer_view mb-5">
 
-                <div class="col-md-12 text-center ">
-                    <h1 class="h1_def text-center mt-3">
+                <div class="col-md-12 text-centerX ">
+                    <h1 class="h1_def text-centerX mt-3">
                         {!! __('web/compound.breadcrumbs-for-sale') !!} -
                         {{$units->total()}} {{ __('web/compound.h1-properties') }}
                     </h1>

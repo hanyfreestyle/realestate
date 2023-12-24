@@ -7,8 +7,8 @@
     <div class="bg-primary-5p def_pb_100X">
         <div class="container">
             <div class="row mb-5">
-                <div class="col-md-12 text-center ">
-                    <h1 class="h1_def text-center mt-3">
+                <div class="col-md-12 text-centerX ">
+                    <h1 class="h1_def text-centerX mt-3">
                         {!! __('web/compound.h1-title') !!} -
                         {{$projects->total()}} {{ __('web/compound.h1-compounds') }} -
                         {{$units->total()}} {{ __('web/compound.h1-properties') }}
