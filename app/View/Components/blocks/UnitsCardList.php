@@ -10,20 +10,20 @@ class UnitsCardList extends Component
 {
     public $unit ;
     public $showmore ;
-    public $show_more_style;
+    public $showmorestyle;
 
     public function __construct(
         $unit = array(),
         $showmore = true,
-        $show_more_style = ' ty-compact-list-units ',
+        $showmorestyle = ' ty-compact-list-units ',
     )
     {
         $this->unit = $unit;
         $this->showmore = $showmore;
-        $this->show_more_style = $show_more_style;
+        $this->show_more_style = $showmorestyle;
 
         if($this->showmore == false){
-            $this->show_more_style = '';
+            $this->showmorestyle = '';
         }
 
     }

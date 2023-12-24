@@ -1,4 +1,4 @@
-<div class="col-12 mb-5  {{$show_more_style}} ty-compact-list-unitsXXXX ">
+<div class="col-12 mb-5  {{$showmorestyle}} ty-compact-list-unitsXXXX ">
     <div class="property-card property-card--row">
 
         <div class="property-card__head">
