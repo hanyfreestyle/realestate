@@ -17,6 +17,11 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
 .ButDivCon .show-more{float:right}
 
 .h1_def{font-size: 30px!important;}
+.h1_def_en{
+    /*font-size: 26px!important;*/
+    /*font-weight: bold;*/
+    font-size: 27px!important;
+}
 .def_h2_out{font-size:22px!important; font-weight: normal!important; }
 .def_h2_blocks{font-size:25px;}
 
@@ -88,6 +93,8 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
     margin-top: 5px;
     color: var(--textColor);
 }
+
+
 
 
 
