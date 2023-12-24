@@ -2,22 +2,22 @@
 
 @section('content')
 
-{{--    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )--}}
-{{--        @if($unit->slider_count > 2)--}}
-{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />--}}
-{{--        @elseif(count($old_slider) > 2 )--}}
-{{--            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />--}}
-{{--        @endif--}}
+    @if($unit->listing_type == 'Project' or $unit->listing_type == 'ForSale' )
+        @if($unit->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
+        @elseif(count($old_slider) > 2 )
+            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
+        @endif
 
-{{--    @elseif($unit->listing_type == 'Unit')--}}
-{{--        @if($unit->slider_count > 2)--}}
-{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />--}}
-{{--        @elseif($unit->project->slider_count > 2)--}}
-{{--            <x-main-block.units-slider :unit="$unit" :photos="$unit->project->slider" type="new_slider"  />--}}
-{{--        @elseif(count($old_slider) > 2 )--}}
-{{--            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />--}}
-{{--        @endif--}}
-{{--    @endif--}}
+    @elseif($unit->listing_type == 'Unit')
+        @if($unit->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->slider" type="new_slider"  />
+        @elseif($unit->project->slider_count > 2)
+            <x-main-block.units-slider :unit="$unit" :photos="$unit->project->slider" type="new_slider"  />
+        @elseif(count($old_slider) > 2 )
+            <x-main-block.units-slider :unit="$unit" :photos="$old_slider" type="old_slider"  />
+        @endif
+    @endif
 
 
 

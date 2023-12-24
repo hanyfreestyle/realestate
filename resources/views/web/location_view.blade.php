@@ -8,8 +8,8 @@
         <div class="container">
             <div class="row developer_view mb-5">
 
-                <div class="col-md-12 text-center ">
-                    <h1 class="h1_def text-center mt-3">
+                <div class="col-md-12 text-centerX ">
+                    <h1 class="h1_def h1_def_en text-centerX mt-3">
                       {{ getLocationProjectTypeName($location->projects_type) ." ". $location->name}}
                     </h1>
                 </div>
