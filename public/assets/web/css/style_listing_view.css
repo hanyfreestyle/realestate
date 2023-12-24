@@ -31,15 +31,17 @@
 }
 
 .ProjectViewInfo .iconColor{
-    color: var(--textColor);
+    /*color: var(--textColor);*/
+    color: rgba(0,0,0,.8) !important;
 }
 .ProjectViewInfo .pro_info{
-    color: var(--textColor);
-    font-size: 16px;
+    /*color: var(--textColor);*/
+    font-size: 20px;
+    color: rgba(0,0,0,.8) !important;
 }
 .ProjectViewInfo .pro_info a{
-    color: var(--textColor);
-    font-size: 16px;
+    color: rgba(0,0,0,.8) !important;
+    font-size: 20px;
 }
 
 .faq_container .accordion-button {
