@@ -36,12 +36,12 @@
 }
 .ProjectViewInfo .pro_info{
     /*color: var(--textColor);*/
-    font-size: 20px;
-    color: rgba(0,0,0,.8) !important;
+    font-size: 18px;
+    color: rgba(0,0,0,.7) !important;
 }
 .ProjectViewInfo .pro_info a{
-    color: rgba(0,0,0,.8) !important;
-    font-size: 20px;
+    color: rgba(0,0,0,.7) !important;
+    font-size: 18px;
 }
 
 .faq_container .accordion-button {
