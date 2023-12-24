@@ -72,6 +72,22 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
     text-overflow:ellipsis;white-space:nowrap;overflow:hidden
 }
 
+.DeveloperSide h3{
+    font-size: 20px!important;
+    font-weight: bold;
+
+}
+
+.RightSide_Blog .h1_name{
+    font-size: 17px!important;
+    color: var(--h1Color);
+}
+
+.RightSide_Blog .published_at{
+    font-size: 15px;
+    margin-top: 5px;
+    color: var(--textColor);
+}
 
 
 
