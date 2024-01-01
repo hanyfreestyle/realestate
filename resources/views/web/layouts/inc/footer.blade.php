@@ -72,38 +72,42 @@
 </div>
 
 @if($pageView['show_fix'] == true)
-    <div class="sticky-navbar fixed d-xl-none">
 
-        <div class="sticky-info">
-            <a href="{{route('page_index')}}" class="sticky_a @if($pageView['SelMenu'] == 'HomePage') sticky_active @endif " >
-                <span class="material-symbols-outlined mat-icon"> home </span>
-                {{__('web/stickyBar.home')}}
-            </a>
-        </div>
+    <div class="fixDiv d-xl-none">
+        <div class="sticky-navbar fixed d-xl-none">
 
-        <div class="sticky-info">
-            <a href="{{route('page_compounds')}}"  href="#" class="sticky_a  @if($pageView['SelMenu'] == 'Compounds') sticky_active @endif ">
-                <span class="material-symbols-outlined mat-icon"> home_work  </span>
-                {{ __('web/stickyBar.project')}}
-            </a>
-        </div>
-        <div class="sticky-info">
-            <a  href="{{route('page_for_sale')}}"   class="sticky_a @if($pageView['SelMenu'] == 'ForSale') sticky_active @endif">
-                <span class="material-symbols-outlined mat-icon"> scene </span>
-                {{ __('web/stickyBar.units') }}
-            </a>
-        </div>
+            <div class="sticky-info">
+                <a href="{{route('page_index')}}" class="sticky_a @if($pageView['SelMenu'] == 'HomePage') sticky_active @endif " >
+                    <span class="material-symbols-outlined mat-icon"> home </span>
+                    {{__('web/stickyBar.home')}}
+                </a>
+            </div>
 
-        <div class="sticky-info">
-            <a href="#" class="sticky_a  @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
-                <span class="material-symbols-outlined mat-icon"> menu </span>
-                {{ __('web/stickyBar.menu') }}
-            </a>
+            <div class="sticky-info">
+                <a href="{{route('page_compounds')}}"  href="#" class="sticky_a  @if($pageView['SelMenu'] == 'Compounds') sticky_active @endif ">
+                    <span class="material-symbols-outlined mat-icon"> home_work  </span>
+                    {{ __('web/stickyBar.project')}}
+                </a>
+            </div>
+            <div class="sticky-info">
+                <a  href="{{route('page_for_sale')}}"   class="sticky_a @if($pageView['SelMenu'] == 'ForSale') sticky_active @endif">
+                    <span class="material-symbols-outlined mat-icon"> scene </span>
+                    {{ __('web/stickyBar.units') }}
+                </a>
+            </div>
+
+            <div class="sticky-info">
+                <a href="#" class="sticky_a  @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
+                    <span class="material-symbols-outlined mat-icon"> menu </span>
+                    {{ __('web/stickyBar.menu') }}
+                </a>
+            </div>
         </div>
     </div>
+
 @else
 {{--    <div class="sticky_call fixed d-xl-none"> --}}
-<div class="fixDiv">
+<div class="fixDiv d-xl-none">
     <div class="sticky_call_new">
 
         <div class="sticky_info_call">

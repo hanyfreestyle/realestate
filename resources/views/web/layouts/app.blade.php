@@ -35,7 +35,7 @@
 @if($_SERVER['HTTP_HOST'] != 'localhost' )
     @include('web.layouts.inc.preloader')
 @endif
-@include('web.layouts.inc.preloader')
+{{--@include('web.layouts.inc.preloader')--}}
 
 @include('web.layouts.inc.header_top')
 @include('web.layouts.inc.header_menu')
