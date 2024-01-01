@@ -97,7 +97,7 @@
             </div>
 
             <div class="sticky-info">
-                <a href="#" class="sticky_a btn01 @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
+                <a class="sticky_a btn01 @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
                     <span class="material-symbols-outlined mat-icon"> menu </span>
                     {{ __('web/stickyBar.menu') }}
                 </a>
@@ -131,14 +131,16 @@
 
 
 <nav class="side-slide">
-
-    <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Help</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
     <h3 class="nav01">x</h3>
+    <ul>
+        <li class="menu-list @if($pageView['SelMenu'] == 'HomePage') current-page @endif"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.home')}} </a> </li>
+        <li class="menu-list @if($pageView['SelMenu'] == 'Compounds') current-page @endif"><a href="{{route('page_compounds')}}" class="link menu-link "> {!! __('web/menu.egypt-s-compounds') !!} </a> </li>
+        <li class="menu-list @if($pageView['SelMenu'] == 'Blog') current-page @endif"><a href="{{route('page_blog')}}" class="link menu-link "> {{__('web/menu.blog')}} </a> </li>
+        <li class="menu-list @if($pageView['SelMenu'] == 'ForSale') current-page @endif"><a href="{{route('page_for_sale')}}" class="link menu-link "> {{__('web/menu.properties-for-sale')}} </a> </li>
+        <li class="menu-list @if($pageView['SelMenu'] == 'Developers') current-page @endif"><a href="{{route('page_developers')}}" class="link menu-link ">{{__('web/menu.developer')}}  </a> </li>
+        <li class="menu-list @if($pageView['SelMenu'] == 'Contact') current-page @endif"><a href="{{route('page_index')}}" class="link menu-link "> {{__('web/menu.contatc-us')}} </a> </li>
+    </ul>
+
 </nav>
 
 

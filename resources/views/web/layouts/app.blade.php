@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_3.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_4.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
