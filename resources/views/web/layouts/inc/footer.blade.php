@@ -97,7 +97,7 @@
             </div>
 
             <div class="sticky-info">
-                <a href="#" class="sticky_a  @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
+                <a href="#" class="sticky_a btn01 @if($pageView['SelMenu'] == 'SelMenu') sticky_active @endif">
                     <span class="material-symbols-outlined mat-icon"> menu </span>
                     {{ __('web/stickyBar.menu') }}
                 </a>
@@ -128,5 +128,17 @@
 </div>
 
 @endif
+
+
+<nav class="side-slide">
+
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <h3 class="nav01">x</h3>
+</nav>
 
 

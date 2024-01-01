@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_2.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_3.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
@@ -83,6 +83,27 @@
     document.addEventListener('livewire:load', () => {
         Livewire.onPageExpired((response, message) => {})
     })
+</script>
+
+<script>
+    // --- Nav |  01  |  Side-Slide
+    $('.btn01').click(function() {
+        $('.side-slide').animate({left: "0px"}, 200);
+    });
+
+    $('h3.nav01').click(function() {
+        $('.side-slide').animate({left: "-100%"}, 200);
+    });
+
+    //
+    // // --- Nav |  02  |  drop-down
+    // $('.btn02').click(function() {
+    //     $('.drop-down').animate({top: "0px"}, 200);
+    // });
+    //
+    // $('h3.nav02').click(function() {
+    //     $('.drop-down').animate({top: "-100vh"}, 200);
+    // });
 </script>
 </body>
 </html>
