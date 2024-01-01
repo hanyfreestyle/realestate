@@ -261,14 +261,16 @@ nav.side-slide {
 
 }
 
-h3.nav02 {
+h3.nav01 {
     position: absolute;
     font-weight: bold;
     cursor: pointer;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 nav.side-slide ul{
+    margin-top: 30px;
     padding: 5px;
     list-style: none;
 
@@ -280,80 +282,8 @@ nav.side-slide li {
     border-bottom: 1px solid  rgba(0,0,0,.1);
     line-height: 30px;
 }
-
-
-/*
-
-
-main {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    background-color: #204056;
-}
-
-hgroup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-h1 {
-    color: #F75D5D;
-    font-weight: bold;
-}
-}
-
-
-
-
-
-
-
-
-
-
-main {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    background-color: #204056;
-}
-
-hgroup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-h1 {
-    color: #F75D5D;
-    font-weight: bold;
-}
-}
-
-h3.nav01, h3.nav02 {
-    position: absolute;
-    font-weight: bold;
+.btn01{
     cursor: pointer;
-    padding: 5px;
 }
 
 
-
-
-
-
-
-
-
-
-
-nav.side-slide a {
-    color: #EDEDED;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-
-}
-
-
- */
