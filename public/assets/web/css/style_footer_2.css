@@ -117,8 +117,35 @@ input[type=text]:focus {
 
 }
 
+
+.fixDiv{
+    position: fixed;
+    bottom: 0px!important;
+    width: 100%;
+    background-color:#fff;
+    border-top:1px solid #e7e7e7;
+    z-index:8888!important;
+}
+
+.sticky_call_new{
+    display:flex;
+}
+.sticky_call_new .sticky_info_call {
+    flex:0 0 50%;
+    max-width:50%;
+    padding-top:15px;
+    padding-bottom:20px;
+    text-align: center;
+
+}
+
+
+
+
+
 .sticky_call{
     display:flex;
+
     position:fixed;
     left:0;
     right:0;
@@ -126,17 +153,21 @@ input[type=text]:focus {
     width:100%;
     background-color:#fff;
     border-top:1px solid #e7e7e7;
-    opacity:0;
-    visibility:hidden;
-    transition:all .25s;
-    z-index:99999999!important;
+    /*opacity:0;*/
+    /*visibility:hidden;*/
+    /*transition:all .25s;*/
+    z-index:8888!important;
 }
 
 .sticky_call.fixed {
-    opacity:1;
-    visibility:visible;
-    transform:translateY(-100%);
-    z-index:99999999!important
+    /*opacity:1;*/
+    /*visibility:visible;*/
+
+    /*transform:translateY(-100%);*/
+    /*transform:translateY(-100%);*/
+    /*z-index:8888!important*/
+
+
 }
 
 

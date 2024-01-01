@@ -102,7 +102,9 @@
         </div>
     </div>
 @else
-    <div class="sticky_call fixed d-xl-none">
+{{--    <div class="sticky_call fixed d-xl-none"> --}}
+<div class="fixDiv">
+    <div class="sticky_call_new">
 
         <div class="sticky_info_call">
             <a href="{{route('page_index')}}" class="sticky_a_call sticky_a_phone" >
@@ -119,6 +121,8 @@
         </div>
 
     </div>
+</div>
+
 @endif
 
 

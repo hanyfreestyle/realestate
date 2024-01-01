@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer.css') }}">
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_2.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
@@ -35,6 +35,7 @@
 @if($_SERVER['HTTP_HOST'] != 'localhost' )
     @include('web.layouts.inc.preloader')
 @endif
+@include('web.layouts.inc.preloader')
 
 @include('web.layouts.inc.header_top')
 @include('web.layouts.inc.header_menu')
