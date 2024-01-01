@@ -49,6 +49,7 @@ class PageController extends WebMainController
 
         $pageView = $this->pageView ;
         $pageView['SelMenu'] = 'HomePage' ;
+        $pageView['show_fix'] = false ;
 
         $unit= Listing::def()
             ->where('slug',$listingid)

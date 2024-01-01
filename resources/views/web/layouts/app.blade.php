@@ -51,17 +51,22 @@
 <script src="{{ defWebAssets('js/app_script.js') }}"></script>
 <script>
     async function loadarfont(){
-        {{--const font_ar = new FontFace('Tajawal','url({{ defWebAssets('fonts/Ar/TajawalRegular.woff2') }}');--}}
-        {{--await font_ar.load();--}}
-        {{--document.fonts.add(font_ar);--}}
-        {{--document.body.classList.add('Tajawal');--}}
         const font_ar = new FontFace('Aljazeera','url({{ defWebAssets('fonts/Ar/Aljazeera.woff') }}');
         await font_ar.load();
         document.fonts.add(font_ar);
         document.body.classList.add('Aljazeera');
-
     };
     loadarfont();
+
+
+    async function loadar_2font(){
+        const font2_ar = new FontFace('Tajawal','url({{ defWebAssets('fonts/Ar/TajawalRegular.woff2') }}');
+        await font2_ar.load();
+        document.fonts.add(font2_ar);
+        document.body.classList.add('Tajawal');
+    };
+    loadar_2font();
+
 
     async function loadarfont_en(){
         const font_en = new FontFace('Poppins','url({{ defWebAssets('fonts/En/Poppins-Regular.woff2') }}');

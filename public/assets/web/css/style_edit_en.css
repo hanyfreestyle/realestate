@@ -17,6 +17,8 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
 
 .header_search input[type="text"] {
     padding:8px 40px 8px 15px ;
+    font-size: 14px;
+
 }
 .header_search button[type="submit"] {
 
@@ -225,4 +227,16 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
 
 
 
+
+.sticky-navbar .sticky-info a {
+    font-family: 'Poppins', sans-serif!important;
+    font-size:12px;
+    letter-spacing: .5px;
+}
+.sticky_a_call{
+    font-size: 15px;
+    font-weight: bold;
+
+
+}
 

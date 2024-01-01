@@ -44,6 +44,7 @@ class WebMainController extends Controller
 
         $pageView = [
             'SelMenu' => '',
+            'show_fix' => true,
             'slug' => null,
         ];
 
