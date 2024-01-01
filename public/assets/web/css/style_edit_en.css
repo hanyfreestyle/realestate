@@ -13,6 +13,18 @@ body{font-family: 'Poppins', sans-serif!important; font-size:18px;}
 .breadcrumb-item + .breadcrumb-item::before{font-size: 12px!important; float:left;content:"\f101";padding-right:0!important;margin-left:0!important;padding-left:3px;margin-right:3px!important}
 .breadcrumb{font-size:15px!important;list-style:none;line-height:30px;margin-top:10px!important}
 
+
+
+.header_search input[type="text"] {
+    padding:8px 40px 8px 15px ;
+}
+.header_search button[type="submit"] {
+
+    left:auto;right: 10px;
+
+}
+
+
 .ButDivCon .show_text_but,.ButDivCon .hide_text_but{float:right}
 .ButDivCon .show-more{float:right}
 

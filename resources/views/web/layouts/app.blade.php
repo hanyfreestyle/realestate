@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {!! SEO::generate() !!}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+{{--    <link rel="preconnect" href="https://fonts.googleapis.com">--}}
+{{--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--}}
+{{--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/fonts/material-icon.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('fonts/fontawesome_all.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/fonts/ff-1.css') }}">
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
+    <link rel="stylesheet" href="{{ defWebAssets('css/style_footer.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_blog.css') }}">
@@ -23,7 +24,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/style_listing_view.css') }}">
 
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">--}}
-    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">
+{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
 
@@ -37,12 +38,10 @@
 
 @include('web.layouts.inc.header_top')
 @include('web.layouts.inc.header_menu')
-
 @yield('content')
 
 
 @include('web.layouts.inc.footer')
-
 
 <script src="{{ defWebAssets('js/jquery-3.7.1.js') }}" ></script>
 <script src="{{ defWebAssets('js/leaflet.js') }}"></script>

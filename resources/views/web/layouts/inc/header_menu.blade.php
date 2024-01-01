@@ -8,16 +8,27 @@
                         <ul class="list list-row gap-4 flex-wrap align-items-center order-1">
                             <li class="d-xl-none">
                                 <div class="d-flex align-items-center gap-5">
+                                    <div class="header_search">
+                                        <form action=""  method="post">
+                                            @csrf
+                                            <input type="text"  name="project_name" placeholder="{{__('web/topHeader.serach-placeholder')}}" value="">
+                                            <button type="submit"><i class="fas fa-search"></i></button>
+                                        </form>
+                                    </div>
+
+
+
+
+                                </div>
+                            </li>
+
+                            <li class="d-xl-none">
+                                <div class="d-flex align-items-center gap-5">
                                     <a href="tel:{{__('web/topHeader.call-us-now-number')}}">
                                         <div class="w-10 h-10 rounded-circle bg-primary-300 d-grid place-content-center flex-shrink-0">
                                             <span class="material-symbols-outlined mat-icon fs-24 clr-neutral-0 fw-300"> phone_in_talk </span>
                                         </div>
                                     </a>
-                                    <div class="d-noneX d-lg-block">
-                                        <span class="fs-12 d-block"> {{__('web/topHeader.call-us-now')}} </span>
-                                        <a href="tel:406-555-0120" class="link d-block clr-neutral-700
-                                        :clr-primary-300"> {{__('web/topHeader.call-us-now-number')}}</a>
-                                    </div>
                                 </div>
                             </li>
                             <li class="d-xl-none">
@@ -29,15 +40,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="d-xl-none">
-                                <div class="d-flex d-inline-block   align-items-center gap-5">
-                                    <a href="#">
-                                        <div class="w-10 h-10 rounded-circle bg-tertiary-300 d-grid place-content-center flex-shrink-0">
-                                            <span class="material-symbols-outlined mat-icon fs-24 clr-neutral-700 fw-300"> mark_as_unread </span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
+
+
                             <li class="lang_menu d-none d-lg-block">
                                     <a href="{{ LaravelLocalization::getLocalizedURL(webChangeLocale()) }}"
                                        class="link d-flex align-items-center gap-2 p-2 rounded-pill bg-primary-5p clr-neutral-500">

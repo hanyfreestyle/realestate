@@ -377,6 +377,7 @@ small,
   -webkit-padding-start: 1rem;
   padding-inline-start: 1rem;
 }
+
 .list-divider>li+li {
   -webkit-padding-start: 1rem;
   padding-inline-start: 1rem;

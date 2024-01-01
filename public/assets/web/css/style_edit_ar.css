@@ -7,11 +7,12 @@ body{font-family: 'Aljazeera', sans-serif!important; font-size:20px}
     margin-right: auto!important;
     margin-left: unset!important;
 }
+.lang_menu{position: absolute;left:15px!important;}
+.form-select {background-position: left .75rem center;}
 
 /*
 
-.lang_menu{position: absolute;left:15px!important;}
-.form-select {background-position: left .75rem center;}
+
 @media (max-width: 600px) {
     .home_slider_text h1{
         padding: 1px 40px;

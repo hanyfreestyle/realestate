@@ -1,0 +1,55 @@
+.list_divider_2 .descMenu{
+    padding-right: 15px;
+}
+
+.list_divider_2 .descMenu .text_span{
+    font-size: 15px;
+    font-weight: normal!important;
+}
+.list_divider_2 .descMenu .text_link{
+    font-family: 'Poppins', sans-serif!important;
+    font-size:13px;
+}
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid #ddd!important;
+}
+
+.header_search {
+    position: relative;
+}
+
+.header_search input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding:8px 15px 8px 40px ;
+    font-size: 15px;
+    min-width: 260px;
+}
+
+.header_search button[type="submit"] {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    border: none;
+    margin: 0;
+    color: #aaa;
+    background: none;
+}
+
+
+
+.WebFooter .section-space--sm{
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+}
+
+.footer_social{
+
+}
+
+.footer_copy_right .border-top{
+    border-color: rgba(255,255,255,.2)!important;
+
+}
