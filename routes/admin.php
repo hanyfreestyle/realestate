@@ -6,6 +6,8 @@ use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\config\AmenityController;
 use App\Http\Controllers\admin\DeveloperController;
 use App\Http\Controllers\admin\LocationController;
+use App\Http\Controllers\admin\PageAdminController;
+use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\admin\PostController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\ProjectToUnitsController;
@@ -20,6 +22,22 @@ Route::get('/',[AdminMainController::class,'Home'])->name('admin.Dashboard');
 Route::get('/Home/Update',[AdminMainController::class,'Update'])->name('admin.Dashboard.Update');
 Route::get('/UpdateData',[UpdateDataController::class,'index'])->name('updateData');
 Route::get('/UpdateListing',[UpdateListingDataController::class,'update'])->name('update.UpdateListing');
+
+
+Route::get('/Pages',[PageAdminController::class,'index'])->name('pages.index');
+Route::get('/Pages/create',[PageAdminController::class,'create'])->name('pages.create');
+Route::post('/Pages/store/{id}',[PageAdminController::class,'storeUpdate'])->name('pages.store');
+Route::get('/Pages/edit/{id}',[PageAdminController::class,'edit'])->name('pages.edit');
+Route::post('/Pages/update/{id}',[PageAdminController::class,'storeUpdate'])->name('pages.update');
+Route::get('/Pages/destroy/{id}',[PageAdminController::class,'destroy'])->name('pages.destroy');
+
+Route::post('/Pages/updateStatus', [PageAdminController::class,'updateStatus'])->name('pages.updateStatus');
+Route::get('/Pages/emptyPhoto/{id}', [PageAdminController::class,'emptyPhoto'])->name('pages.emptyPhoto');
+Route::get('/Pages/SoftDelete/',[PageAdminController::class,'SoftDeletes'])->name('pages.SoftDelete');
+Route::get('/Pages/restore/{id}',[PageAdminController::class,'Restore'])->name('pages.restore');
+Route::get('/Pages/force/{id}',[PageAdminController::class,'ForceDeletes'])->name('pages.force');
+
+
 
 Route::get('/amenity',[AmenityController::class,'index'])->name('amenity.index');
 Route::get('/amenity/create',[AmenityController::class,'create'])->name('amenity.create');

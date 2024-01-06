@@ -7,10 +7,13 @@ use Database\Seeders\admin\CategoryTranslationSeeder;
 use Database\Seeders\admin\DeveloperPhotoSeeder;
 use Database\Seeders\admin\DeveloperSeeder;
 use Database\Seeders\admin\DeveloperTranslationSeeder;
+use Database\Seeders\admin\ListingPhotoSeeder;
 use Database\Seeders\admin\ListingSeeder;
 use Database\Seeders\admin\ListingTranslationSeeder;
 use Database\Seeders\admin\LocationSeeder;
 use Database\Seeders\admin\LocationTranslationSeeder;
+use Database\Seeders\admin\PageSeeder;
+use Database\Seeders\admin\PageTranslationSeeder;
 use Database\Seeders\admin\PostPhotoSeeder;
 use Database\Seeders\admin\PostSeeder;
 use Database\Seeders\admin\PostTranslationSeeder;
@@ -68,8 +71,12 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ListingSeeder::class);
         $this->call(ListingTranslationSeeder::class);
+        $this->call(ListingPhotoSeeder::class);
         $this->call(QuestionSeeder::class);
         $this->call(QuestionTranslationSeeder::class);
+
+        $this->call(PageSeeder::class);
+        $this->call(PageTranslationSeeder::class);
 
     }
 }

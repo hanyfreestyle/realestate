@@ -4,7 +4,8 @@
 /public/uploads
 /public/hot
 /public/storage
-/public/db
+#/public/db
+/public/db/SQLDumpSplitterResult
 /public/ckfinder
 /public/images/project
 /storage/*.key

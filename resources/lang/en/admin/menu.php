@@ -11,6 +11,7 @@ return
 	'location' => 'Locations',
 	'post' => 'Posts',
 	'project' => 'Projects',
+	'project_update' => 'Update Data',
 	'roles' => 'Users &amp; Permissions',
 	'roles_permissions' => 'Permissions',
 	'roles_role' => 'Roles',
@@ -24,5 +25,5 @@ return
 	'setting_web' => 'Web Settings',
 	'unit' => 'Units For Sale',
 	'uploadFilter' => 'Upload Filters',
-	'project_update' => 'Update Data',
+	'pages' => 'Pages',
 ];

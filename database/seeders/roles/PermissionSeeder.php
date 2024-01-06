@@ -92,6 +92,12 @@ class PermissionSeeder extends Seeder
             ['cat_id'=> '15', 'name' => 'unit_delete','name_ar'=>'حذف','name_en'=>'Delete'],
             ['cat_id'=> '15', 'name' => 'unit_restore','name_ar'=>'استعادة المحذوف','name_en'=>'Restore'],
 
+            ['cat_id'=> '16', 'name' => 'pages_view','name_ar'=>'عرض','name_en'=>'View'],
+            ['cat_id'=> '16', 'name' => 'pages_add','name_ar'=>'اضافة','name_en'=>'Add'],
+            ['cat_id'=> '16', 'name' => 'pages_edit','name_ar'=>'تعديل','name_en'=>'Edit'],
+            ['cat_id'=> '16', 'name' => 'pages_delete','name_ar'=>'حذف','name_en'=>'Delete'],
+            ['cat_id'=> '16', 'name' => 'pages_restore','name_ar'=>'استعادة المحذوف','name_en'=>'Restore'],
+
 
         ];
 

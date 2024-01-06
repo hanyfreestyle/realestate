@@ -19,10 +19,16 @@ class UpdateListingDataController extends AdminMainController
 
         foreach ($Developers as $Developer){
 
-            $projects_count = Listing::Project()
+//            $projects_count = Listing::Project()
+//                ->where('is_published', true)
+//                ->where('developer_id',$Developer->id)
+//                ->count();
+
+            $projects_count = Listing::where('listing_type','=','Project')
                 ->where('is_published', true)
                 ->where('developer_id',$Developer->id)
                 ->count();
+
 
             $units_count = Listing::where('listing_type','!=','Project')
                 ->where('is_published', true)

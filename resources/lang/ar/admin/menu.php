@@ -11,6 +11,7 @@ return
 	'location' => 'المناطق',
 	'post' => 'المقالات',
 	'project' => 'المشروعات',
+	'project_update' => 'تحديث البيانات',
 	'roles' => 'الاعضاء والصلاحيات',
 	'roles_permissions' => 'الاصلاحيات',
 	'roles_role' => 'مجموعات الصلاحيات',
@@ -24,5 +25,5 @@ return
 	'setting_web' => 'الاعدادات العامة',
 	'unit' => 'وحدات للبيع',
 	'uploadFilter' => 'فلاتر الصور',
-	'project_update' => 'تحديث البيانات',
+	'pages' => 'الصفحات',
 ];

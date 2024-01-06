@@ -13,6 +13,8 @@ class LocationSeeder extends Seeder
     public function run(): void
     {
 
+
+
         Location::unguard();
         $tablePath = public_path('db/locations.sql');
         DB::unprepared(file_get_contents($tablePath));

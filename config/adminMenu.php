@@ -3,6 +3,78 @@
  return [
     'menu' => [
 
+
+
+        [
+            'view'=>true,
+            'sel_routs'=>'pages',
+            'type'=>'one',
+            'text'=> 'admin/menu.pages',
+            'url'=> 'pages.index',
+            'icon'=>'fab fa-html5',
+            'roleView'=>'pages_view',
+        ],  #Pages
+
+        [
+            'view'=>true,
+            'sel_routs'=>'category',
+            'type'=>'one',
+            'text'=> 'admin/menu.category',
+            'url'=> 'category.index',
+            'icon'=>'fas fa-sitemap',
+            'roleView'=>'category_view',
+        ],  #Category
+
+        [
+            'view'=>true,
+            'sel_routs'=>'post',
+            'type'=>'one',
+            'text'=> 'admin/menu.post',
+            'url'=> 'post.index',
+            'icon'=>'fab fa-blogger',
+            'roleView'=>'post_view',
+        ],  #Post
+
+        [
+            'view'=>true,
+            'sel_routs'=>'location',
+            'type'=>'one',
+            'text'=> 'admin/menu.location',
+            'url'=> 'location.index',
+            'icon'=>'fas fa-map-marker-alt',
+            'roleView'=>'location_view',
+        ],  #Location
+
+        [
+            'view'=>true,
+            'sel_routs'=>'developer',
+            'type'=>'one',
+            'text'=> 'admin/menu.developer',
+            'url'=> 'developer.index',
+            'icon'=>'fas fa-truck-monster',
+            'roleView'=>'developer_view',
+        ],  #Developer
+
+        [
+            'view'=>true,
+            'sel_routs'=>'project',
+            'type'=>'one',
+            'text'=> 'admin/menu.project',
+            'url'=> 'project.index',
+            'icon'=>'fas fa-building',
+            'roleView'=>'project_view',
+        ],  #Project
+
+        [
+            'view'=>true,
+            'sel_routs'=>'unit',
+            'type'=>'one',
+            'text'=> 'admin/menu.unit',
+            'url'=> 'unit.index',
+            'icon'=>'fas fa-bath',
+            'roleView'=>'unit_view',
+        ],  #Unit
+
         [
             'view'=>true,
             'sel_routs'=>'config',
@@ -68,66 +140,6 @@
 
         [
             'view'=>true,
-            'sel_routs'=>'category',
-            'type'=>'one',
-            'text'=> 'admin/menu.category',
-            'url'=> 'category.index',
-            'icon'=>'fas fa-sitemap',
-            'roleView'=>'category_view',
-        ],  #Category
-
-        [
-            'view'=>true,
-            'sel_routs'=>'post',
-            'type'=>'one',
-            'text'=> 'admin/menu.post',
-            'url'=> 'post.index',
-            'icon'=>'fab fa-blogger',
-            'roleView'=>'post_view',
-        ],  #Post
-
-        [
-            'view'=>true,
-            'sel_routs'=>'location',
-            'type'=>'one',
-            'text'=> 'admin/menu.location',
-            'url'=> 'location.index',
-            'icon'=>'fas fa-map-marker-alt',
-            'roleView'=>'location_view',
-        ],  #Location
-
-        [
-            'view'=>true,
-            'sel_routs'=>'developer',
-            'type'=>'one',
-            'text'=> 'admin/menu.developer',
-            'url'=> 'developer.index',
-            'icon'=>'fas fa-truck-monster',
-            'roleView'=>'developer_view',
-        ],  #Developer
-
-        [
-            'view'=>true,
-            'sel_routs'=>'project',
-            'type'=>'one',
-            'text'=> 'admin/menu.project',
-            'url'=> 'project.index',
-            'icon'=>'fas fa-building',
-            'roleView'=>'project_view',
-        ],  #Project
-
-        [
-            'view'=>true,
-            'sel_routs'=>'unit',
-            'type'=>'one',
-            'text'=> 'admin/menu.unit',
-            'url'=> 'unit.index',
-            'icon'=>'fas fa-bath',
-            'roleView'=>'unit_view',
-        ],  #Unit
-
-        [
-            'view'=>true,
             'sel_routs'=>'update',
             'type'=>'one',
             'text'=> 'admin/menu.project_update',
@@ -135,7 +147,6 @@
             'icon'=>'fas fa-database',
             'roleView'=>'project_view',
         ], #Update
-
 
     ],
 
