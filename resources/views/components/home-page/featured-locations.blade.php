@@ -5,8 +5,8 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xxl-6">
-                        <div class="text-center">
-                            <h2 class="mt-4 def_h2_out mb-6"> {{__('web/home.featured-locations')}} </h2>
+                        <div class="text-center Home_h2">
+                            <h2 class="mt-4 mb-6"> {{__('web/home.featured-locations')}} </h2>
                             <p class="mb-0">{{__('web/home.featured-locations-text')}}</p>
                         </div>
                     </div>
@@ -30,11 +30,11 @@
 
                                                 <div class="d-flex align-items-center justify-content-between w-100">
                                                     <a href="{{route('page_locationView',$location->slug)}}" class="link d-flex flex-column gap-1 clr-neutral-0 flex-grow-1">
-                                                        <span class="d-block fs-20 fw-semibold"> {{$location->name}} </span>
-                                                        <span class="d-block fs-14">{{$location->projects_count}} {{__('web/def.project')}} </span>
-                                                        <span class="d-block fs-14">{{$location->units_count}} {{__('web/def.units')}} </span>
+                                                        <span class="d-block location_card_name"> {{$location->name}} </span>
+                                                        <span class="d-block location_card_project">{{$location->projects_count}} {{__('web/def.project')}} </span>
+                                                        <span class="d-block location_card_units">{{$location->units_count}} {{__('web/def.units')}} </span>
                                                     </a>
-                                                    <a href="{{route('page_locationView',$location->slug)}}" class="link d-grid place-content-center w-9 h-9 border border-primary-50 rounded-circle clr-primary-50 :bg-primary-300 flex-shrink-0">
+                                                    <a href="{{route('page_locationView',$location->slug)}}" class="location_card_icon link d-grid place-content-center w-9 h-9 border border-primary-50 rounded-circle clr-primary-50 :bg-primary-300 flex-shrink-0">
                                                         <span class="material-symbols-outlined mat-icon"> arrow_forward_ios </span>
                                                     </a>
                                                 </div>

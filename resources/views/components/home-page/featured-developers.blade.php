@@ -2,14 +2,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7 col-xl-6">
-                <div class="text-center">
-                    <h2 class="def_h2_out mb-5 pb-5 "> {{ $title }} </h2>
+                <div class="text-center Home_h2">
+                    <h2 class="mb-5 pb-5 "> {{ $title }} </h2>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
             <div class="col-12">
                 <div class="position-relative">
@@ -25,7 +25,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <h4 class="mb-2 home_developer_name mt-5 crop_line_1">
+                                    <h4 class="mb-2 home_developer_name crop_line_1">
                                         <a href="{{route('page_developer_view',$developer->slug)}}">{{$developer->name}}</a>
                                     </h4>
                                 </div>

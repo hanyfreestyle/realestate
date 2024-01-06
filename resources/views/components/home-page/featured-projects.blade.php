@@ -1,15 +1,15 @@
-<section class="section-space--sm pt-lg-0 mt-lg-0">
+<section class="section-space--sm pt-lg-0 mt-lg-2">
     <div class="container">
         <div class="row g-4 align-items-center">
-            <div class="col-xl-12 text-center">
-                <h2 class="mb-2 def_h2_out">{{$title}}</h2>
+            <div class="col-xl-12 Home_h2 text-center">
+                <h2 class="mb-2">{{$title}}</h2>
             </div>
-            <div class="col-xl-12 mb-5  pb-3">
+            <div class="col-xl-12 mb-5">
                 <div class="list-group flex-row flex-wrap justify-content-xl-start gap-5  ">
-                    <div class="Featured_Projects_Scrool">
+                    <div class="Featured_Projects_Scroll">
                         @foreach($locations as $location)
                             <a href="#list-location_{{$location->id}}"
-                               class="@if($loop->first) active @endif  featured-tab link fw-semibold clr-primary-400 d-inline-block py-3 px-6 bg-primary-50 :bg-primary-300 :clr-neutral-0 rounded-pill"
+                               class="@if($loop->first) active @endif  featured-tab link clr-primary-400 d-inline-block py-3 px-2 bg-primary-50 :bg-primary-300 :clr-neutral-0 rounded-pill"
                                data-bs-toggle="list">
                                 {{$location->name}}
                             </a>

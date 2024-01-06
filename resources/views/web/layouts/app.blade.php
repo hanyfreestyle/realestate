@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/plugins.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style.css') }}">
 
+    <link rel="stylesheet" href="{{ defWebAssets('css/home_page.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_footer_4.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_default.css') }}">
     <link rel="stylesheet" href="{{ defWebAssets('css/style_header.css') }}">
@@ -24,7 +25,6 @@
     <link rel="stylesheet" href="{{ defWebAssets('css/style_listing_view.css') }}">
 
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_def.css') }}">--}}
-{{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_edit.css') }}">--}}
 {{--    <link rel="stylesheet" href="{{ defWebAssets('css/style_serach_form.css') }}">--}}
     <link rel="stylesheet" href="{{ defWebAssets('css/style_edit_'.thisCurrentLocale().'.css') }}">
 
@@ -48,7 +48,7 @@
 <script src="{{ defWebAssets('js/leaflet.js') }}"></script>
 <script src="{{ defWebAssets('js/plugins.js') }}"></script>
 <script src="{{ defWebAssets('js/app.js') }}"></script>
-<script src="{{ defWebAssets('js/app_slider.js') }}"></script>
+<script src="{{ defWebAssets('js/app_sliders.js') }}"></script>
 <script src="{{ defWebAssets('js/app_script.js') }}"></script>
 <script>
     async function loadarfont(){
