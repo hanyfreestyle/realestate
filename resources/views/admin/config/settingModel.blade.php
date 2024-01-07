@@ -19,6 +19,14 @@
 
                                 <div class="col-lg-12 pt-3">
                                     <div class="alert alert-dark alert-dismissible">
+                                        {{ __('admin/menu.pages') }}
+                                    </div>
+                                    <x-def-settings modelname="pages" :morephotos="false">
+                                    </x-def-settings>
+                                </div>
+
+                                <div class="col-lg-12 pt-3">
+                                    <div class="alert alert-dark alert-dismissible">
                                         {{ __('admin/menu.category') }}
                                     </div>
                                     <x-def-settings modelname="category">

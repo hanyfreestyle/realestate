@@ -16,6 +16,7 @@ class PageTranslationSeeder extends Seeder
     {
         PageTranslation::unguard();
         $tablePath = public_path('db/page_translations.sql');
+       // $tablePath = public_path('db/OldData/page_translations.sql');
         DB::unprepared(file_get_contents($tablePath));
 
 //        $OldData = PageTranslation::all();

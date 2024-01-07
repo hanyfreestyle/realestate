@@ -15,6 +15,7 @@ class PageSeeder extends Seeder
     {
         Page::unguard();
         $tablePath = public_path('db/pages.sql');
+      //  $tablePath = public_path('db/OldData/pages.sql');
         DB::unprepared(file_get_contents($tablePath));
     }
 }

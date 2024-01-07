@@ -9,12 +9,15 @@ use Illuminate\View\Component;
 class DefSettings extends Component
 {
     public $modelname;
+    public $morephotos;
 
     public function __construct(
         $modelname = "",
+        $morephotos = true,
     )
     {
         $this->modelname = $modelname;
+        $this->morephotos = $morephotos;
     }
 
     /**

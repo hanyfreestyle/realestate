@@ -100,6 +100,8 @@ class UiCard extends Component
                 $this->title = __('admin/page.page_edit');
             }elseif($pageData['ViewType'] == 'List'){
                 $this->title = __('admin/page.page_list');
+            }elseif($pageData['ViewType'] == 'deleteList'){
+                $this->title = __('admin/page.del_restor_but');
             }
         }
 

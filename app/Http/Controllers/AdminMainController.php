@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\AdminHelper;
+use App\Models\admin\config\Setting;
 use App\Models\admin\config\UploadFilter;
 use App\Models\admin\Developer;
 use App\Models\admin\Listing;
+use App\Models\admin\Page;
 use App\Models\admin\Post;
 use Cache;
 use Illuminate\Support\Facades\View;
@@ -304,6 +306,18 @@ class AdminMainController extends Controller
 
 
 
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+#|||||||||||||||||||||||||||||||||||||| #     getAllPagesData
+    static function getAllPagesData($stopCash=0){
+        if($stopCash){
+            $getAllPagesData = Page::where('id','!=',0)->with('translation')->get();
+        }else{
+            $getAllPagesData = Cache::remember('PageLinksData_'.app()->getLocale(),config('app.def_24h_cash'), function (){
+                return  Page::where('id','!=',0)->with('translation')->get();
+            });
+        }
+        return $getAllPagesData ;
+    }
 
 
 

@@ -14,12 +14,10 @@
         <x-form-select-arr  label="{{__('admin/config/settings.set_orderBy')}}" name="{{$modelname}}_orderby" colrow="col-lg-3" :send-arr="$OrderByArr"
                             sendvalue="{{old($modelname.'_orderby',\App\Helpers\AdminHelper::arrIsset($modelSettings,$modelname.'_orderby',0))}}" select-type="normal"/>
 
-
-
-
-
-        <x-form-select-arr  label="{{__('admin/def.form_selectFilterLable')}}" name="{{$modelname}}_filterid" colrow="col-lg-3"
-                            sendvalue="{{old($modelname.'_filterid',\App\Helpers\AdminHelper::arrIsset($modelSettings,$modelname.'_filterid',0))}}" :send-arr="$filterTypes"/>
+        @if($morephotos)
+            <x-form-select-arr  label="{{__('admin/def.form_selectFilterLable')}}" name="{{$modelname}}_filterid" colrow="col-lg-3"
+                                sendvalue="{{old($modelname.'_filterid',\App\Helpers\AdminHelper::arrIsset($modelSettings,$modelname.'_filterid',0))}}" :send-arr="$filterTypes"/>
+        @endif
 
         {{$slot}}
     </div>
